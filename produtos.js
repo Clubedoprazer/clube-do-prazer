@@ -47,7 +47,7 @@ const produtos = {
   chocolate: {
     nome: "Chocolate do Amor Excitante para Adultos com Taurina — Caixa com 5 unidades 25g (Loka Sensação)",
     preco: "R$ 34,90",
-    fotos: ["https://acdn-us.mitiendanube.com/stores/002/993/813/products/copia-de-copia-de-produtos-site-82-99439ac80beebaf00717744743364458-640-0.webp"],
+    fotos: ["https://miess.vteximg.com.br/arquivos/ids/361023/9546_1.jpg?v=639089481377470000", "https://miess.vteximg.com.br/arquivos/ids/361025/9546_5.jpg?v=639089481386230000", "https://miess.vteximg.com.br/arquivos/ids/361024/9546_2.jpg?v=639089492405770000"],
     descricao: "O Chocolate do Amor da Loka Sensação é um afrodisíaco em forma de chocolate. Sua fórmula reúne guaraná em pó, taurina, cravo, gengibre e jambú — ingredientes conhecidos pelo efeito estimulante. Sabor cereja com chocolate meio amargo. Caixa com 5 unidades.",
     beneficios: ["Contém taurina e guaraná — mais energia", "Afrodisíaco natural com cravo, gengibre e jambú", "Sabor cereja com chocolate meio amargo", "Caixa com 5 unidades", "Ideal para casais e momentos especiais"],
     comoUsar: "Consuma 1 unidade de 30 a 60 minutos antes da relação. Pode ser compartilhado com o parceiro(a). Não exceda 2 unidades por dia.",
