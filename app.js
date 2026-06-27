@@ -1,29 +1,43 @@
+const WHATSAPP = '5511973784809';
+
 // ---- AGE GATE ----
 function confirmAge() {
+  localStorage.setItem('age-status', 'confirmed');
   document.getElementById('age-gate').style.display = 'none';
   document.getElementById('main').style.display = 'block';
-  sessionStorage.setItem('age-confirmed', '1');
 }
+
 function denyAge() {
+  localStorage.setItem('age-status', 'denied');
   window.location.href = 'https://www.google.com';
 }
-if (sessionStorage.getItem('age-confirmed')) {
-  document.getElementById('age-gate').style.display = 'none';
-  document.getElementById('main').style.display = 'block';
-}
+
+// Ao carregar a página, verifica o que foi salvo
+(function checkAge() {
+  const status = localStorage.getItem('age-status');
+  if (status === 'confirmed') {
+    document.getElementById('age-gate').style.display = 'none';
+    document.getElementById('main').style.display = 'block';
+  } else if (status === 'denied') {
+    // já disse que não tem 18 — redireciona direto, sem mostrar nada
+    document.getElementById('age-gate').style.display = 'none';
+    document.getElementById('main').style.display = 'none';
+    window.location.href = 'https://www.google.com';
+  }
+  // se não tem nada salvo, mostra o age gate normalmente
+})();
 
 // ---- MODAL ----
 function openModal(id) {
   const p = produtos[id];
   if (!p) return;
 
-  // título e preço
   document.getElementById('modal-title').textContent = p.nome;
   document.getElementById('modal-price').textContent = p.preco;
 
-  // whatsapp
+  // WhatsApp com número fixo
   const msg = encodeURIComponent(`Olá! Tenho interesse no produto: ${p.nome} (${p.preco})`);
-  document.getElementById('modal-whatsapp').href = `https://wa.me/?text=${msg}`;
+  document.getElementById('modal-whatsapp').href = `https://wa.me/${WHATSAPP}?text=${msg}`;
 
   // foto principal
   const mainImg = document.getElementById('modal-img-main');
@@ -36,7 +50,7 @@ function openModal(id) {
   p.fotos.forEach((f, i) => {
     const img = document.createElement('img');
     img.src = f;
-    img.alt = p.nome + ' ' + (i+1);
+    img.alt = p.nome + ' ' + (i + 1);
     if (i === 0) img.classList.add('active');
     img.onclick = () => {
       mainImg.src = f;
@@ -46,12 +60,11 @@ function openModal(id) {
     extrasEl.appendChild(img);
   });
 
-  // seções de conteúdo
+  // seções
   setSection('modal-desc', '📝 Sobre o produto', `<p>${p.descricao}</p>`);
 
   if (p.beneficios && p.beneficios.length) {
-    const lista = p.beneficios.map(b => `<li>${b}</li>`).join('');
-    setSection('modal-benefits', '✨ Benefícios', `<ul>${lista}</ul>`);
+    setSection('modal-benefits', '✨ Benefícios', `<ul>${p.beneficios.map(b => `<li>${b}</li>`).join('')}</ul>`);
   } else {
     document.getElementById('modal-benefits').innerHTML = '';
   }
@@ -63,8 +76,7 @@ function openModal(id) {
   }
 
   if (p.ficha && p.ficha.length) {
-    const lista = p.ficha.map(f => `<li>${f}</li>`).join('');
-    setSection('modal-specs', '📋 Ficha técnica', `<ul>${lista}</ul>`);
+    setSection('modal-specs', '📋 Ficha técnica', `<ul>${p.ficha.map(f => `<li>${f}</li>`).join('')}</ul>`);
   } else {
     document.getElementById('modal-specs').innerHTML = '';
   }
@@ -75,7 +87,6 @@ function openModal(id) {
     document.getElementById('modal-care').innerHTML = '';
   }
 
-  // abre modal
   document.getElementById('modal-overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -89,7 +100,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// fechar com ESC
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
