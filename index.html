@@ -22,8 +22,8 @@
     <p>Este site contém produtos destinados a maiores de 18 anos.</p>
     <p>Você confirma que tem 18 anos ou mais?</p>
     <div class="age-btns">
-      <button onclick="confirmAge()" class="btn-sim">Sim, tenho 18+</button>
-      <button onclick="denyAge()" class="btn-nao">Não</button>
+      <button id="btn-confirm" class="btn-sim">Sim, tenho 18+</button>
+      <button id="btn-deny" class="btn-nao">Não</button>
     </div>
   </div>
 </div>
@@ -68,7 +68,7 @@
     <div class="sec-title pink"><span>💋</span> NOSSOS PRODUTOS</div>
     <div class="products-grid">
 
-      <div class="prod-card" onclick="openModal('sedenta')">
+      <div class="prod-card" data-modal="sedenta">
         <img src="https://miess.vteximg.com.br/arquivos/ids/347892/PB52-Morango_1.jpg" alt="Sedenta">
         <div class="prod-info">
           <h4>Sedenta para Garganta Profunda</h4>
@@ -77,7 +77,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('gelVibra')">
+      <div class="prod-card" data-modal="gelVibra">
         <img src="https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg" alt="Gel Vibra">
         <div class="prod-info">
           <h4>Siri Ryka — Gel Vibra 18g</h4>
@@ -86,7 +86,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('caneta')">
+      <div class="prod-card" data-modal="caneta">
         <img src="https://miess.vteximg.com.br/arquivos/ids/290753/SN20-Morango_1.jpg" alt="Caneta Comestível" onerror="this.src='https://miess.vteximg.com.br/arquivos/ids/290754/SN20-Morango_2.jpg'">
         <div class="prod-info">
           <h4>Caneta Comestível Sexy Pen</h4>
@@ -95,7 +95,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('trepe')">
+      <div class="prod-card" data-modal="trepe">
         <img src="https://miess.vteximg.com.br/arquivos/ids/249165/TL03_1.jpg" alt="Trepe Honey">
         <div class="prod-info">
           <h4>Trepe Honey — Secret Love</h4>
@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('chocolate')">
+      <div class="prod-card" data-modal="chocolate">
         <img src="https://miess.vteximg.com.br/arquivos/ids/358530/LS1201_1.jpg" alt="Chocolate Afrodisiaco" onerror="this.src='https://miess.vteximg.com.br/arquivos/ids/244665/LS1201_1.jpg'">
         <div class="prod-info">
           <h4>Chocolate do Amor com Taurina</h4>
@@ -113,7 +113,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('melzinho')">
+      <div class="prod-card" data-modal="melzinho">
         <img src="https://miess.vteximg.com.br/arquivos/ids/362316/ML01_1.jpg" alt="Melzinho Arabe">
         <div class="prod-info">
           <h4>Melzinho Árabe do Prazer</h4>
@@ -122,7 +122,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('myrose')">
+      <div class="prod-card" data-modal="myrose">
         <img src="https://miess.vteximg.com.br/arquivos/ids/361004/MVV7879-Rosa-Claro_1.jpg" alt="MyRose">
         <div class="prod-info">
           <h4>MyRose — Estimulador de Clitóris</h4>
@@ -131,7 +131,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('miniVib')">
+      <div class="prod-card" data-modal="miniVib">
         <img src="https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg" alt="Mini Vibrador">
         <div class="prod-info">
           <h4>Mini Vibrador Super Potente</h4>
@@ -140,7 +140,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('vibLiquido')">
+      <div class="prod-card" data-modal="vibLiquido">
         <img src="https://miess.vteximg.com.br/arquivos/ids/339162/6170-Chiclete_1.jpg" alt="Vibrador Liquido">
         <div class="prod-info">
           <h4>Vibrador Líquido Ponto G</h4>
@@ -149,7 +149,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('sache')">
+      <div class="prod-card" data-modal="sache">
         <img src="https://miess.vteximg.com.br/arquivos/ids/354218/MK01_1.jpg" alt="Sache Lubrificante" onerror="this.src='https://miess.vteximg.com.br/arquivos/ids/182416/MK01_1.jpg'">
         <div class="prod-info">
           <h4>Sachê Gel Sugador Comestível</h4>
@@ -158,7 +158,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('masturbador')">
+      <div class="prod-card" data-modal="masturbador">
         <img src="https://miess.vteximg.com.br/arquivos/ids/362563/SI9867-Bege_1.jpg" alt="Masturbador">
         <div class="prod-info">
           <h4>Masturbador CyberSkin</h4>
@@ -167,7 +167,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('tesao')">
+      <div class="prod-card" data-modal="tesao">
         <img src="https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg" alt="Tesao de Touro">
         <div class="prod-info">
           <h4>Tesão de Touro</h4>
@@ -176,7 +176,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('eggWavy')">
+      <div class="prod-card" data-modal="eggWavy">
         <img src="https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg" alt="Egg Wavy">
         <div class="prod-info">
           <h4>Egg Wavy Masturbador</h4>
@@ -185,7 +185,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('funnyEgg')">
+      <div class="prod-card" data-modal="funnyEgg">
         <img src="https://miess.vteximg.com.br/arquivos/ids/289949/MA007RS-Vagina_1.jpg" alt="Funny Egg">
         <div class="prod-info">
           <h4>Funny Egg Masturbador</h4>
@@ -194,7 +194,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('kitAlgema')">
+      <div class="prod-card" data-modal="kitAlgema">
         <img src="https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg" alt="Kit Algema">
         <div class="prod-info">
           <h4>Kit Algema + Bolinha Explosiva</h4>
@@ -203,7 +203,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('perfumeCalcinha')">
+      <div class="prod-card" data-modal="perfumeCalcinha">
         <img src="https://miess.vteximg.com.br/arquivos/ids/363625/00601-Chocolate-Nutela_1.jpg" alt="Perfume de Calcinha">
         <div class="prod-info">
           <h4>Perfume de Calcinha 40ml</h4>
@@ -212,7 +212,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('pherome')">
+      <div class="prod-card" data-modal="pherome">
         <img src="https://miess.vteximg.com.br/arquivos/ids/336469/KAL1119_1.jpg" alt="Pherome Dom">
         <div class="prod-info">
           <h4>Pherome Dom — Perfume c/ Feromônio</h4>
@@ -221,7 +221,7 @@
         </div>
       </div>
 
-      <div class="prod-card" onclick="openModal('sedentaMolhadinha')">
+      <div class="prod-card" data-modal="sedentaMolhadinha">
         <img src="https://miess.vteximg.com.br/arquivos/ids/347301/PB509_1.jpg" alt="Sedenta Molhadinha">
         <div class="prod-info">
           <h4>Sedenta Molhadinha — Lubrificante</h4>
@@ -238,7 +238,7 @@
     <div class="sec-title gold"><span>🎁</span> KITS ESPECIAIS</div>
     <div class="kits-grid">
 
-      <div class="kit-card" onclick="openModal('kitIniciante')">
+      <div class="kit-card" data-modal="kitIniciante">
         <div class="kit-header">
           <span class="kit-name">KIT INICIANTE</span>
           <span class="kit-price">R$ 19,90</span>
@@ -251,7 +251,7 @@
         <div class="kit-cta">Ver detalhes →</div>
       </div>
 
-      <div class="kit-card" onclick="openModal('kitCasal')">
+      <div class="kit-card" data-modal="kitCasal">
         <div class="kit-header">
           <span class="kit-name">KIT CASAL</span>
           <span class="kit-price">R$ 29,90</span>
@@ -264,7 +264,7 @@
         <div class="kit-cta">Ver detalhes →</div>
       </div>
 
-      <div class="kit-card destaque" onclick="openModal('kitPhero')">
+      <div class="kit-card destaque" data-modal="kitPhero">
         <div class="kit-header">
           <span class="kit-name">KIT COMPLETO</span>
           <span class="kit-price">R$ 54,90</span>
@@ -278,7 +278,7 @@
         <div class="kit-cta">Ver detalhes →</div>
       </div>
 
-      <div class="kit-card" onclick="openModal('kitPrazer')">
+      <div class="kit-card" data-modal="kitPrazer">
         <div class="kit-header">
           <span class="kit-name">KIT PRAZER ABSOLUTO</span>
           <span class="kit-price">R$ 49,90</span>
@@ -308,9 +308,9 @@
 </div>
 
 <!-- MODAL -->
-<div id="modal-overlay" onclick="closeModal()">
+<div id="modal-overlay" data-close="true">
   <div id="modal-box" onclick="event.stopPropagation()">
-    <button class="modal-close" onclick="closeModal()">✕</button>
+    <button class="modal-close" data-close="true">✕</button>
     <div class="modal-inner">
       <div class="modal-gallery">
         <img id="modal-img-main" src="" alt="">
