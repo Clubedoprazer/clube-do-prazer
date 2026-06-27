@@ -3,23 +3,46 @@ var produtos = {
   sedenta: {
     nome: "Sedenta por Garganta Profunda — Dessensibilizante Oral Extra Forte 18ml (Pepper Blend)",
     preco: "R$ 15,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta.png", "https://miess.vteximg.com.br/arquivos/ids/331696/PB525-Blueberry_1.jpg"],
-    descricao: "O Sedenta por Garganta Profunda é um dessensibilizante oral extra forte em spray de 18ml. Ele reduz o reflexo de engasgo e torna o sexo oral mais profundo, prazeroso e sem desconforto. Os sabores são suaves e discretos — presentes só para tornar o momento mais agradável, sem interferir no sabor natural. Desenvolvido pela Pepper Blend com fórmula de ação rápida.",
-    beneficios: ["Dessensibilizante oral extra forte de ação rápida", "Permite maior profundidade sem desconforto", "Sabores suaves e zero açúcar", "Sensação de formigamento que potencializa o prazer", "Spray de 18ml — prático e discreto"],
-    comoUsar: "Aplique 1 a 2 jatos na região desejada e aguarde 1 a 2 minutos para o efeito agir. Pode ser usado também em massagem erótica por áreas erógenas.",
-    ficha: ["Conteúdo: spray 18ml", "Marca: Pepper Blend", "Sabores: Morango, Kiwi, Pepper Blend e outros — consulte disponibilidade", "Composição: Glicerina, Água, Aroma, Álcool, Conservantes, Edulcorante"],
-    cuidados: "Para maiores de 18 anos. Em caso de irritação, suspenda o uso. Não expor a temperaturas acima de 50°C."
+    fotos: [
+      "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta.png"
+    ],
+    descricao: "Quão fundo você consegue ir com a ajudinha do Sedenta? Esse dessensibilizante cumpre o que promete: formulado com um blend de matérias-primas de ação extra forte, vai transformar o sexo oral em uma experiência inesquecível. A bala líquida cria conexão sexual e emocional com seu par, livrando de qualquer desconforto na hora H. Sabores deliciosos, 0 açúcar!",
+    beneficios: [
+      "Sabores deliciosos e 0 açúcar",
+      "Dessensibilizante extra forte",
+      "Garganta mega profunda",
+      "Sensação de formigamento",
+      "Ajuda seu par a gozar muito!"
+    ],
+    comoUsar: "Sexo oral: aplique um pouco do líquido na região íntima da pessoa amada e aproveite. Pelo corpo: aplique em áreas erógenas como pescoço, seios, próstata e faça massagens sensuais. Massagem erótica: aplique a quantidade desejada e realize movimentos leves até absorção.",
+    ficha: [
+      "Contém: 01 Sedenta Dessensibilizante",
+      "Embalagem: Spray de 18ml",
+      "Composição: Glicerina, Água, Aroma, Álcool, Conservantes e Edulcorante",
+      "Validade: presente na embalagem"
+    ],
+    cuidados: "Para maiores de 18 anos. Não exponha a temperaturas acima de 50°C. Conserve ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Em contato com os olhos, enxaguar com água abundante."
   },
 
   gelVibra: {
     nome: "Siri Ryka — Gel Comestível Esquenta, Gela e Vibra 18g (Pepper Blend)",
     preco: "R$ 12,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg"],
-    descricao: "Gel comestível com efeito triplo: esquenta, gela e vibra ao mesmo tempo. Desenvolvido para intensificar a excitação. Perfeito para o oral e preliminares.",
-    beneficios: ["Efeito triplo: esquenta, gela e vibra", "Comestível — ótimo para o oral", "Aumenta a excitação", "Sabor delicioso"],
-    comoUsar: "Aplique nas regiões íntimas ou erógenas. Massageie suavemente. Pode ser usado com a boca.",
-    ficha: ["Conteúdo: 18g", "Marca: Pepper Blend", "Comestível: sim"],
-    cuidados: "Evite contato com os olhos. Para maiores de 18 anos."
+    descricao: "Use esse gel e sinta prazeres que te transportam para lugares paradisíacos! O Siri Ryka foi desenvolvido para o corpo feminino, com funções de vibração, esquenta e gela, deixando completamente maluca de tesão. É comestível — seu par pode cair de boca e se deliciar com o sabor inesquecível. Use nos momentos solos ou nas preliminares.",
+    beneficios: [
+      "Gel para masturbação e preliminares",
+      "Efeito triplo: esquenta, gela e vibra",
+      "Comestível — sabor irresistível",
+      "Aumenta a sensibilidade e excitação",
+      "Orgasmos incríveis"
+    ],
+    comoUsar: "Agite a embalagem, passe o gel no local desejado e desfrute do gosto delicioso. Ideal para sexo oral, masturbação e preliminares.",
+    ficha: [
+      "Contém: 01 Gel Aromatizado Comestível de 18g",
+      "Marca: Pepper Blend",
+      "Composição: Água, Glicerina, Extrato de Jambu, Aromas de Caju e Lichia, Arginina, Mentol, Conservantes, Espessante, Neotame e Corante Rosa"
+    ],
+    cuidados: "Manter em local seco e fresco. Em caso de vermelhidão ou reação alérgica, suspenda o uso. Evite contato com os olhos. Não compartilhe com outros parceiros."
   },
 
   caneta: {
@@ -32,22 +55,43 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/155477/012570Ice-Menta_1.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/155478/012570Doce-de-Leite_1.jpg"
     ],
-    descricao: "A Caneta Comestível Sexy Pen da Sensuale é o acessório perfeito para apimentar a relação com diversão e sensualidade! Desenhe no corpo do par com sabores irresistíveis e apague com beijos e carinhos. 100% comestível, zero açúcar.",
-    beneficios: ["100% comestível — zero açúcar", "Escreva e desenhe no corpo do par", "Sabores irresistíveis", "Aquece e torna as preliminares únicas", "Prática e fácil de usar"],
-    comoUsar: "Retire a tampa e escreva ou desenhe no corpo do par. Use a boca para lamer com carinho. Totalmente comestível e segura para uso íntimo.",
-    ficha: ["Conteúdo: 20g", "Marca: Sensuale", "Sabores disponíveis: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"],
-    cuidados: "Para uso externo. Para maiores de 18 anos."
+    descricao: "A Caneta Comestível Sexy Pen Sensuale é o item perfeito para apimentar a relação! Imagine desenhar no corpo do parceiro(a) com sabores deliciosos como morango com champanhe, chocolate com menta ou leite condensado, e depois apagar esses desenhos com beijos e carícias. Com fórmula especial de gel comestível, estimula o paladar e o tato. Não deixa a pele grudenta e é discreta — leve para qualquer lugar!",
+    beneficios: [
+      "Aflora a imaginação e criatividade",
+      "Novas sensações a dois",
+      "Ideal para preliminares caprichadas",
+      "Saia da rotina com seu amor",
+      "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta e Doce de Leite"
+    ],
+    comoUsar: "Desenhe em seios, barriga, pernas, pés ou regiões íntimas. Apague com beijos e carícias. Também é perfeita para o sexo oral! Dica: deixe na geladeira antes de usar para uma sensação refrescante.",
+    ficha: [
+      "Contém: 01 Caneta Comestível 20g",
+      "Marca: Sensuale",
+      "Composição: Água, Glicerol, Hietelose, Imidazolidinyl Urea, PEG-40 Castor Oil, Óleo de Canela Cássia, Disodium EDTA, Perfume, Cinamaldeído",
+      "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"
+    ],
+    cuidados: "Para maiores de 18 anos. Em caso de irritação suspenda o uso. Não ingerir. Manter fora do alcance de crianças. Não usar em pele irritada ou lesionada."
   },
 
   trepe: {
     nome: "Trepe Honey — Estimulante Sexual 8ml (Secret Love)",
     preco: "R$ 11,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg"],
-    descricao: "O Trepe Honey da Secret Love é um estimulante natural com mel e extratos de frutas em sachê de 8ml. O sabor é adocicado e herbáceo — característico de suplemento natural. Dica: misture na sua bebida favorita (suco, água de coco, drink) para tornar mais gostoso! Aumenta a libido, reduz o cansaço e deixa a noite muito mais intensa. Unissex.",
-    beneficios: ["Estimulante e energizante", "Aumenta a libido", "Mais disposição e vitalidade", "Fórmula natural com mel", "Sachê de dose única — discreto"],
-    comoUsar: "Tome o sachê de dose única cerca de 2 horas antes da relação, puro ou diluído em bebida.",
-    ficha: ["Conteúdo: 8ml", "Marca: Secret Love", "Composição: Aqua, Fruit Extract, Propylparaben"],
-    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C."
+    descricao: "O Trepe Honey revigora as forças e a energia quando nos sentimos cansados. Quando tomado antes do sexo, ajuda a aumentar a libido e a disposição, deixando o cansaço de lado e trazendo vitalidade para uma noite daquelas. Composto por mel e extratos naturais, proporciona calor, excitação e aumento do apetite sexual tanto para a mulher quanto para o homem. Dica: dilua na sua bebida preferida para um sabor mais agradável!",
+    beneficios: [
+      "Estimulante e energizante natural",
+      "Aumenta a libido e disposição",
+      "Diminui o cansaço",
+      "Melhora o desempenho sexual",
+      "Unissex — funciona para homens e mulheres"
+    ],
+    comoUsar: "Tome o sachê de dose única cerca de 2 horas antes da relação. Pode ser ingerido puro ou diluído na sua bebida preferida.",
+    ficha: [
+      "Contém: 01 Sachê de 8ml",
+      "Marca: Secret Love",
+      "Composição: Aqua, Fruit Extract, Propylparaben"
+    ],
+    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C. Em caso de sensibilidade, interrompa o uso. Guardar longe do alcance de crianças."
   },
 
   chocolate: {
@@ -58,11 +102,23 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/361025/9546_5.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/361024/9546_2.jpg"
     ],
-    descricao: "O Chocolate do Amor da Loka Sensação é um afrodisíaco funcional com fórmula estimulante. O sabor é de chocolate meio amargo com cereja e especiarias (cravo, gengibre, jambú) — tem um toque picante e levemente amargo característico dos ingredientes ativos. Não é um chocolate docinho comum: é funcional! Contém guaraná e taurina para mais energia e disposição. Caixa com 5 unidades.",
-    beneficios: ["Contém taurina e guaraná — mais energia", "Afrodisíaco natural com cravo e gengibre", "Sabor cereja com chocolate meio amargo", "Caixa com 5 unidades"],
-    comoUsar: "Consuma 1 unidade de 30 a 60 minutos antes da relação. Máximo 2 unidades por dia.",
-    ficha: ["5 unidades de 25g", "Marca: Loka Sensação", "Composição: Óleo de coco, Guaraná, Açúcar fit, Gengibre, Cravo, Cacau, Jambú, Cereja, Taurina"],
-    cuidados: "Produto alimentício para adultos. Diabéticos consultem médico. Não indicado para gestantes."
+    descricao: "O Chocolate do Amor é um estimulante funcional afrodisíaco que vai além do sabor! Sua fórmula reúne guaraná em pó e taurina (efeito estimulante), aliados a notas quentes de cravo, gengibre e jambú. Ideal para casais que desejam explorar novas sensações. Cobertura de chocolate meio amargo com recheio de especiarias. Caixa com 5 unidades.",
+    beneficios: [
+      "Guaraná em pó e taurina — efeito estimulante natural",
+      "Experiência sensorial quente e envolvente",
+      "Cravo e gengibre — toque quente e marcante",
+      "Jambú — sensações únicas na boca",
+      "Perfeito para preliminares e ocasiões especiais",
+      "Caixa com 5 unidades"
+    ],
+    comoUsar: "Consumir imediatamente após abrir. Ideal para momentos especiais e preliminares.",
+    ficha: [
+      "Contém: 5 unidades com 25g cada",
+      "Marca: Loka Sensação",
+      "Ingredientes: Óleo de coco, Guaraná em pó, Açúcar fit, Aroma natural de gengibre e cravo, Cacau em pó, Aroma natural de jambú, Aroma de cereja e Taurina",
+      "Pode conter derivados de leite e soja"
+    ],
+    cuidados: "Não deve ser consumido por crianças, gestantes ou lactantes. Consumir imediatamente após abrir. Manter em local seco e fresco, ao abrigo da luz e calor."
   },
 
   melzinho: {
