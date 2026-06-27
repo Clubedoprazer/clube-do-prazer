@@ -4,11 +4,11 @@ var produtos = {
     nome: "Sedenta por Garganta Profunda — Dessensibilizante Oral Extra Forte 18ml (Pepper Blend)",
     preco: "R$ 15,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/347892/PB52-Morango_1.jpg"],
-    descricao: "Dessensibilizante oral em spray de 18ml, extra forte. Reduz o reflexo de engasgo tornando o sexo oral mais profundo e prazeroso. Sabores deliciosos com zero açúcar.",
-    beneficios: ["Dessensibilizante extra forte", "Prolonga e intensifica o sexo oral", "Sabores deliciosos — zero açúcar", "Sensação de formigamento suave", "Spray de 18ml prático"],
-    comoUsar: "Aplique 1 a 2 jatos na região desejada antes do sexo oral. Aguarde 1 a 2 minutos para o efeito agir.",
-    ficha: ["Conteúdo: spray 18ml", "Marca: Pepper Blend", "Composição: Glicerina, Água, Aroma, Álcool, Conservantes, Edulcorante"],
-    cuidados: "Para maiores de 18 anos. Em caso de irritação, suspenda o uso."
+    descricao: "O Sedenta por Garganta Profunda é um dessensibilizante oral extra forte em spray de 18ml. Ele reduz o reflexo de engasgo e torna o sexo oral mais profundo, prazeroso e sem desconforto. Os sabores são suaves e discretos — presentes só para tornar o momento mais agradável, sem interferir no sabor natural. Desenvolvido pela Pepper Blend com fórmula de ação rápida.",
+    beneficios: ["Dessensibilizante oral extra forte de ação rápida", "Permite maior profundidade sem desconforto", "Sabores suaves e zero açúcar", "Sensação de formigamento que potencializa o prazer", "Spray de 18ml — prático e discreto"],
+    comoUsar: "Aplique 1 a 2 jatos na região desejada e aguarde 1 a 2 minutos para o efeito agir. Pode ser usado também em massagem erótica por áreas erógenas.",
+    ficha: ["Conteúdo: spray 18ml", "Marca: Pepper Blend", "Sabores: Morango, Kiwi, Pepper Blend e outros — consulte disponibilidade", "Composição: Glicerina, Água, Aroma, Álcool, Conservantes, Edulcorante"],
+    cuidados: "Para maiores de 18 anos. Em caso de irritação, suspenda o uso. Não expor a temperaturas acima de 50°C."
   },
 
   gelVibra: {
@@ -25,19 +25,25 @@ var produtos = {
   caneta: {
     nome: "Caneta Comestível Sexy Pen 20g — Sensuale",
     preco: "2 unidades por R$ 10,00",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/290753/SN20-Morango_1.jpg"],
-    descricao: "Escreva, desenhe e lamba! A Caneta Comestível Sexy Pen torna as preliminares deliciosas e criativas. 100% comestível, sabores irresistíveis.",
-    beneficios: ["100% comestível", "Escreva no corpo do par", "Sabores irresistíveis", "Aquece as preliminares"],
-    comoUsar: "Retire a tampa e escreva no corpo do par. Use a boca para lamer. Totalmente comestível.",
-    ficha: ["Conteúdo: 20g", "Marca: Sensuale"],
-    cuidados: "Para uso externo. Não ingerir grandes quantidades. Para maiores de 18 anos."
+    fotos: [
+      "https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg",
+      "https://miess.vteximg.com.br/arquivos/ids/155474/012570Chocomenta_1.jpg",
+      "https://miess.vteximg.com.br/arquivos/ids/155475/012570Morango_1.jpg",
+      "https://miess.vteximg.com.br/arquivos/ids/155477/012570Ice-Menta_1.jpg",
+      "https://miess.vteximg.com.br/arquivos/ids/155478/012570Doce-de-Leite_1.jpg"
+    ],
+    descricao: "A Caneta Comestível Sexy Pen da Sensuale é o acessório perfeito para apimentar a relação com diversão e sensualidade! Desenhe no corpo do par com sabores irresistíveis e apague com beijos e carinhos. 100% comestível, zero açúcar.",
+    beneficios: ["100% comestível — zero açúcar", "Escreva e desenhe no corpo do par", "Sabores irresistíveis", "Aquece e torna as preliminares únicas", "Prática e fácil de usar"],
+    comoUsar: "Retire a tampa e escreva ou desenhe no corpo do par. Use a boca para lamer com carinho. Totalmente comestível e segura para uso íntimo.",
+    ficha: ["Conteúdo: 20g", "Marca: Sensuale", "Sabores disponíveis: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"],
+    cuidados: "Para uso externo. Para maiores de 18 anos."
   },
 
   trepe: {
     nome: "Trepe Honey — Estimulante Sexual 8ml (Secret Love)",
     preco: "R$ 11,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg"],
-    descricao: "Estimulante natural composto por mel e extratos naturais. Proporciona calor, excitação, aumento da libido e mais disposição. Unissex — funciona para homens e mulheres.",
+    descricao: "O Trepe Honey da Secret Love é um estimulante natural com mel e extratos de frutas em sachê de 8ml. O sabor é adocicado e herbáceo — característico de suplemento natural. Dica: misture na sua bebida favorita (suco, água de coco, drink) para tornar mais gostoso! Aumenta a libido, reduz o cansaço e deixa a noite muito mais intensa. Unissex.",
     beneficios: ["Estimulante e energizante", "Aumenta a libido", "Mais disposição e vitalidade", "Fórmula natural com mel", "Sachê de dose única — discreto"],
     comoUsar: "Tome o sachê de dose única cerca de 2 horas antes da relação, puro ou diluído em bebida.",
     ficha: ["Conteúdo: 8ml", "Marca: Secret Love", "Composição: Aqua, Fruit Extract, Propylparaben"],
@@ -52,7 +58,7 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/361025/9546_5.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/361024/9546_2.jpg"
     ],
-    descricao: "Chocolate afrodisíaco com guaraná, taurina, cravo, gengibre e jambú. Sabor cereja com chocolate meio amargo. Estimula os sentidos e aumenta o desejo. Caixa com 5 unidades.",
+    descricao: "O Chocolate do Amor da Loka Sensação é um afrodisíaco funcional com fórmula estimulante. O sabor é de chocolate meio amargo com cereja e especiarias (cravo, gengibre, jambú) — tem um toque picante e levemente amargo característico dos ingredientes ativos. Não é um chocolate docinho comum: é funcional! Contém guaraná e taurina para mais energia e disposição. Caixa com 5 unidades.",
     beneficios: ["Contém taurina e guaraná — mais energia", "Afrodisíaco natural com cravo e gengibre", "Sabor cereja com chocolate meio amargo", "Caixa com 5 unidades"],
     comoUsar: "Consuma 1 unidade de 30 a 60 minutos antes da relação. Máximo 2 unidades por dia.",
     ficha: ["5 unidades de 25g", "Marca: Loka Sensação", "Composição: Óleo de coco, Guaraná, Açúcar fit, Gengibre, Cravo, Cacau, Jambú, Cereja, Taurina"],
@@ -67,7 +73,7 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/362317/ML01_2.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/362318/ML01_3.jpg"
     ],
-    descricao: "Suplemento 100% natural feito com mel puro (70%), própolis (15%) e guaco (8%). Unissex. Registrado na ANVISA. Aumenta a libido, lubrificação natural e intensidade do prazer.",
+    descricao: "O Melzinho Árabe do Prazer é um suplemento 100% natural à base de mel puro (70%), própolis (15%) e guaco (8%). Tem sabor de mel — doce e suave, que pode ser tomado puro ou misturado à sua bebida favorita para disfarçar. Unissex, registrado na ANVISA. Aumenta a libido, lubrificação natural e intensidade do prazer em até 30 minutos.",
     beneficios: ["Aumenta a libido em homens e mulheres", "Maior lubrificação natural", "100% natural — mel + própolis + guaco", "Registrado na ANVISA", "Unissex"],
     comoUsar: "Tome 1 sachê de 30 a 60 min antes da relação, puro ou em bebida. Máximo 2 por dia.",
     ficha: ["Conteúdo: 10g", "Marca: Chillies Cosméticos", "Composição: 70% mel puro, 15% própolis, 8% guaco"],
@@ -178,17 +184,6 @@ var produtos = {
     comoUsar: "Borrife no pescoço, pulsos ou atrás das orelhas.",
     ficha: ["Conteúdo: 15ml", "Marca: Kalya", "Notas: Bergamota, Maçã, Pimenta Rosa"],
     cuidados: "Uso externo. Não aplique em pele lesionada."
-  },
-
-  pheroAroma: {
-    nome: "Perfume Phero Aroma Feminino — com Feromônio",
-    preco: "R$ 29,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/349215/3560268604509_1.jpg"],
-    descricao: "Perfume íntimo feminino com feromônios. Aroma delicado e marcante que potencializa a sedução. O mesmo perfume do Kit Completo, agora avulso!",
-    beneficios: ["Com feromônios", "Aroma feminino delicado", "Boa fixação", "Ideal para encontros"],
-    comoUsar: "Aplique no pescoço, pulsos ou atrás das orelhas.",
-    ficha: ["Tipo: perfume íntimo feminino c/ feromônios"],
-    cuidados: "Uso externo. Para uso pessoal."
   },
 
   sedentaMolhadinha: {
