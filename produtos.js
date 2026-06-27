@@ -129,37 +129,79 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/362317/ML01_2.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/362318/ML01_3.jpg"
     ],
-    descricao: "O Melzinho Árabe do Prazer é um suplemento 100% natural à base de mel puro (70%), própolis (15%) e guaco (8%). Tem sabor de mel — doce e suave, que pode ser tomado puro ou misturado à sua bebida favorita para disfarçar. Unissex, registrado na ANVISA. Aumenta a libido, lubrificação natural e intensidade do prazer em até 30 minutos.",
-    beneficios: ["Aumenta a libido em homens e mulheres", "Maior lubrificação natural", "100% natural — mel + própolis + guaco", "Registrado na ANVISA", "Unissex"],
-    comoUsar: "Tome 1 sachê de 30 a 60 min antes da relação, puro ou em bebida. Máximo 2 por dia.",
-    ficha: ["Conteúdo: 10g", "Marca: Chillies Cosméticos", "Composição: 70% mel puro, 15% própolis, 8% guaco"],
-    cuidados: "Alérgicos a mel ou própolis não devem usar."
+    descricao: "O Melzinho Árabe do Prazer é um gel natural INCRÍVEL para dar aquele up nos ânimos e deixar você ou o seu parceiro louco(a)! Perfeito para quem foi domado pelo cansaço — ele vai ajudar a transformar suas noites. Feito à base de mel puro (70%), extrato de própolis (15%) e extrato de guaco (8%), é 100% natural, unissex e registrado na ANVISA. Demora até 30 minutos para surtir seus efeitos, e após isso, ouse como nunca!",
+    beneficios: [
+      "Aumenta a libido em homens e mulheres",
+      "Proporciona maior lubrificação natural",
+      "Intensifica o prazer e contribui para o orgasmo mais rápido",
+      "100% natural — mel puro, própolis e guaco",
+      "Registrado na ANVISA",
+      "Unissex — funciona para todos"
+    ],
+    comoUsar: "Tome 1 sachê de 30 minutos antes da relação. Pode ser consumido puro ou diluído em sua bebida preferida, seja alcoólica ou não. Dose máxima recomendada: 2 sachês por dia.",
+    ficha: [
+      "Conteúdo: 10g (sachê)",
+      "Marca: Chillies Cosméticos",
+      "Composição: 70% mel puro, 15% extrato de própolis em solução alcoólica, 8% extrato de guaco",
+      "Registro: ANVISA",
+      "Unissex: sim"
+    ],
+    cuidados: "Alérgicos a mel ou própolis não devem usar. Para maiores de 18 anos. Consulte um profissional de saúde em caso de condições médicas."
   },
 
   myrose: {
-    nome: "MyRose — Rosa Estimuladora de Clitóris 10 Modos (MyVib)",
+    nome: "MyRose — Rosa Estimuladora de Clitóris com 10 Modos de Pulsação (MyVib)",
     preco: "R$ 29,90",
     fotos: [
       "https://miess.vteximg.com.br/arquivos/ids/361004/MVV7879-Rosa-Claro_1.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/361005/MVV7879_2.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/361006/MVV7879-Rosa-Claro_3.jpg"
     ],
-    descricao: "A rosa que virou febre! Estimulador de clitóris com design de flor, 10 modos de pulsação e sucção intensa. Silicone médico, resistente à água, recarregável via USB.",
-    beneficios: ["10 modos de pulsação e sucção", "Design discreto em formato de rosa", "Silicone médico macio", "Resistente à água", "Recarregável via USB"],
-    comoUsar: "Carregue antes do primeiro uso. Ligue e escolha o modo. Posicione sobre o clitóris. Use com lubrificante à base de água.",
-    ficha: ["10 intensidades", "Material: silicone médico + ABS", "Resistente à água: sim", "Carregamento: USB magnético", "Marca: MyVib"],
-    cuidados: "Higienize antes e após uso. Para uso individual."
+    descricao: "Seu jardim vai ganhar uma flor diferente! A MyRose é o vibrador potente, macio e discreto que você estava procurando. Famosa pelos seus modos poderosos de pulsação, ela emite ondas de pressão no clitóris fazendo com que estimule e massageie a região, aumentando a excitação a níveis surpreendentes. Feita em silicone macio com toque aveludado, possui 10 modos de pulsação, é resistente à água e recarregável via USB. Seu formato de rosa passa despercebido por olhos curiosos — ideal para levar onde desejar.",
+    beneficios: [
+      "10 modos de pulsação intensa",
+      "Emite ondas de pressão no clitóris — não suga a pele",
+      "Design discreto em formato de rosa",
+      "Silicone macio com toque aveludado",
+      "Resistente à água",
+      "Recarregável via USB com base magnética",
+      "Pode ser usado em clitóris, mamilos e outras áreas erógenas"
+    ],
+    comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Para ligar/desligar, pressione o botão por 3 segundos. Pressione novamente para alternar entre os modos. Relaxe e aproveite! Medidas: 6,6 cm de comprimento x 5,6 cm de espessura.",
+    ficha: [
+      "10 modos de pulsação",
+      "Material: Silicone de alta qualidade",
+      "Resistente à água: sim (não submergir)",
+      "Carregamento: USB com base magnética",
+      "Medidas: 6,6 x 5,6 cm (aproximadas)",
+      "Marca: MyVib",
+      "Cores: Rosa Claro e Roxo"
+    ],
+    cuidados: "Higienize com água e sabão neutro antes e após o uso. Evite molhar o compartimento de recarga. Seque com papel toalha. Guarde na embalagem original. Não expor a temperatura superior a 50°C. Para uso individual. Maiores de 18 anos."
   },
 
   miniVib: {
     nome: "Mini Vibrador Super Potente Smallest (Vip Mix)",
     preco: "R$ 17,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg"],
-    descricao: "Compacto mas potente! Múltiplas velocidades de vibração. Perfeito para clitóris, mamilos e zonas erógenas. Cabe na bolsa.",
-    beneficios: ["Múltiplas velocidades", "Ultra compacto e discreto", "Estimulação intensa", "Disponível em várias cores"],
-    comoUsar: "Pressione para ligar e ajustar a intensidade. Use com lubrificante à base de água.",
-    ficha: ["Material: ABS + silicone", "Alimentação: pilha AAA", "Marca: Vip Mix"],
-    cuidados: "Higienize antes e após uso. Para uso individual."
+    descricao: "Mini vibrador pessoal, super potente e discreto — proporciona maiores prazeres levando a grandes orgasmos! Design super discreto em diversas cores. Apesar do tamanho compacto, entrega vibração intensa com múltiplas velocidades. Perfeito para estimulação de clitóris, mamilos e zonas erógenas. Cabe na bolsa e vai onde você for!",
+    beneficios: [
+      "Super potente apesar do tamanho compacto",
+      "Múltiplas velocidades de vibração",
+      "Design discreto — parece um batom",
+      "Estimula clitóris, mamilos e outras zonas erógenas",
+      "Disponível em várias cores",
+      "Ideal para uso solo ou a dois"
+    ],
+    comoUsar: "Pressione o botão para ligar e ajustar a intensidade. Aplique sobre as regiões desejadas. Recomenda-se o uso de lubrificante à base de água. Tamanho: 6,5 x 1,5 cm. Utiliza 1 bateria LR44 (inclusa).",
+    ficha: [
+      "Material: ABS",
+      "Alimentação: 1 bateria LR44 inclusa",
+      "Medidas: 6,5 x 1,5 cm (aproximadas)",
+      "Marca: Vip Mix",
+      "Cores disponíveis: Rosa, Pink, Preto, Roxo"
+    ],
+    cuidados: "Lave com água e sabão neutro antes e após o uso. Não use em zona inflamada ou pele lesionada. Para uso individual. Maiores de 18 anos."
   },
 
   vibLiquido: {
@@ -180,33 +222,71 @@ var produtos = {
       "https://miess.vteximg.com.br/arquivos/ids/362563/SI9867-Bege_1.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/362564/SI9867-Bege_2.jpg"
     ],
-    descricao: "Material CyberSkin ultra-realista que aquece na temperatura corporal. Textura interna com relevos para experiências incríveis.",
-    beneficios: ["CyberSkin ultra-realista", "Textura interna com relevos", "Aquece na temperatura do corpo", "Compacto e discreto"],
-    comoUsar: "Use lubrificante à base de água. Após, lave com água morna e sabão neutro.",
-    ficha: ["Material: CyberSkin", "Marca: Sexy Import"],
-    cuidados: "Use APENAS lubrificante à base de água. Para uso individual."
+    descricao: "O Masturbador Masculino em CyberSkin da Sexy Import foi projetado para revolucionar seus momentos de prazer! Com vagina realística e detalhada, feito com tecnologia CyberSkin — material sintético que imita com perfeição a pele humana, macio, elástico e atóxico. A textura interna com relevos proporciona sensações intensas. Masturbação silenciosa, discreta e com sensação ultra-realista.",
+    beneficios: [
+      "Material CyberSkin ultra-realista — imita a pele humana",
+      "Vagina realística e detalhada",
+      "Masturbação silenciosa e discreta",
+      "Textura interna com relevos para sensações intensas",
+      "Tamanho compacto e fácil de higienizar"
+    ],
+    comoUsar: "Higienize o produto antes do uso. Aplique lubrificante à base de água generosamente no interior e no pênis, massageie suavemente e comece a penetração. Após o uso, lave com água corrente e sabão neutro. Seque com papel toalha e guarde na embalagem original.",
+    ficha: [
+      "Material: CyberSkin (atóxico, macio, elástico)",
+      "Marca: Sexy Import",
+      "Formato: vagina realística",
+      "Tamanho: compacto"
+    ],
+    cuidados: "Use APENAS lubrificante à base de água — lubrificante de silicone danifica o material. Higienize sempre após o uso. Para uso individual. Não compartilhar."
   },
 
   tesao: {
     nome: "Tesão de Touro — Estimulante Afrodisíaco Natural 10ml (K-Lab)",
     preco: "R$ 5,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg"],
-    descricao: "Energético afrodisíaco natural em ampola de 10ml. Aumenta a libido, traz mais energia e disposição para as noites a dois.",
-    beneficios: ["Aumenta a libido", "Mais energia e disposição", "Afrodisíaco natural", "Efeito rápido"],
-    comoUsar: "Tome a ampola 30 a 60 min antes, puro ou em bebida.",
-    ficha: ["Conteúdo: 10ml", "Marca: K-Lab"],
-    cuidados: "Para maiores de 18 anos. Não indicado para gestantes."
+    descricao: "Como o nome já diz tudo, prepare-se para noites de Tesão! O Tesão de Touro é um Energético Afrodisíaco Natural desenvolvido para aumentar a libido, trazer mais energia e disposição para as noites a dois. Feito com ingredientes naturais e livre de hormônios — não é medicamento. Melhora o desempenho, aumenta o apetite sexual e garante que seu relacionamento nunca mais caia na rotina!",
+    beneficios: [
+      "Aumenta a libido",
+      "Mais energia e disposição para a hora H",
+      "Afrodisíaco natural sem hormônios",
+      "Melhora o desempenho sexual",
+      "Não contém glúten e lactose",
+      "Pode ser tomado puro ou misturado em qualquer bebida"
+    ],
+    comoUsar: "Tome o conteúdo em dose única, puro ou misturado na sua bebida favorita (água, suco, refrigerante ou bebida alcoólica). Pode ser consumido quente ou gelado. Ideal ingerir 30 minutos antes da relação.",
+    ficha: [
+      "Conteúdo: 10ml",
+      "Marca: K-Lab",
+      "Composição: Açaí, água, guaraná, taurina, benzoato, açúcar e corante",
+      "Embalagem: frasco plástico",
+      "Não contém glúten e lactose"
+    ],
+    cuidados: "Para maiores de 18 anos. Não expor a temperatura superior a 50°C. Não indicado para gestantes, lactantes, idosos e hipertensos. Portadores de alguma enfermidade consultem médico antes do uso. Após violar o lacre, consumir imediatamente."
   },
 
   eggWavy: {
     nome: "Egg Wavy — Masturbador Masculino (Magical Kiss)",
     preco: "R$ 9,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg"],
-    descricao: "Masturbador em silicone macio e elástico com textura interna ondulada. Compacto, discreto e fácil de higienizar.",
-    beneficios: ["Textura ondulada intensa", "Silicone macio e elástico", "Compacto e discreto", "Fácil de higienizar"],
-    comoUsar: "Use lubrificante à base de água. Após, lave e seque bem.",
-    ficha: ["Material: silicone elástico", "Marca: Magical Kiss"],
-    cuidados: "Use apenas lubrificante à base de água."
+    descricao: "Quem diria que uma forma de prazer tão poderoso poderia caber na palma da mão? O Egg Wavy da Magical Kiss chegou para elevar a masturbação a um outro nível! Com textura interna em ondulações horizontais, proporciona maravilhosas sensações que te levam à loucura. O melhor é a discrição: quem olha à primeira vista não imagina que é um poderoso masturbador. Perfeito para usar solo ou a dois!",
+    beneficios: [
+      "Textura interna em ondulações horizontais",
+      "Estimulação em 360° atingindo toda a região do pênis",
+      "Ultra discreto — parece um ovo comum",
+      "Silicone macio, elástico e não tóxico",
+      "Resistente à água",
+      "Masturbação silenciosa",
+      "Perfeito para uso solo ou a dois"
+    ],
+    comoUsar: "Descasque a embalagem como um ovo. Aplique lubrificante à base de água no interior e no pênis. Encaixe o egg sobre o pênis como uma touca. Por ser elástico, pode ser esticado até a base. A masturbação se dá com movimentos de vai e vem. Perfeito solo ou durante a penetração.",
+    ficha: [
+      "Material: Silicone não tóxico",
+      "Marca: Magical Kiss",
+      "Textura: ondulações horizontais (Wavy)",
+      "Contém: 01 Egg",
+      "Medidas: 7,0 cm de comprimento x 5,0 cm de espessura (aproximadas)"
+    ],
+    cuidados: "Use lubrificante à base de água. Higienize com água corrente e sabão neutro antes e após o uso. Seque com papel toalha. Guarde na embalagem original. Não usar em pele lesionada. Para uso individual."
   },
 
   funnyEgg: {
@@ -224,11 +304,23 @@ var produtos = {
     nome: "Perfume de Calcinha Aromático 40ml (Apinil Cosméticos)",
     preco: "R$ 11,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/363625/00601-Chocolate-Nutela_1.jpg"],
-    descricao: "Deixa sua lingerie e regiões íntimas externas com aroma irresistível por horas. Eleva a autoestima. Vários aromas disponíveis.",
-    beneficios: ["Perfume de longa duração", "Aromas envolventes", "Eleva a autoestima", "Aromas: Chocolate, Algodão Doce, Melancia, Menta, Melindo"],
-    comoUsar: "Borrife 1 a 2 jatos na lingerie ou regiões íntimas externas. Evite mucosas.",
-    ficha: ["Conteúdo: 40ml", "Marca: Apinil Cosméticos", "Aromas: Chocolate Nutela, Algodão Doce, Melancia, Menta, Melindo"],
-    cuidados: "Uso externo. Evite mucosas."
+    descricao: "Por que até o cheiro da sua lingerie merece ser marcante? O Perfume de Calcinha Apinil é um aromatizador em spray com fragrância feminina e sensual para deixar suas lingeries com aroma marcante e agradável. Produzido com elementos especiais para proporcionar à sua roupa íntima um cheiro próprio, fragrância suave, doce e romântica. Pode ser aplicado em qualquer tecido, desde o mais básico até o mais delicado, sem comprometer a qualidade da peça!",
+    beneficios: [
+      "Aroma marcante e duradouro",
+      "Sensual e instigante",
+      "Fragrância suave, doce e romântica",
+      "Pode ser aplicado em qualquer tecido",
+      "Aromas disponíveis: Maçã do Amor, Algodão Doce, Chocolate Nutella, Menta, Melancia, Morango com Champagne",
+      "Frasco spray de 40ml"
+    ],
+    comoUsar: "Abra a embalagem, borrife o produto na calcinha, espere alguns segundos para que o tecido absorva o produto e coloque. Aplique sempre que desejar. Pode ser usado em lingeries, fantasias e meias-calças.",
+    ficha: [
+      "Conteúdo: 01 Perfume spray de 40ml",
+      "Marca: Apinil Cosméticos",
+      "Composição: Aqua, Tetrasodium EDTA, Mentha Piperita Leaf Extract, Propylparaben, Methylparaben, Lactic Acid, PEG-40 Hydrogenated Castor Oil, Parfum e outros",
+      "Aromas: Maçã do Amor, Algodão Doce, Chocolate Nutella, Menta, Melancia, Morango com Champagne"
+    ],
+    cuidados: "Uso externo. Conservar em local fresco ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Manter fora do alcance de crianças."
   },
 
   pherome: {
