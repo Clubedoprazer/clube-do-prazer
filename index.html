@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clube do Prazer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- VERIFICAÇÃO DE IDADE -->
+<div id="age-gate">
+  <div class="age-box">
+    <div class="age-logo">💋</div>
+    <h2>Conteúdo adulto</h2>
+    <p>Este site contém produtos destinados a maiores de 18 anos.</p>
+    <p>Você confirma que tem 18 anos ou mais?</p>
+    <div class="age-btns">
+      <button onclick="confirmAge()" class="btn-sim">Sim, tenho 18+</button>
+      <button onclick="denyAge()" class="btn-nao">Não</button>
+    </div>
+  </div>
+</div>
+
+<!-- SITE PRINCIPAL -->
+<div id="main" style="display:none">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="badges-left">
+        <div class="badge"><span class="badge-icon">♥</span><div><b>DISCRIÇÃO</b><small>TOTAL</small></div></div>
+        <div class="badge"><span class="badge-icon">✉</span><div><b>EMBALAGEM</b><small>SIGILOSA</small></div></div>
+        <div class="badge"><span class="badge-icon">🛡</span><div><b>COMPRA</b><small>SEGURA</small></div></div>
+        <div class="badge"><span class="badge-icon">🚚</span><div><b>ENTREGA</b><small>RÁPIDA</small></div></div>
+      </div>
+      <div class="brand">
+        <div class="brand-clube">Clube do</div>
+        <div class="brand-prazer">Prazer</div>
+        <div class="brand-tag">SEU <strong>PRAZER</strong>, SUA ESCOLHA.</div>
+      </div>
+      <div class="badges-right">
+        <div class="badge r"><div><b>PRODUTOS</b><small>SELECIONADOS</small></div><span class="badge-icon">♥</span></div>
+        <div class="badge r"><div><b>QUALIDADE</b><small>COMPROVADA</small></div><span class="badge-icon">✓</span></div>
+        <div class="badge r"><div><b>PRAZER DO</b><small>COMEÇO AO FIM</small></div><span class="badge-icon">🔥</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BRINDE BANNER -->
+  <div class="gift-banner">
+    <div class="gift-icon">🎁</div>
+    <div class="gift-text">
+      <h3>GANHE UM BRINDE!</h3>
+      <p>Todos os pedidos acima de R$ 50,00 ganham uma Raspadinha do Prazer!</p>
+    </div>
+    <div class="gift-img">
+      <img src="https://miess.vteximg.com.br/arquivos/ids/263489/RaspadinhaK_1.jpg" alt="Raspadinha" onerror="this.style.display='none'">
+    </div>
+    <div class="gift-slogan">Mais prazer, mais conexão,<br>mais você! ♥</div>
+  </div>
+
+  <!-- SEÇÃO: PARA ELA -->
+  <section>
+    <div class="sec-title pink"><span>💋</span> PARA ELA</div>
+    <div class="products-grid">
+      <div class="prod-card" onclick="openModal('sedenta')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/347892/PB52-Morango_1.jpg" alt="Sedenta" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Sedenta para Garganta Profunda Pepper Blend</h4>
+          <p>Gel dessensibilizante oral que aumenta o prazer e o tempo do momento.</p>
+          <div class="prod-price">R$ 15,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('gelVibra')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg" alt="Gel Vibra" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Gel Vibra 18g Pepper Blend</h4>
+          <p>Esquenta, vibra e proporciona muito mais prazer para os dois.</p>
+          <div class="prod-price">R$ 12,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('caneta')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/151456/SN20_1.jpg" alt="Caneta" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Caneta Comestível Sexy Pen</h4>
+          <p>Sabor irresistível para momentos deliciosos.</p>
+          <div class="prod-price prod-price-2">2 POR<br>R$10</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('trepe')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/249165/TL03_1.jpg" alt="Trepe Honey" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Trepe Honey Secret Love</h4>
+          <p>Gel estimulante para massagem corporal com efeito quente e sensual.</p>
+          <div class="prod-price">R$ 11,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('chocolate')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/244665/LS1201_1.jpg" alt="Chocolate" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Chocolate Afrodisíaco Hot Sensação</h4>
+          <p>Delicioso chocolate que desperta os sentidos e aumenta o desejo.</p>
+          <div class="prod-price">R$ 34,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('melzinho')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/362316/ML01_1.jpg" alt="Melzinho" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Meizinho Afro do Prazer</h4>
+          <p>Esquenta e aumenta a excitação feminina.</p>
+          <div class="prod-price">R$ 14,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('myrose')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/361004/MVV7879-Rosa-Claro_1.jpg" alt="MyRose" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Vibrador Estimulador de Clitóris 10 Modos</h4>
+          <p>10 modos de vibração para múltiplos orgasmos.</p>
+          <div class="prod-price">R$ 29,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('miniVib')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg" alt="Mini Vibrador" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Mini Vibrador Super Potente Smallest</h4>
+          <p>Pequeno no tamanho, gigante no prazer.</p>
+          <div class="prod-price">R$ 17,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('vibLiquido')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/339162/6170-Chiclete_1.jpg" alt="Vibrador Líquido" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Vibrador Líquido Ponto G Slim Sexy Fantasy</h4>
+          <p>Estimula o ponto G com delicadeza e intensidade.</p>
+          <div class="prod-price">R$ 44,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('sache')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/182416/MK01_1.jpg" alt="Sachê" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Sachê Lubrificante Comestível 1g</h4>
+          <p>Lubrifica e ainda tem sabor. Ideal para beijar e ousar.</p>
+          <div class="prod-price">R$ 4,90</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: PARA ELE -->
+  <section>
+    <div class="sec-title blue"><span>🥃</span> PARA ELE</div>
+    <div class="products-grid">
+      <div class="prod-card" onclick="openModal('masturbador')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/362563/SI9867-Bege_1.jpg" alt="Masturbador" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Masturbador Masculino CyberSkin</h4>
+          <p>Textura realista para experiências incríveis.</p>
+          <div class="prod-price">R$ 34,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('tesao')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg" alt="Tesão de Touro" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Testo de Touro</h4>
+          <p>Estimulante natural que aumenta energia, disposição e performance.</p>
+          <div class="prod-price">R$ 5,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('eggWavy')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg" alt="Egg Wavy" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Egg Wavy Masturbador Masculino</h4>
+          <p>Discreto, portátil e com textura interna incrível.</p>
+          <div class="prod-price">R$ 9,90</div>
+        </div>
+      </div>
+      <div class="prod-card" onclick="openModal('funnyEgg')">
+        <img src="https://miess.vteximg.com.br/arquivos/ids/289949/MA007RS-Vagina_1.jpg" alt="Funny Egg" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+        <div class="prod-info">
+          <h4>Funny Egg Masturbador Masculino</h4>
+          <p>Formato vagina em cyberskin para muito mais prazer.</p>
+          <div class="prod-price">R$ 19,90</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO: PARA CASAL -->
+  <section>
+    <div class="sec-title heart"><span>♥</span> PARA CASAL</div>
+    <div class="products-casal">
+      <div class="products-grid flex4">
+        <div class="prod-card" onclick="openModal('kitAlgema')">
+          <img src="https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg" alt="Kit Algema" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+          <div class="prod-info">
+            <h4>Kit com Algema e Dice Explosivo</h4>
+            <p>Algema + dados eróticos para apimentar o relacionamento.</p>
+            <div class="prod-price">R$ 14,90</div>
+          </div>
+        </div>
+        <div class="prod-card" onclick="openModal('lubrificante')">
+          <img src="https://miess.vteximg.com.br/arquivos/ids/339162/6170-Chiclete_1.jpg" alt="Lubrificante" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+          <div class="prod-info">
+            <h4>Lubrificante Líquido 15ml</h4>
+            <p>Mais conforto e deslizamento para todos os momentos.</p>
+            <div class="prod-price">R$ 17,90</div>
+          </div>
+        </div>
+        <div class="prod-card" onclick="openModal('perfumeCalcinha')">
+          <img src="https://miess.vteximg.com.br/arquivos/ids/363625/00601-Chocolate-Nutela_1.jpg" alt="Perfume" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+          <div class="prod-info">
+            <h4>Perfumes Íntimos 40ml</h4>
+            <p>Aromas envolventes que despertam sensações. <small>*Aromas Apinil, Melinda e Colínia.</small></p>
+            <div class="prod-price">R$ 11,90</div>
+          </div>
+        </div>
+        <div class="prod-card" onclick="openModal('pherome')">
+          <img src="https://miess.vteximg.com.br/arquivos/ids/336469/KAL1119_1.jpg" alt="Pherome" onerror="this.src='https://miess.vteximg.com.br/arquivos/miess-sex-shop-thumbnail-home.jpg'">
+          <div class="prod-info">
+            <h4>Perfume Capilar Soul Red 110ml</h4>
+            <p>Perfume e brilho para seus cabelos arrasarem.</p>
+            <div class="prod-price">R$ 24,90</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMBOS -->
+      <div class="combos-box">
+        <div class="combos-title">🎁 COMBOS ESPECIAIS</div>
+        <div class="combo-item">
+          <div class="combo-head"><span>KIT INICIANTE</span><span class="combo-price">R$ 19,90</span></div>
+          <ul>
+            <li>♥ 1 Caneta Comestível</li>
+            <li>♥ 1 Sachê Lubrificante</li>
+            <li>♥ 1 Raspadinha do Prazer</li>
+          </ul>
+        </div>
+        <div class="combo-item">
+          <div class="combo-head"><span>KIT CASAL</span><span class="combo-price">R$ 29,90</span></div>
+          <ul>
+            <li>♥ 1 Gel Vibra 18g</li>
+            <li>♥ 1 Lubrificante 15ml</li>
+            <li>♥ 1 Raspadinha do Prazer</li>
+          </ul>
+        </div>
+        <div class="combo-item">
+          <div class="combo-head"><span>KIT PRAZER ABSOLUTO</span><span class="combo-price">R$ 49,90</span></div>
+          <ul>
+            <li>♥ 1 Mini Vibrador</li>
+            <li>♥ 1 Trepe Honey</li>
+            <li>♥ 1 Caneta Comestível</li>
+            <li>♥ 1 Raspadinha do Prazer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-item"><span>🔒</span><div><b>DISCRIÇÃO E SIGILO TOTAL</b></div></div>
+    <div class="foot-item"><span>📦</span><div><b>EMBALAGEM SEM IDENTIFICAÇÃO</b></div></div>
+    <div class="foot-item"><span>🚚</span><div><b>ENTREGA RÁPIDA E SEGURA</b></div></div>
+    <div class="foot-cta">
+      <b>📲 FAÇA SEU PEDIDO!</b>
+      <span>Chame no direct ou no WhatsApp e receba em casa com total discrição.</span>
+    </div>
+  </footer>
+</div>
+
+<!-- MODAL DE PRODUTO -->
+<div id="modal-overlay" onclick="closeModal()">
+  <div id="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-inner">
+      <div class="modal-gallery">
+        <img id="modal-img-main" src="" alt="">
+        <div id="modal-imgs-extra"></div>
+      </div>
+      <div class="modal-content">
+        <h2 id="modal-title"></h2>
+        <div class="modal-price-wrap">
+          <span id="modal-price" class="modal-price"></span>
+          <a id="modal-whatsapp" href="#" target="_blank" class="btn-whatsapp">💬 Pedir via WhatsApp</a>
+        </div>
+        <div id="modal-desc" class="modal-section"></div>
+        <div id="modal-benefits" class="modal-section"></div>
+        <div id="modal-how" class="modal-section"></div>
+        <div id="modal-specs" class="modal-section"></div>
+        <div id="modal-care" class="modal-section"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="produtos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
