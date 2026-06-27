@@ -3,11 +3,7 @@ var produtos = {
   sedenta: {
     nome: "Sedenta por Garganta Profunda — Dessensibilizante Oral Extra Forte 18ml (Pepper Blend)",
     preco: "R$ 15,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/363069/PB52-Morango_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/363070/PB52-Kiwi_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/363071/PB52-PepperBlend_1.jpg"
-    ],
+    fotos: ["https://miess.vteximg.com.br/arquivos/ids/331696/PB525-Blueberry_1.jpg"],
     descricao: "O Sedenta por Garganta Profunda é um dessensibilizante oral extra forte em spray de 18ml. Ele reduz o reflexo de engasgo e torna o sexo oral mais profundo, prazeroso e sem desconforto. Os sabores são suaves e discretos — presentes só para tornar o momento mais agradável, sem interferir no sabor natural. Desenvolvido pela Pepper Blend com fórmula de ação rápida.",
     beneficios: ["Dessensibilizante oral extra forte de ação rápida", "Permite maior profundidade sem desconforto", "Sabores suaves e zero açúcar", "Sensação de formigamento que potencializa o prazer", "Spray de 18ml — prático e discreto"],
     comoUsar: "Aplique 1 a 2 jatos na região desejada e aguarde 1 a 2 minutos para o efeito agir. Pode ser usado também em massagem erótica por áreas erógenas.",
