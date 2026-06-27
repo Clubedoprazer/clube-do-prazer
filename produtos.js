@@ -36,7 +36,7 @@ const produtos = {
   trepe: {
     nome: "Trepe Honey — Estimulante Sexual 8ml (Secret Love)",
     preco: "R$ 11,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/249165/TL03_1.jpg"],
+    fotos: ["https://cdn.dooca.store/162880/products/img-20250210-wa0149.jpg?v=1739404032"],
     descricao: "O Trepe Honey da Secret Love é um gel estimulante com efeito quente para massagem corporal. Aumenta a circulação sanguínea nas regiões aplicadas, intensificando a sensibilidade e o prazer. Ideal para as preliminares.",
     beneficios: ["Efeito quente e sensual", "Aumenta a sensibilidade", "Ideal para massagem erótica", "Afrodisíaco natural", "Frasco de 8ml — discreto e prático"],
     comoUsar: "Aplique uma pequena quantidade nas regiões erógenas e massageie suavemente. O calor das mãos potencializa o efeito.",
@@ -47,7 +47,7 @@ const produtos = {
   chocolate: {
     nome: "Chocolate do Amor Excitante para Adultos com Taurina — Caixa com 5 unidades 25g (Loka Sensação)",
     preco: "R$ 34,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/358530/LS1201_1.jpg"],
+    fotos: ["https://acdn-us.mitiendanube.com/stores/002/993/813/products/copia-de-copia-de-produtos-site-82-99439ac80beebaf00717744743364458-640-0.webp"],
     descricao: "O Chocolate do Amor da Loka Sensação é um afrodisíaco em forma de chocolate. Sua fórmula reúne guaraná em pó, taurina, cravo, gengibre e jambú — ingredientes conhecidos pelo efeito estimulante. Sabor cereja com chocolate meio amargo. Caixa com 5 unidades.",
     beneficios: ["Contém taurina e guaraná — mais energia", "Afrodisíaco natural com cravo, gengibre e jambú", "Sabor cereja com chocolate meio amargo", "Caixa com 5 unidades", "Ideal para casais e momentos especiais"],
     comoUsar: "Consuma 1 unidade de 30 a 60 minutos antes da relação. Pode ser compartilhado com o parceiro(a). Não exceda 2 unidades por dia.",
@@ -102,7 +102,7 @@ const produtos = {
   sache: {
     nome: "Sachê Sugalik Momozin — Gel Sugador Comestível 1g",
     preco: "R$ 4,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/354218/MK01_1.jpg"],
+    fotos: ["https://miess.vteximg.com.br/arquivos/ids/307034/MK01_1.jpg?v=638259891093630000"],
     descricao: "O Sachê Gel Sugador Comestível Sugalik Momozin é prático, discreto e gostoso! Com textura lubrificante e sabor irresistível, potencializa o sexo oral deixando tudo muito mais prazeroso. Sachê individual — leve na bolsa sem ninguém saber.",
     beneficios: ["Lubrificante comestível com sabor", "Potencializa o sexo oral", "Sachê prático e discreto", "Preço acessível", "Leve para qualquer lugar"],
     comoUsar: "Rasgue o sachê e aplique o conteúdo na região desejada antes do sexo oral ou preliminares.",
@@ -156,7 +156,7 @@ const produtos = {
 
   kitAlgema: {
     nome: "Kit com Bullet Vibro Ó + Pepper Ball + Algema MyCuff + Sedenta por Gemido",
-    preco: "R$ 19,90",
+    preco: "R$ 30,00",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg", "https://miess.vteximg.com.br/arquivos/ids/365079/507411501537_1.jpg"],
     descricao: "Kit completo para uma noite inesquecível! Vem com: Bullet vibratório Vibro Ó multivelocidades, Bolinha explosiva Pepper Ball para o oral, Algema de pelúcia MyCuff e gel dessensibilizante Sedenta por Gemido. Tudo que você precisa para apimentar a relação.",
     beneficios: ["Kit 4 em 1 completo", "Bullet vibratório multivelocidades", "Bolinha explosiva estimulante", "Algema de pelúcia confortável", "Gel Sedenta por Gemido incluído"],
@@ -234,13 +234,24 @@ const produtos = {
 
   kitPrazer: {
     nome: "Kit Prazer Absoluto",
-    preco: "R$ 49,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg"],
-    descricao: "O Kit Prazer Absoluto tem tudo para uma noite inesquecível! Mini vibrador potente, gel estimulante quente, caneta comestível para brincar e um brinde surpresa.",
-    beneficios: ["Mini vibrador super potente", "Gel estimulante efeito quente", "Caneta comestível para explorar", "Brinde surpresa especial"],
-    comoUsar: "Use a Caneta para aquecer as preliminares. O Trepe Honey para a massagem. O Mini Vibrador para a estimulação intensa. E o brinde é surpresa! 😉",
-    ficha: ["1 Mini Vibrador Super Potente", "1 Trepe Honey 8ml", "1 Caneta Comestível Sexy Pen", "1 Brinde surpresa"],
+    preco: "R$ 50,00",
+    fotos: ["https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg", "https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg", "https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg"],
+    descricao: "O Kit Prazer Absoluto é o pacote mais completo! Mini vibrador potente, Egg Wavy masturbador, algema de pelúcia, caneta comestível e um brinde surpresa. Uma caixinha do prazer do começo ao fim!",
+    beneficios: ["Mini vibrador super potente", "Egg Wavy masturbador com textura interna", "Algema de pelúcia para explorar", "Caneta comestível para aquecer", "Brinde surpresa especial"],
+    comoUsar: "Use a Caneta para aquecer as preliminares. A Algema para apimentar. O Egg Wavy para ele. O Mini Vibrador para ela. E o brinde é surpresa! 😉",
+    ficha: ["1 Mini Vibrador Super Potente", "1 Egg Wavy Masturbador", "1 Algema de Pelúcia", "1 Caneta Comestível Sexy Pen", "1 Brinde surpresa"],
     cuidados: "Produtos para maiores de 18 anos."
+  }
+
+  pheroAroma: {
+    nome: "Perfume Phero Aroma Feminino — com Feromônio (Kit Miess)",
+    preco: "R$ 29,90",
+    fotos: ["https://miess.vteximg.com.br/arquivos/ids/349215/3560268604509_1.jpg"],
+    descricao: "O Perfume Phero Aroma Feminino é um perfume íntimo com feromônios desenvolvido para potencializar a atração e a sedução. Com aroma delicado e marcante, deixa um rastro irresistível. O mesmo perfume que acompanha o Kit Completo, agora avulso!",
+    beneficios: ["Com feromônios — aumenta a atração", "Aroma feminino delicado e envolvente", "Boa fixação", "Tamanho compacto — leve na bolsa", "Ideal para encontros especiais"],
+    comoUsar: "Aplique 1 a 2 jatos no pescoço, pulsos ou atrás das orelhas. Evite aplicação direta em mucosas.",
+    ficha: ["Tipo: perfume íntimo feminino com feromônios", "Marca: Miess"],
+    cuidados: "Uso externo. Não aplique em pele lesionada. Para uso pessoal."
   }
 
 };
