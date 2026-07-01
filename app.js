@@ -6,51 +6,54 @@ function san(s) {
   return d.innerHTML;
 }
 
-// Age gate
 function showMain() {
   document.getElementById('age-gate').style.display = 'none';
   document.getElementById('main').style.display = 'block';
-  bindCards();
 }
-
-try {
-  var st = localStorage.getItem('cdp_age');
-  if (st === '1') { document.addEventListener('DOMContentLoaded', function(){ showMain(); }); }
-  else if (st === '0') { window.location.replace('https://www.google.com'); }
-} catch(e) {}
-
-document.addEventListener('DOMContentLoaded', function() {
-  var btnY = document.getElementById('btn-yes');
-  var btnN = document.getElementById('btn-no');
-  if (btnY) btnY.addEventListener('click', function() {
-    try { localStorage.setItem('cdp_age','1'); } catch(e) {}
-    showMain();
-  });
-  if (btnN) btnN.addEventListener('click', function() {
-    try { localStorage.setItem('cdp_age','0'); } catch(e) {}
-    window.location.replace('https://www.google.com');
-  });
-
-  // Fechar modal
-  var mclose = document.getElementById('modal-close');
-  var movl = document.getElementById('modal-overlay');
-  if (mclose) mclose.addEventListener('click', closeModal);
-  if (movl) movl.addEventListener('click', function(e){
-    if (e.target === movl) closeModal();
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key==='Escape') closeModal();
-  });
-});
 
 function bindCards() {
   document.querySelectorAll('[data-id]').forEach(function(card) {
     card.style.cursor = 'pointer';
-    card.addEventListener('click', function() {
+    card.onclick = function() {
       openModal(this.getAttribute('data-id'));
-    });
+    };
   });
 }
+
+// Checa age gate
+document.addEventListener('DOMContentLoaded', function() {
+  var aged = false;
+  try { aged = localStorage.getItem('cdp_age') === '1'; } catch(e) {}
+
+  if (aged) {
+    showMain();
+    bindCards();
+  }
+
+  // Botões
+  var btnY = document.getElementById('btn-yes');
+  var btnN = document.getElementById('btn-no');
+
+  if (btnY) btnY.onclick = function() {
+    try { localStorage.setItem('cdp_age','1'); } catch(e) {}
+    showMain();
+    bindCards();
+  };
+
+  if (btnN) btnN.onclick = function() {
+    try { localStorage.setItem('cdp_age','0'); } catch(e) {}
+    window.location.replace('https://www.google.com');
+  };
+
+  // Fechar modal
+  document.getElementById('modal-close').onclick = closeModal;
+  document.getElementById('modal-overlay').onclick = function(e) {
+    if (e.target === this) closeModal();
+  };
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+});
 
 function estoqueHtml(qtd) {
   if (qtd === undefined || qtd === null) return '';
@@ -81,11 +84,11 @@ function openModal(id) {
     var img = document.createElement('img');
     img.src = f; img.alt = p.nome;
     if (i===0) img.classList.add('active');
-    img.addEventListener('click', function(){
+    img.onclick = function() {
       main.src = f;
       thumbs.querySelectorAll('img').forEach(function(x){ x.classList.remove('active'); });
       img.classList.add('active');
-    });
+    };
     thumbs.appendChild(img);
   });
 
