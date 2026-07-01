@@ -3,252 +3,287 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Clube do Prazer</title>
+<title>Clube do Prazer ✨</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#08040a;
-  --deep:#110818;
-  --card:#1a0d22;
-  --pink:#e8186d;
-  --pink2:#ff4d94;
-  --rose:#ff85b3;
-  --gold:#d4a843;
+  --bg:#0d0010;
+  --bg2:#160018;
+  --card:#1e0028;
+  --pink:#ff2d8f;
+  --pink2:#ff69b4;
+  --pink3:#ffb3d9;
+  --purple:#9b1fca;
   --white:#fff;
-  --muted:#a07898;
-  --border:rgba(232,24,109,.2);
+  --muted:#c090b8;
+  --border:rgba(255,45,143,.25);
+  --gold:#f0c060;
 }
-html{scroll-behavior:smooth}
-body{background:var(--black);font-family:'Inter',sans-serif;color:var(--white);min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);font-family:'Poppins',sans-serif;color:var(--white);overflow-x:hidden}
 
 /* AGE GATE */
-#age-gate{position:fixed;inset:0;background:#08040a;display:flex;align-items:center;justify-content:center;z-index:9999;padding:20px}
-.age-inner{text-align:center;max-width:360px;width:100%}
-.age-symbol{font-size:48px;margin-bottom:24px;display:block}
-.age-inner h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:.08em;margin-bottom:12px;color:var(--rose)}
-.age-inner p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:8px}
-.age-line{width:40px;height:1px;background:var(--pink);margin:24px auto}
-.age-btns{display:flex;flex-direction:column;gap:12px;margin-top:28px}
-.btn-yes{background:var(--pink);color:#fff;border:none;padding:16px;font-size:15px;font-weight:500;letter-spacing:.1em;cursor:pointer;text-transform:uppercase;transition:.2s}
-.btn-yes:hover{background:var(--pink2)}
-.btn-no{background:transparent;color:var(--muted);border:1px solid rgba(160,120,152,.3);padding:14px;font-size:13px;cursor:pointer;letter-spacing:.08em;text-transform:uppercase}
+#age-gate{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;
+  background:linear-gradient(135deg,#0d0010 0%,#1a0025 50%,#0d0010 100%)}
+#age-gate::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff2d8f' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.age-box{position:relative;text-align:center;max-width:380px;width:100%;
+  background:rgba(30,0,40,.95);border:1px solid var(--border);
+  padding:40px 32px;border-radius:24px;
+  box-shadow:0 0 80px rgba(255,45,143,.2)}
+.age-emoji{font-size:56px;margin-bottom:16px;display:block;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.age-box h2{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;
+  background:linear-gradient(135deg,var(--pink),var(--pink3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+.age-box p{color:var(--muted);font-size:14px;line-height:1.6;margin-bottom:6px}
+.age-divider{width:50px;height:2px;background:linear-gradient(90deg,var(--pink),var(--purple));margin:20px auto}
+.age-btns{display:flex;flex-direction:column;gap:12px;margin-top:24px}
+.btn-yes{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border:none;
+  padding:16px;font-size:15px;font-weight:600;cursor:pointer;border-radius:50px;
+  letter-spacing:.05em;transition:.2s;box-shadow:0 6px 24px rgba(255,45,143,.4)}
+.btn-yes:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,45,143,.5)}
+.btn-no{background:transparent;color:var(--muted);border:1px solid rgba(192,144,184,.3);
+  padding:13px;font-size:13px;cursor:pointer;border-radius:50px;letter-spacing:.05em}
 
 /* MAIN */
-#main{}
+#main{display:none}
 
+/* HEADER */
+header{
+  background:linear-gradient(180deg,rgba(255,45,143,.12) 0%,transparent 100%);
+  padding:28px 20px 20px;text-align:center;position:relative;overflow:hidden}
+header::before{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:500px;height:300px;
+  background:radial-gradient(ellipse,rgba(255,45,143,.2) 0%,transparent 70%);
+  pointer-events:none}
+.header-badge{display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,45,143,.15);border:1px solid var(--border);
+  padding:5px 14px;border-radius:50px;font-size:11px;color:var(--pink3);
+  letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+.header-title{font-family:'Playfair Display',serif;font-size:clamp(42px,12vw,72px);
+  font-weight:900;line-height:1;
+  background:linear-gradient(135deg,#fff 0%,var(--pink3) 50%,var(--pink) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.header-title span{font-style:italic;font-weight:400}
+.header-sub{font-size:12px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;margin-top:10px}
 
-/* HERO */
-.hero{padding:48px 20px 36px;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(232,24,109,.18) 0%,transparent 70%);pointer-events:none}
-.hero-eyebrow{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--pink);margin-bottom:20px;display:block}
-.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,14vw,88px);font-weight:300;line-height:.9;margin-bottom:8px}
-.hero-title em{font-style:italic;color:var(--pink)}
-.hero-sub{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-top:16px}
+/* TRUST BAR */
+.trust-bar{display:flex;overflow-x:auto;gap:0;
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+  scrollbar-width:none}
+.trust-bar::-webkit-scrollbar{display:none}
+.trust-item{display:flex;align-items:center;gap:8px;padding:12px 20px;
+  font-size:11px;font-weight:500;color:var(--pink3);white-space:nowrap;
+  border-right:1px solid var(--border);flex:none}
+.trust-item span{font-size:16px}
 
-/* TRUST PILLS */
-.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:0 20px 32px}
-.trust-pill{display:flex;align-items:center;gap:6px;background:rgba(232,24,109,.08);border:1px solid var(--border);padding:7px 14px;font-size:11px;letter-spacing:.08em;color:var(--rose)}
-.trust-pill svg{width:12px;height:12px;flex:none}
-
-/* BRINDE BANNER */
-.brinde{margin:0 16px 32px;padding:18px 20px;border:1px solid rgba(212,168,67,.3);background:linear-gradient(135deg,rgba(212,168,67,.06),rgba(232,24,109,.06));display:flex;align-items:center;gap:14px}
-.brinde-icon{font-size:22px;flex:none}
-.brinde-text{font-size:13px;color:#e8d5b0;line-height:1.5}
-.brinde-text strong{color:var(--gold);display:block;font-size:11px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}
+/* BRINDE */
+.brinde-bar{
+  background:linear-gradient(135deg,rgba(240,192,96,.12),rgba(255,45,143,.08));
+  border-bottom:1px solid rgba(240,192,96,.2);
+  padding:14px 20px;display:flex;align-items:center;gap:12px}
+.brinde-bar .icon{font-size:22px;animation:bounce .8s infinite alternate}
+@keyframes bounce{from{transform:translateY(0)}to{transform:translateY(-4px)}}
+.brinde-bar p{font-size:12.5px;color:#f0d080;line-height:1.5}
+.brinde-bar strong{color:var(--gold);font-size:11px;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:2px}
 
 /* SECTION */
-.sec{padding:0 16px 48px}
-.sec-label{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--pink);margin-bottom:20px;display:flex;align-items:center;gap:12px}
-.sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.sec{padding:24px 16px 40px}
+.sec-head{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:22px;font-style:italic;color:var(--pink3)}
+.sec-head::after{content:'';flex:1;height:1px;background:var(--border)}
 
 /* GRID */
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border)}
-@media(min-width:600px){.grid{grid-template-columns:repeat(3,1fr)}}
-@media(min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:580px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:860px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1100px){.grid{grid-template-columns:repeat(5,1fr)}}
 
 /* CARD */
-.card{background:var(--black);cursor:pointer;display:flex;flex-direction:column;transition:background .2s}
-.card:hover{background:var(--deep)}
-.card-img{width:100%;aspect-ratio:1;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;
+  overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(255,45,143,.3);border-color:var(--pink)}
+.card:active{transform:scale(.97)}
+.card-img{background:#fff;width:100%;aspect-ratio:1;overflow:hidden;display:flex;align-items:center;justify-content:center;position:relative}
 .card-img img{width:100%;height:100%;object-fit:contain;padding:8px;transition:transform .3s}
-.card:hover .card-img img{transform:scale(1.04)}
-.card-body{padding:14px 14px 16px;flex:1;display:flex;flex-direction:column}
-.card-name{font-size:12px;font-weight:500;line-height:1.4;margin-bottom:6px;color:var(--white)}
-.card-desc{font-size:11px;color:var(--muted);line-height:1.5;flex:1}
-.card-price{margin-top:12px;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--pink)}
-.card-price small{font-size:13px;font-family:'Inter',sans-serif;font-weight:400}
+.card:hover .card-img img{transform:scale(1.06)}
+.card-body{padding:12px 12px 14px;flex:1;display:flex;flex-direction:column}
+.card-name{font-size:12.5px;font-weight:600;line-height:1.35;margin-bottom:5px}
+.card-desc{font-size:11px;color:var(--muted);line-height:1.4;flex:1}
+.card-footer{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.card-price{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--pink)}
+.card-price small{font-size:11px;font-family:'Poppins',sans-serif;font-weight:400;color:var(--muted);display:block;line-height:1}
+.card-btn{background:linear-gradient(135deg,var(--pink),var(--purple));
+  color:#fff;border:none;border-radius:50px;padding:6px 12px;
+  font-size:10px;font-weight:600;cursor:pointer;letter-spacing:.05em;white-space:nowrap}
 
 /* FOOTER */
-footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
-.foot-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-bottom:28px}
-@media(min-width:500px){.foot-grid{grid-template-columns:repeat(4,1fr)}}
-.foot-item{font-size:11px;color:var(--muted);line-height:1.6}
-.foot-item strong{display:block;color:var(--rose);font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}
-.foot-cta{font-family:'Cormorant Garamond',serif;font-size:20px;font-style:italic;color:var(--rose);margin-bottom:6px}
+footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1));
+  border-top:1px solid var(--border);padding:28px 20px;text-align:center}
+.foot-pills{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:20px}
+.foot-pill{background:rgba(255,45,143,.1);border:1px solid var(--border);
+  padding:6px 14px;border-radius:50px;font-size:11px;color:var(--pink3)}
+.foot-title{font-family:'Playfair Display',serif;font-size:18px;font-style:italic;color:var(--pink3);margin-bottom:4px}
 .foot-sub{font-size:12px;color:var(--muted)}
 
 /* MODAL */
-#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:1000;align-items:flex-end;justify-content:center;padding:0}
-#modal-overlay.open{display:flex}
+#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);
+  z-index:1000;align-items:flex-end;justify-content:center}
 @media(min-width:700px){#modal-overlay{align-items:center;padding:20px}}
-#modal-box{background:var(--deep);width:100%;max-width:720px;max-height:92vh;overflow-y:auto;position:relative;border-top:1px solid var(--border)}
-@media(min-width:700px){#modal-box{border:1px solid var(--border)}}
-#modal-close{position:sticky;top:0;float:right;background:var(--card);color:var(--muted);border:none;width:44px;height:44px;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center}
+#modal-overlay.open{display:flex}
+#modal-box{background:linear-gradient(180deg,var(--card),var(--bg2));
+  width:100%;max-width:780px;max-height:92vh;overflow-y:auto;
+  border-radius:24px 24px 0 0;border:1px solid var(--border);position:relative}
+@media(min-width:700px){#modal-box{border-radius:24px}}
+#modal-close{position:sticky;top:12px;float:right;margin:12px 14px 0 0;
+  background:rgba(255,45,143,.2);color:var(--pink3);border:1px solid var(--border);
+  border-radius:50%;width:36px;height:36px;font-size:16px;cursor:pointer;z-index:10;
+  display:flex;align-items:center;justify-content:center}
 .modal-inner{display:flex;flex-direction:column;clear:both}
-@media(min-width:600px){.modal-inner{flex-direction:row}}
-.modal-gal{flex:none;width:100%}
-@media(min-width:600px){.modal-gal{width:260px}}
+@media(min-width:620px){.modal-inner{flex-direction:row}}
+.modal-gal{flex:none}
+@media(min-width:620px){.modal-gal{width:280px}}
 #modal-main-img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;padding:16px;display:block}
-#modal-thumbs{display:flex;gap:4px;padding:4px;background:var(--black)}
-#modal-thumbs img{width:56px;height:56px;object-fit:contain;background:#fff;padding:4px;cursor:pointer;border:2px solid transparent;transition:.15s;flex:none}
+#modal-thumbs{display:flex;gap:6px;padding:8px;background:var(--bg)}
+#modal-thumbs img{width:60px;height:60px;object-fit:contain;background:#fff;
+  padding:4px;cursor:pointer;border:2px solid transparent;border-radius:8px;transition:.15s;flex:none}
 #modal-thumbs img.active,#modal-thumbs img:hover{border-color:var(--pink)}
-.modal-body{padding:24px 20px;flex:1}
-.modal-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:12px}
-#modal-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;line-height:1.3;margin-bottom:16px;color:var(--white)}
-.modal-price-row{display:flex;align-items:center;gap:16px;margin-bottom:16px;flex-wrap:wrap}
-#modal-price{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--pink)}
-.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;padding:11px 20px;font-size:13px;font-weight:600;letter-spacing:.05em;transition:.15s}
-.btn-wa:hover{background:#1fbc5a}
-#modal-estoque-box{margin-bottom:16px}
-.modal-estoque{padding:8px 14px;font-size:12px;font-weight:500;letter-spacing:.05em;display:inline-block}
-.modal-estoque.verde{background:rgba(50,200,100,.1);color:#5dbb5d;border-left:2px solid #5dbb5d}
-.modal-estoque.amarelo{background:rgba(255,165,0,.1);color:#ffb347;border-left:2px solid #ffb347}
-.modal-estoque.vermelho{background:rgba(255,80,80,.1);color:#ff6b6b;border-left:2px solid #ff6b6b}
-.modal-estoque.zero{background:rgba(100,100,100,.1);color:#888;border-left:2px solid #555}
-.msec{margin-bottom:20px;border-top:1px solid var(--border);padding-top:16px}
-.msec h3{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--pink);margin-bottom:10px}
+.modal-body{padding:20px 20px 24px;flex:1}
+#modal-title{font-family:'Playfair Display',serif;font-size:20px;line-height:1.3;margin-bottom:14px;color:#fff}
+.modal-price-row{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+#modal-price{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;
+  background:linear-gradient(135deg,var(--pink),var(--pink3));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;
+  color:#fff;text-decoration:none;padding:11px 20px;border-radius:50px;
+  font-size:13px;font-weight:600;box-shadow:0 4px 16px rgba(37,211,102,.3);transition:.2s}
+.btn-wa:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
+#modal-estoque-box{margin-bottom:14px}
+.modal-estoque{display:inline-block;padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600}
+.modal-estoque.verde{background:rgba(50,200,100,.15);color:#5ddd7a}
+.modal-estoque.amarelo{background:rgba(255,165,0,.15);color:#ffc55a}
+.modal-estoque.vermelho{background:rgba(255,80,80,.15);color:#ff7070}
+.modal-estoque.zero{background:rgba(100,100,100,.15);color:#999}
+.msec{margin-bottom:18px;padding-top:16px;border-top:1px solid var(--border)}
+.msec h3{font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--pink);margin-bottom:10px;font-weight:600}
 .msec p,.msec li{font-size:13px;color:var(--muted);line-height:1.7}
 .msec ul{list-style:none}
-.msec li{padding:3px 0;padding-left:14px;position:relative}
-.msec li::before{content:'—';position:absolute;left:0;color:var(--pink);font-size:10px;top:6px}
+.msec li{padding:2px 0 2px 16px;position:relative}
+.msec li::before{content:'♥';position:absolute;left:0;color:var(--pink);font-size:9px;top:5px}
+.modal-mais{margin-top:16px;padding-top:16px;border-top:1px solid var(--border);
+  font-size:12px;color:var(--muted)}
+.modal-mais a{color:var(--pink);text-decoration:none;font-weight:500}
 </style>
-<script>
-(function(){
-  try {
-    if(localStorage.getItem('cdp_age')==='1'){
-      document.addEventListener('DOMContentLoaded',function(){
-        document.getElementById('age-gate').style.display='none';
-        document.getElementById('main').style.display='block';
-      });
-    } else if(localStorage.getItem('cdp_age')==='0'){
-      window.location.replace('https://www.google.com');
-    }
-  }catch(e){}
-})();
-</script>
 </head>
 <body>
 
 <!-- AGE GATE -->
 <div id="age-gate">
-  <div class="age-inner">
-    <span class="age-symbol">🌹</span>
-    <h2>Conteúdo adulto</h2>
-    <div class="age-line"></div>
-    <p>Este espaço é destinado exclusivamente a maiores de 18 anos.</p>
+  <div class="age-box">
+    <span class="age-emoji">💋</span>
+    <h2>Conteúdo +18</h2>
+    <div class="age-divider"></div>
+    <p>Este espaço é exclusivo para maiores de 18 anos.</p>
     <p>Você confirma que tem 18 anos ou mais?</p>
     <div class="age-btns">
-      <button id="btn-yes" class="btn-yes">Sim, tenho 18 anos</button>
-      <button id="btn-no" class="btn-no">Não tenho</button>
+      <button id="btn-yes" class="btn-yes">✨ Sim, tenho 18 anos!</button>
+      <button id="btn-no" class="btn-no">Não tenho 18 anos</button>
     </div>
   </div>
 </div>
 
 <!-- MAIN -->
-<div id="main" style="display:none">
+<div id="main">
 
-  <!-- HERO -->
-  <div class="hero">
-    <span class="hero-eyebrow">seu prazer, sua escolha</span>
-    <h1 class="hero-title">Clube do<br><em>Prazer</em></h1>
-    <p class="hero-sub">cosméticos sensuais &amp; brinquedos</p>
-  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="header-badge">💖 bem-vinda ao prazer</div>
+    <h1 class="header-title">Clube do <span>Prazer</span></h1>
+    <p class="header-sub">seu prazer, sua escolha</p>
+  </header>
 
-  <!-- TRUST -->
-  <div class="trust">
-    <div class="trust-pill"><svg viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Discrição total</div>
-    <div class="trust-pill"><svg viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Embalagem sigilosa</div>
-    <div class="trust-pill"><svg viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Compra segura</div>
-    <div class="trust-pill"><svg viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2"/><path d="M4 6l1.5 1.5L8 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>Entrega combinada</div>
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><span>🔒</span>Discrição total</div>
+    <div class="trust-item"><span>📦</span>Embalagem sigilosa</div>
+    <div class="trust-item"><span>✅</span>Compra segura</div>
+    <div class="trust-item"><span>🚀</span>Entrega combinada</div>
+    <div class="trust-item"><span>💬</span>Atendimento WhatsApp</div>
   </div>
 
   <!-- BRINDE -->
-  <div class="brinde">
-    <span class="brinde-icon">🎁</span>
-    <div class="brinde-text">
-      <strong>Brinde especial</strong>
-      Nas compras acima de R$ 40,00 você ganha um Sachê Sugalik Momozin Gel Sugador!
-    </div>
+  <div class="brinde-bar">
+    <div class="icon">🎁</div>
+    <p><strong>Brinde especial!</strong>Nas compras acima de R$ 40,00 você ganha um Sachê Sugalik Momozin Gel Sugador!</p>
   </div>
 
   <!-- PRODUTOS -->
   <section class="sec">
-    <div class="sec-label">nossos produtos</div>
-    <div class="grid" id="grid-produtos">
+    <div class="sec-head"><h2>Nossos Produtos</h2></div>
+    <div class="grid">
 
-      <div class="card" data-id="sedenta"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta.png" alt="Sedenta" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta Garganta Profunda</div><div class="card-desc">Dessensibilizante oral extra forte</div><div class="card-price">R$ 17,90</div></div></div>
+      <div class="card" data-id="sedenta"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta.png" alt="Sedenta" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta Garganta Profunda</div><div class="card-desc">Dessensibilizante oral extra forte</div><div class="card-footer"><div class="card-price">R$ 17,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="sedentaGemido"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_gemido.png" alt="Sedenta Gemido" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta por Gemido</div><div class="card-desc">Excitante com leve picância</div><div class="card-price">R$ 9,90</div></div></div>
+      <div class="card" data-id="sedentaGemido"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_gemido.png" alt="Sedenta Gemido" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta por Gemido</div><div class="card-desc">Excitante com leve picância</div><div class="card-footer"><div class="card-price">R$ 9,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="sedentaMolhadinha"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/347301/PB509_1.jpg" alt="Sedenta Molhadinha" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta Molhadinha 50g</div><div class="card-desc">Lubrificante neutro deslizante</div><div class="card-price">R$ 13,90</div></div></div>
+      <div class="card" data-id="sedentaMolhadinha"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/347301/PB509_1.jpg" alt="Sedenta Molhadinha" loading="lazy"></div><div class="card-body"><div class="card-name">Sedenta Molhadinha 50g</div><div class="card-desc">Lubrificante neutro deslizante</div><div class="card-footer"><div class="card-price">R$ 13,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="gelVibra"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg" alt="Siri Ryka" loading="lazy"></div><div class="card-body"><div class="card-name">Siri Ryka — Gel Vibra 18g</div><div class="card-desc">Esquenta, gela e vibra</div><div class="card-price">R$ 14,90</div></div></div>
+      <div class="card" data-id="gelVibra"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg" alt="Siri Ryka" loading="lazy"></div><div class="card-body"><div class="card-name">Siri Ryka — Gel Vibra 18g</div><div class="card-desc">Esquenta, gela e vibra!</div><div class="card-footer"><div class="card-price">R$ 14,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="lacradinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/lacradinha.png" alt="Lacradinha" loading="lazy"></div><div class="card-body"><div class="card-name">Lacradinha</div><div class="card-desc">Gel adstringente feminino</div><div class="card-price">R$ 17,90</div></div></div>
+      <div class="card" data-id="lacradinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/lacradinha.png" alt="Lacradinha" loading="lazy"></div><div class="card-body"><div class="card-name">Lacradinha</div><div class="card-desc">Gel adstringente feminino</div><div class="card-footer"><div class="card-price">R$ 17,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="vibLiquido"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/liquidi_sabores.png" alt="Liquidi" loading="lazy"></div><div class="card-body"><div class="card-name">Liquidi Vibrador</div><div class="card-desc">Gel beijável que vibra</div><div class="card-price">R$ 19,90</div></div></div>
+      <div class="card" data-id="vibLiquido"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/liquidi_sabores.png" alt="Liquidi" loading="lazy"></div><div class="card-body"><div class="card-name">Liquidi Vibrador</div><div class="card-desc">Gel beijável que vibra</div><div class="card-footer"><div class="card-price">R$ 19,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="caneta"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg" alt="Caneta" loading="lazy"></div><div class="card-body"><div class="card-name">Caneta Comestível Sexy Pen</div><div class="card-desc">Escreva, desenhe e lamba!</div><div class="card-price"><small>2 por</small> R$ 12,90</div></div></div>
+      <div class="card" data-id="caneta"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg" alt="Caneta" loading="lazy"></div><div class="card-body"><div class="card-name">Caneta Comestível Sexy Pen</div><div class="card-desc">Escreva, desenhe e lamba!</div><div class="card-footer"><div class="card-price"><small>2 por</small>R$ 12,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="trepe"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg" alt="Trepe Honey" loading="lazy"></div><div class="card-body"><div class="card-name">Trepe Honey</div><div class="card-desc">Estimulante natural</div><div class="card-price">R$ 12,90</div></div></div>
+      <div class="card" data-id="trepe"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg" alt="Trepe Honey" loading="lazy"></div><div class="card-body"><div class="card-name">Trepe Honey</div><div class="card-desc">Estimulante natural</div><div class="card-footer"><div class="card-price">R$ 12,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="chocolate"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/361023/9546_1.jpg" alt="Chocolate" loading="lazy"></div><div class="card-body"><div class="card-name">Chocolate do Amor</div><div class="card-desc">Afrodisíaco com taurina — 5 un.</div><div class="card-price">R$ 39,90</div></div></div>
+      <div class="card" data-id="chocolate"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/361023/9546_1.jpg" alt="Chocolate" loading="lazy"></div><div class="card-body"><div class="card-name">Chocolate do Amor</div><div class="card-desc">Afrodisíaco com taurina — 5 un.</div><div class="card-footer"><div class="card-price">R$ 39,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="melzinho"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/362316/ML01_1.jpg" alt="Melzinho" loading="lazy"></div><div class="card-body"><div class="card-name">Melzinho Árabe do Prazer</div><div class="card-desc">Natural e unissex</div><div class="card-price">R$ 17,90</div></div></div>
+      <div class="card" data-id="melzinho"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/362316/ML01_1.jpg" alt="Melzinho" loading="lazy"></div><div class="card-body"><div class="card-name">Melzinho Árabe do Prazer</div><div class="card-desc">Natural e unissex</div><div class="card-footer"><div class="card-price">R$ 17,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="myrose"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/myrose_red.png" alt="MyRose" loading="lazy"></div><div class="card-body"><div class="card-name">MyRose — Estimulador</div><div class="card-desc">10 modos de pulsação</div><div class="card-price">R$ 34,90</div></div></div>
+      <div class="card" data-id="myrose"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/myrose_red.png" alt="MyRose" loading="lazy"></div><div class="card-body"><div class="card-name">MyRose — Estimulador</div><div class="card-desc">10 modos de pulsação 🌹</div><div class="card-footer"><div class="card-price">R$ 34,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="miniVib"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg" alt="Mini Vibrador" loading="lazy"></div><div class="card-body"><div class="card-name">Mini Vibrador Potente</div><div class="card-desc">Compacto e poderoso</div><div class="card-price">R$ 19,90</div></div></div>
+      <div class="card" data-id="miniVib"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg" alt="Mini Vibrador" loading="lazy"></div><div class="card-body"><div class="card-name">Mini Vibrador Potente</div><div class="card-desc">Compacto e poderoso</div><div class="card-footer"><div class="card-price">R$ 19,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="golfinho"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/golfinho.png" alt="Golfinho" loading="lazy"></div><div class="card-body"><div class="card-name">Vibrador Golfinho</div><div class="card-desc">Ponto G — 10 modos</div><div class="card-price">R$ 22,90</div></div></div>
+      <div class="card" data-id="golfinho"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/golfinho.png" alt="Golfinho" loading="lazy"></div><div class="card-body"><div class="card-name">Vibrador Golfinho</div><div class="card-desc">Ponto G — 10 modos</div><div class="card-footer"><div class="card-price">R$ 22,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="bullet"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet.png" alt="Bullet" loading="lazy"></div><div class="card-body"><div class="card-name">Bullet Vibrador</div><div class="card-desc">Multivelocidades com controle</div><div class="card-price">R$ 12,90</div></div></div>
+      <div class="card" data-id="bullet"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet.png" alt="Bullet" loading="lazy"></div><div class="card-body"><div class="card-name">Bullet Vibrador</div><div class="card-desc">Multivelocidades com controle</div><div class="card-footer"><div class="card-price">R$ 12,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="pepperBall"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/pepper_ball.png" alt="Pepper Ball" loading="lazy"></div><div class="card-body"><div class="card-name">Pepper Ball</div><div class="card-desc">Bolinha explosiva para o oral</div><div class="card-price">R$ 9,90</div></div></div>
+      <div class="card" data-id="pepperBall"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/pepper_ball.png" alt="Pepper Ball" loading="lazy"></div><div class="card-body"><div class="card-name">Pepper Ball</div><div class="card-desc">Bolinha explosiva para o oral</div><div class="card-footer"><div class="card-price">R$ 9,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="tesao"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg" alt="Tesão de Touro" loading="lazy"></div><div class="card-body"><div class="card-name">Tesão de Touro</div><div class="card-desc">Energético afrodisíaco</div><div class="card-price">R$ 7,90</div></div></div>
+      <div class="card" data-id="tesao"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg" alt="Tesão de Touro" loading="lazy"></div><div class="card-body"><div class="card-name">Tesão de Touro</div><div class="card-desc">Energético afrodisíaco</div><div class="card-footer"><div class="card-price">R$ 7,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="eggWavy"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg" alt="Egg Wavy" loading="lazy"></div><div class="card-body"><div class="card-name">Egg Wavy Masturbador</div><div class="card-desc">Textura ondulada intensa</div><div class="card-price">R$ 12,90</div></div></div>
+      <div class="card" data-id="eggWavy"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg" alt="Egg Wavy" loading="lazy"></div><div class="card-body"><div class="card-name">Egg Wavy Masturbador</div><div class="card-desc">Textura ondulada intensa</div><div class="card-footer"><div class="card-price">R$ 12,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="funnyEgg"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/289949/MA007RS-Vagina_1.jpg" alt="Funny Egg" loading="lazy"></div><div class="card-body"><div class="card-name">Funny Egg Masturbador</div><div class="card-desc">CyberSkin realista</div><div class="card-price">R$ 24,90</div></div></div>
+      <div class="card" data-id="funnyEgg"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/289949/MA007RS-Vagina_1.jpg" alt="Funny Egg" loading="lazy"></div><div class="card-body"><div class="card-name">Funny Egg Masturbador</div><div class="card-desc">CyberSkin realista</div><div class="card-footer"><div class="card-price">R$ 24,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="masturbador"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/masturbador2.png" alt="Masturbador" loading="lazy"></div><div class="card-body"><div class="card-name">Masturbador CyberSkin</div><div class="card-desc">Ultra-realista</div><div class="card-price">R$ 34,90</div></div></div>
+      <div class="card" data-id="masturbador"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/masturbador2.png" alt="Masturbador" loading="lazy"></div><div class="card-body"><div class="card-name">Masturbador CyberSkin</div><div class="card-desc">Ultra-realista</div><div class="card-footer"><div class="card-price">R$ 34,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="kitAlgema"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_vermelha.png" alt="Algema" loading="lazy"></div><div class="card-body"><div class="card-name">Algema de Pelúcia</div><div class="card-desc">Confortável com chave</div><div class="card-price">R$ 14,90</div></div></div>
+      <div class="card" data-id="kitAlgema"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_vermelha.png" alt="Algema" loading="lazy"></div><div class="card-body"><div class="card-name">Algema de Pelúcia</div><div class="card-desc">Confortável com chave</div><div class="card-footer"><div class="card-price">R$ 14,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="perfumeCalcinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/perfume_calcinha_sabores.png" alt="Perfume Calcinha" loading="lazy"></div><div class="card-body"><div class="card-name">Perfume de Calcinha</div><div class="card-desc">6 aromas irresistíveis — 40ml</div><div class="card-price">R$ 14,90</div></div></div>
+      <div class="card" data-id="perfumeCalcinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/perfume_calcinha_sabores.png" alt="Perfume Calcinha" loading="lazy"></div><div class="card-body"><div class="card-name">Perfume de Calcinha</div><div class="card-desc">6 aromas irresistíveis — 40ml</div><div class="card-footer"><div class="card-price">R$ 14,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="pheroAromaF"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/phero_feminino.png" alt="Phero Aroma" loading="lazy"></div><div class="card-body"><div class="card-name">Phero Aroma Feminino</div><div class="card-desc">Perfume com feromônios</div><div class="card-price">R$ 22,90</div></div></div>
+      <div class="card" data-id="pheroAromaF"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/phero_feminino.png" alt="Phero Aroma" loading="lazy"></div><div class="card-body"><div class="card-name">Phero Aroma Feminino</div><div class="card-desc">Perfume com feromônios</div><div class="card-footer"><div class="card-price">R$ 22,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="pherome"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/336469/KAL1119_1.jpg" alt="Pherome Dom" loading="lazy"></div><div class="card-body"><div class="card-name">Pherome Dom</div><div class="card-desc">Perfume masculino c/ feromônio</div><div class="card-price">R$ 54,90</div></div></div>
+      <div class="card" data-id="pherome"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/336469/KAL1119_1.jpg" alt="Pherome Dom" loading="lazy"></div><div class="card-body"><div class="card-name">Pherome Dom</div><div class="card-desc">Perfume masculino c/ feromônio</div><div class="card-footer"><div class="card-price">R$ 54,90</div><button class="card-btn">Ver mais</button></div></div></div>
 
-      <div class="card" data-id="raspadinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/raspadinha.png" alt="Raspadinha" loading="lazy"></div><div class="card-body"><div class="card-name">Raspadinha do Prazer</div><div class="card-desc">Jogo erótico surpresa</div><div class="card-price">R$ 1,80</div></div></div>
+      <div class="card" data-id="raspadinha"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/raspadinha.png" alt="Raspadinha" loading="lazy"></div><div class="card-body"><div class="card-name">Raspadinha do Prazer</div><div class="card-desc">Jogo erótico surpresa 🎲</div><div class="card-footer"><div class="card-price">R$ 1,80</div><button class="card-btn">Ver mais</button></div></div></div>
 
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="foot-grid">
-      <div class="foot-item"><strong>Discrição</strong>Total e garantida</div>
-      <div class="foot-item"><strong>Embalagem</strong>Sem identificação</div>
-      <div class="foot-item"><strong>Entrega</strong>A combinar</div>
-      <div class="foot-item"><strong>Atendimento</strong>Via WhatsApp</div>
+    <div class="foot-pills">
+      <span class="foot-pill">🔒 Discrição total</span>
+      <span class="foot-pill">📦 Embalagem sigilosa</span>
+      <span class="foot-pill">🚀 Entrega combinada</span>
+      <span class="foot-pill">💬 Atendimento WhatsApp</span>
     </div>
-    <p class="foot-cta">Pronta para se mimar?</p>
-    <p class="foot-sub">Clique em qualquer produto e fale com a gente 💋</p>
+    <p class="foot-title">Pronta para se mimar? 💖</p>
+    <p class="foot-sub">Clique em qualquer produto e fale com a gente!</p>
   </footer>
 </div>
 
@@ -262,7 +297,6 @@ footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
         <div id="modal-thumbs"></div>
       </div>
       <div class="modal-body">
-        <div class="modal-tag">Clube do Prazer</div>
         <h2 id="modal-title"></h2>
         <div class="modal-price-row">
           <span id="modal-price"></span>
@@ -274,9 +308,7 @@ footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
         <div id="modal-how"></div>
         <div id="modal-specs"></div>
         <div id="modal-care"></div>
-        <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)">
-          Precisa de mais unidades? <a id="modal-wa-mais" href="#" target="_blank" style="color:var(--pink);text-decoration:none">Consulte disponibilidade no WhatsApp →</a>
-        </div>
+        <div class="modal-mais">Precisa de mais unidades? <a id="modal-wa-mais" href="#">Consulte no WhatsApp →</a></div>
       </div>
     </div>
   </div>
@@ -284,486 +316,91 @@ footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
 
 <script>
 
-var produtos = {
-
-  sedenta: {
-    nome: "Sedenta por Garganta Profunda — Dessensibilizante Oral Extra Forte 18ml (Pepper Blend)",
-    preco: "R$ 17,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta.png","https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_caixa.png","https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_sabores.png"],
-    descricao: "🔥 Quão fundo você consegue ir com a ajudinha do Sedenta? Esse dessensibilizante cumpre o que promete! Formulado com um blend de matérias-primas de ação extra forte, você fará o melhor sexo oral da sua vida. Cada sabor dá um gostinho de quero mais! A bala líquida traz um toque a mais de cuidado, criando conexão sexual e emocional com seu par. Te livrando de qualquer desconforto, esse dessensibilizante se tornará um verdadeiro aliado na hora H. Surpreenda quem você ama com muito tesão entre 4 paredes! Sabores disponíveis: Melancia, Blueberry e Kiwi.",
-    beneficios: ["Sabores deliciosos e 0 açúcar","Dessensibilizante extra forte","Garganta mega profunda","Sensação de formigamento","Ajuda seu par a gozar muito!"],
-    comoUsar: "Sexo oral: aplique um pouco do líquido na região íntima da pessoa amada antes do oral e aproveite. Pelo corpo: aplique em áreas erógenas (pescoço, seios, próstata) e faça massagens sensuais. Massagem Erótica: aplique a quantidade desejada e realize movimentos leves até a absorção.",
-    ficha: ["Contém: 01 Sedenta Dessensibilizante","Embalagem: Spray de 18ml","Composição: Glicerina, Água, Aroma, Álcool, Conservantes e Edulcorante","Validade: presente na embalagem","Sabores: Melancia, Blueberry, Kiwi"],
-    cuidados: "Para maiores de 18 anos. Mantenha fora do alcance de crianças. Não exponha a temperaturas acima de 50ºC. Conserve ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Em contato com os olhos, enxaguar com água abundante.",
-    estoque: 3
-  },
-
-  gelVibra: {
-    nome: "Siri Ryka — Gel Comestível Esquenta, Gela e Vibra 18g (Pepper Blend)",
-    preco: "R$ 14,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg"],
-    descricao: "Use esse gel e sinta prazeres que te transportam para lugares paradisíacos! O Siri Ryka foi desenvolvido para o corpo feminino com efeito triplo: vibra, esquenta e gela. Comestível — seu par pode cair de boca e se deliciar com o sabor inesquecível!",
-    beneficios: ["Efeito triplo: esquenta, gela e vibra", "Comestível com sabor irresistível", "Aumenta a sensibilidade", "Ideal para masturbação e preliminares", "Orgasmos incríveis"],
-    comoUsar: "Agite a embalagem, passe o gel no local desejado e desfrute do gosto delicioso.",
-    ficha: ["Contém: 01 Gel 18g", "Composição: Água, Glicerina, Extrato de Jambu, Aromas de Caju e Lichia, Arginina, Mentol"],
-    cuidados: "Evite contato com os olhos. Não compartilhe. Manter em local fresco.",
-    estoque: 2
-  },
-
-  caneta: {
-    nome: "Caneta Comestível Sexy Pen 20g — Sensuale",
-    preco: "R$ 12,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/155474/012570Chocomenta_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/155475/012570Morango_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/155477/012570Ice-Menta_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/155478/012570Doce-de-Leite_1.jpg"
-    ],
-    descricao: "A Caneta Comestível Sexy Pen Sensuale é o item perfeito para apimentar a relação! Imagine desenhar no corpo do parceiro(a) com sabores deliciosos como morango com champanhe, chocolate com menta ou leite condensado, e depois apagar esses desenhos com beijos e carícias. Com fórmula especial de gel comestível, estimula o paladar e o tato. Não deixa a pele grudenta e é discreta — leve para qualquer lugar!",
-    beneficios: [
-      "Aflora a imaginação e criatividade",
-      "Novas sensações a dois",
-      "Ideal para preliminares caprichadas",
-      "Saia da rotina com seu amor",
-      "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta e Doce de Leite"
-    ],
-    comoUsar: "Desenhe em seios, barriga, pernas, pés ou regiões íntimas. Apague com beijos e carícias. Também é perfeita para o sexo oral! Dica: deixe na geladeira antes de usar para uma sensação refrescante.",
-    ficha: [
-      "Contém: 01 Caneta Comestível 20g",
-      "Marca: Sensuale",
-      "Composição: Água, Glicerol, Hietelose, Imidazolidinyl Urea, PEG-40 Castor Oil, Óleo de Canela Cássia, Disodium EDTA, Perfume, Cinamaldeído",
-      "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"
-    ],
-    cuidados: "Para maiores de 18 anos. Em caso de irritação suspenda o uso. Não ingerir. Manter fora do alcance de crianças. Não usar em pele irritada ou lesionada.",
-    estoque: 4
-  },
-
-  trepe: {
-    nome: "Trepe Honey — Estimulante Sexual 8ml (Secret Love)",
-    preco: "R$ 12,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg"],
-    descricao: "O Trepe Honey revigora as forças e a energia quando nos sentimos cansados. Quando tomado antes do sexo, ajuda a aumentar a libido e a disposição, deixando o cansaço de lado e trazendo vitalidade para uma noite daquelas. Composto por mel e extratos naturais, proporciona calor, excitação e aumento do apetite sexual tanto para a mulher quanto para o homem. Dica: dilua na sua bebida preferida para um sabor mais agradável!",
-    beneficios: [
-      "Estimulante e energizante natural",
-      "Aumenta a libido e disposição",
-      "Diminui o cansaço",
-      "Melhora o desempenho sexual",
-      "Unissex — funciona para homens e mulheres"
-    ],
-    comoUsar: "Tome o sachê de dose única cerca de 2 horas antes da relação. Pode ser ingerido puro ou diluído na sua bebida preferida.",
-    ficha: [
-      "Contém: 01 Sachê de 8ml",
-      "Marca: Secret Love",
-      "Composição: Aqua, Fruit Extract, Propylparaben"
-    ],
-    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C. Em caso de sensibilidade, interrompa o uso. Guardar longe do alcance de crianças.",
-    estoque: 5
-  },
-
-  chocolate: {
-    nome: "Chocolate do Amor Excitante com Taurina — Caixa com 5 unidades 25g (Loka Sensação)",
-    preco: "R$ 39,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/361023/9546_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/361025/9546_5.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/361024/9546_2.jpg"
-    ],
-    descricao: "O Chocolate do Amor é um estimulante funcional afrodisíaco que vai além do sabor! Sua fórmula reúne guaraná em pó e taurina (efeito estimulante), aliados a notas quentes de cravo, gengibre e jambú. Ideal para casais que desejam explorar novas sensações. Cobertura de chocolate meio amargo com recheio de especiarias. Caixa com 5 unidades.",
-    beneficios: [
-      "Guaraná em pó e taurina — efeito estimulante natural",
-      "Experiência sensorial quente e envolvente",
-      "Cravo e gengibre — toque quente e marcante",
-      "Jambú — sensações únicas na boca",
-      "Perfeito para preliminares e ocasiões especiais",
-      "Caixa com 5 unidades"
-    ],
-    comoUsar: "Consumir imediatamente após abrir. Ideal para momentos especiais e preliminares.",
-    ficha: [
-      "Contém: 5 unidades com 25g cada",
-      "Marca: Loka Sensação",
-      "Ingredientes: Óleo de coco, Guaraná em pó, Açúcar fit, Aroma natural de gengibre e cravo, Cacau em pó, Aroma natural de jambú, Aroma de cereja e Taurina",
-      "Pode conter derivados de leite e soja"
-    ],
-    cuidados: "Não deve ser consumido por crianças, gestantes ou lactantes. Consumir imediatamente após abrir. Manter em local seco e fresco, ao abrigo da luz e calor.",
-    estoque: 2
-  },
-
-  melzinho: {
-    nome: "Melzinho Árabe do Prazer Natural Unissex 10g (Chillies)",
-    preco: "R$ 17,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/362316/ML01_1.jpg"],
-    descricao: "O Melzinho Árabe é IN-CRÍ-VEL para dar aquele up nos ânimos! Demora 30 minutos para surtir efeitos excitantes. Dica: adicione em um drink ou gin para ficar ainda mais gostoso! Aumenta a libido, melhora o humor e a lubrificação natural.",
-    beneficios: ["Aumenta a libido", "Melhora o humor", "Diminui o cansaço", "100% natural — mel, própolis e guaco", "Sabor delicioso de mel"],
-    comoUsar: "Tome 30 minutos antes, puro ou diluído na bebida preferida. Fica delicioso em drinks!",
-    ficha: ["01 sachê de 10g", "Composição: 70% Mel puro, 15% Extrato de própolis, 8% Extrato de guaco"],
-    cuidados: "Alérgicos a mel ou própolis não devem usar. Para maiores de 18 anos.",
-    estoque: 8
-  },
-
-  miniVib: {
-    nome: "Mini Vibrador Super Potente Smallest (Vip Mix)",
-    preco: "R$ 19,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/187383/MV005-Rosa_1.jpg", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/mini_vib_cores.png"],
-    descricao: "Apesar do tamanho reduzido, oferece vibração potente! Cabeça massageadora macia e texturizada. Compacto e leve com corrente para transporte discreto. Resistente à água. Perfeito para momentos individuais ou a dois.",
-    beneficios: ["Vibração super potente", "Cabeça massageadora texturizada", "Ultra compacto com corrente", "Estimula clitóris e mamilos", "Resistente à água", "Bateria LR44 inclusa"],
-    comoUsar: "Pressione o botão para ligar e ajustar a intensidade.",
-    ficha: ["Material: ABS", "Medidas: 6,5 x 1,5cm", "Bateria: 1 LR44 inclusa", "Cores: Preto, Roxo, Pink, Rosa e Vinho"],
-    cuidados: "Higienize com água e sabão neutro. Para uso individual.",
-    estoque: 3
-  },
-
-  vibLiquido: {
-    nome: "Liquidi Vibrador — Gel Vibrador Líquido Beijável 15g (Sexy Fantasy)",
-    preco: "R$ 19,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/liquidi_sabores.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/liquidi_caixa.png"],
-    descricao: "Prepare-se para uma explosão de sensações! O Liquidi Vibrador é um gel líquido beijável que proporciona vibração intensa e deliciosa. Com sabores irresistíveis como Chiclete, Morango e Menta, eleva a excitação a um novo nível. Fórmula inovadora com extrato de jambu!",
-    beneficios: ["Sensação vibrante que intensifica o prazer", "Beijável e saboroso — ótimo para o oral", "Textura leve sem resíduos pegajosos", "Extrato de jambu na fórmula", "Sabores: Chiclete, Morango e Menta"],
-    comoUsar: "Aplique uma pequena quantidade na região desejada e massageie até absorção.",
-    ficha: ["15g", "Sabores: Chiclete, Morango e Menta", "Composição: Água, Aroma, PEG-40, Álcool Etílico, Extrato de Jambu, Neotamo"],
-    cuidados: "Uso externo. Evite contato com os olhos. Manter fora do alcance de crianças.",
-    estoque: 3
-  },
-
-  masturbador: {
-    nome: "Masturbador Masculino Formato Vagina em CyberSkin (Sexy Import)",
-    preco: "R$ 34,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/masturbador2.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/masturbador3.png"],
-    descricao: "Feito para quem busca uma experiência mais intensa e realista! Design que simula a anatomia íntima feminina com canal interno apertado. Material macio com toque aveludado que imita a pele humana. Cada movimento, cada entrada... cada avanço é uma entrega intensa!",
-    beneficios: ["Formato realista da anatomia feminina", "Canal interno apertado", "Material TPE macio aveludado", "Design anatômico para melhor pegada", "Medidas: 13,5cm x 6cm x 6,5cm (aprox)"],
-    comoUsar: "Aplique lubrificante à base de água no pênis e na entrada. Introduza lentamente e varie a velocidade.",
-    ficha: ["01 Masturbador", "Material: TPE", "Medidas: 13,5cm x 6cm x 6,5cm (aprox)"],
-    cuidados: "Use APENAS lubrificante à base de água. Higienize antes e após o uso. Para uso individual.",
-    estoque: 1
-  },
-
-  tesao: {
-    nome: "Tesão de Touro — Estimulante Afrodisíaco Natural 10ml (K-Lab)",
-    preco: "R$ 7,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/246491/0107_1.jpg"],
-    descricao: "Como o nome já diz tudo, prepare-se para noites de Tesão! O Tesão de Touro é um Energético Afrodisíaco Natural desenvolvido para aumentar a libido, trazer mais energia e disposição para as noites a dois. Feito com ingredientes naturais e livre de hormônios — não é medicamento. Melhora o desempenho, aumenta o apetite sexual e garante que seu relacionamento nunca mais caia na rotina!",
-    beneficios: [
-      "Aumenta a libido",
-      "Mais energia e disposição para a hora H",
-      "Afrodisíaco natural sem hormônios",
-      "Melhora o desempenho sexual",
-      "Não contém glúten e lactose",
-      "Pode ser tomado puro ou misturado em qualquer bebida"
-    ],
-    comoUsar: "Tome o conteúdo em dose única, puro ou misturado na sua bebida favorita (água, suco, refrigerante ou bebida alcoólica). Pode ser consumido quente ou gelado. Ideal ingerir 30 minutos antes da relação.",
-    ficha: [
-      "Conteúdo: 10ml",
-      "Marca: K-Lab",
-      "Composição: Açaí, água, guaraná, taurina, benzoato, açúcar e corante",
-      "Embalagem: frasco plástico",
-      "Não contém glúten e lactose"
-    ],
-    cuidados: "Para maiores de 18 anos. Não expor a temperatura superior a 50°C. Não indicado para gestantes, lactantes, idosos e hipertensos. Portadores de alguma enfermidade consultem médico antes do uso. Após violar o lacre, consumir imediatamente.",
-    estoque: 2
-  },
-
-  eggWavy: {
-    nome: "Egg Wavy — Masturbador Masculino (Magical Kiss)",
-    preco: "R$ 12,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/egg_uso.png"],
-    descricao: "O egg masturbador é um acessório erótico masculino projetado para estimular durante a masturbação. Silicone macio e elástico com textura interna que proporciona sensações intensas. Elasticidade que se ajusta a diferentes tamanhos. Pode ser usado solo ou nas preliminares a dois.",
-    beneficios: ["Textura interna com relevos intensos", "Silicone macio e elástico", "Estimulação em 360°", "Discreto e portátil", "Versátil — solo ou a dois"],
-    comoUsar: "Adicione lubrificante à base de água dentro antes de colocar sobre o pênis ereto. Aplique movimentos suaves para cima e para baixo.",
-    ficha: ["Contém: 01 Egg", "Material: Silicone", "Medidas: 7cm x 5cm (aprox)"],
-    cuidados: "Use lubrificante à base de água. Lave com água morna e sabão neutro. Para uso individual.",
-    estoque: 4
-  },
-
-  funnyEgg: {
-    nome: "Funny Egg — Masturbador Masculino Vagina em CyberSkin (Vip Mix)",
-    preco: "R$ 24,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/289949/MA007RS-Vagina_1.jpg"],
-    descricao: "Não deixe a rotina tomar conta dos seus momentos íntimos! O Masturbador Egg da Vip Mix tem formato excitante e textura interna diferenciada, com toque macio e confortável. Masturbação silenciosa e discreta. Embalagem discreta para levar onde desejar.",
-    beneficios: ["Texturas diferenciadas", "Material macio TPE", "Prazer intenso", "Compacto e discreto", "Medidas: 8cm x 5cm (aprox)"],
-    comoUsar: "Higienize. Coloque lubrificante, encaixe no pênis e inicie. Na mulher: vire ao avesso e use na região clitoriana.",
-    ficha: ["Contém: 01 Masturbador Egg", "Material: TPE e PP", "Medidas: 8cm x 5cm (aprox)"],
-    cuidados: "Higienize antes e após o uso. Para uso individual.",
-    estoque: 1
-  },
-
-  perfumeCalcinha: {
-    nome: "Perfume de Calcinha Aromático 40ml (Apinil Cosméticos)",
-    preco: "R$ 14,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/363625/00601-Chocolate-Nutela_1.jpg", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/perfume_calcinha_sabores.png"],
-    descricao: "Por que até o cheiro da sua lingerie merece ser marcante? O Perfume de Calcinha Apinil é um aromatizador em spray com fragrância feminina e sensual. Fragrância suave, doce e romântica. Funciona em qualquer tecido sem comprometer a qualidade!",
-    beneficios: ["Aroma marcante e duradouro", "Fragrância suave, doce e romântica", "Aumenta a sensualidade", "Funciona em qualquer tecido", "Sabores: Morango c/ Champagne, Algodão Doce, Chocolate Nutela, Menta, Melancia, Maçã do Amor"],
-    comoUsar: "Borrife na calcinha, espere alguns segundos e coloque. Aplique sempre que desejar.",
-    ficha: ["01 Perfume spray 40ml", "Apinil Cosméticos", "Sabores: Morango c/ Champagne, Algodão Doce, Chocolate Nutela, Menta, Melancia, Maçã do Amor"],
-    cuidados: "Uso externo. Manter fora do alcance de crianças.",
-    estoque: 3
-  },
-
-  pherome: {
-    nome: "Pherome Dom — Perfume Masculino com Feromônio 15ml (Kalya)",
-    preco: "R$ 54,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/336469/KAL1119_1.jpg"],
-    descricao: "Se você quer exalar confiança e magnetismo, o Pherome Dom foi feito para você! Inspirado no Aventus by Creed, com aroma Chipre frutado de bergamota, maçã e pimenta rosa. Feromônios que potencializam o poder de atração. Ótima fixação — perfumado o dia todo!",
-    beneficios: ["Feromônios para potencializar a sedução", "Fragrância Chipre frutado sofisticado", "Notas: bergamota, maçã e pimenta rosa", "Ótima fixação e projeção", "15ml compacto"],
-    comoUsar: "Borrife no pescoço, pulsos e atrás das orelhas. Evite regiões íntimas.",
-    ficha: ["01 Perfume 15ml", "Kalya", "Composição: Álcool, Dipropilenoglicol, Parfum, Citronelol, Cumarina, Geraniol, Limoneno, Linalol"],
-    cuidados: "Uso externo. Não aplicar em pele lesionada. Não ingerir.",
-    estoque: 1
-  },
-
-  sedentaMolhadinha: {
-    nome: "Sedenta Molhadinha — Gel Deslizante Neutro 50g (Pepper Blend)",
-    preco: "R$ 13,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/347301/PB509_1.jpg"],
-    descricao: "Gel Deslizante Neutro feito à base de água com altíssimo poder de lubrificação. Livre de aroma e coloração. Perfeito para masturbação, massagem e penetração. Beijável e comestível — pode ser usado no sexo oral também!",
-    beneficios: ["Altíssimo poder de lubrificação", "Fórmula neutra sem aroma ou cor", "Compatível com preservativos e sex toys", "Beijável e comestível", "Deslize prazeroso sem desconforto"],
-    comoUsar: "Aplique na palma da mão ou diretamente na região desejada. Pode ser utilizado em qualquer parte do corpo, sob preservativo ou com sex toys.",
-    ficha: ["Contém: 01 gel de 50g", "Composição: Glicerina, Água, Goma Xantana, Sorbato de Potássio e Benzoato de Sódio"],
-    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C.",
-    estoque: 1
-  },
-  lacradinha: {
-    nome: "Lacradinha — Gel Adstringente Feminino 15g (Sexy Fantasy)",
-    preco: "R$ 17,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/lacradinha.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/lacradinha2.png"],
-    descricao: "Apertadinha novamente! A Lacradinha traz de volta a sensação de estar apertadinha na hora da penetração, como se fosse a sua \"primeira vez\". Surpreenda seu parceiro com prazeres ainda mais intensos e noites inesquecíveis!",
-    beneficios: ["Sensação de estreitamento vaginal", "Noites muito mais intensas", "Aumenta o prazer dos dois", "Quebra a rotina", "Sensação de \"primeira vez\""],
-    comoUsar: "Coloque uma pequena quantidade sobre os dedos, aplique massageando suavemente, e aproveite.",
-    ficha: ["Contém: 01 Gel Adstringente 15g", "Composição: Água, Polawax, Vaselina Líquida, Propilenoglicol, Alumen de Potassio, Extrato de Hamamellis, Aroma Ice Menta"],
-    cuidados: "Não utilizar em zonas inflamadas ou com lacerações. Não compartilhar.",
-    estoque: 2
-  },
-  sedentaGemido: {
-    nome: "Sedenta por Gemido — Excitante 18g (Pepper Blend)",
-    preco: "R$ 9,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_gemido.png"],
-    descricao: "Desfrute de um mundo de novas possibilidades com este gel que esquentará o clima! O destaque vai para o aroma de pimenta com sabor levemente adocicado, causando sensações de aquecimento na região aplicada, elevando o tesão e liberando os gemidos mais intensos e sinceros.",
-    beneficios: ["Picância suave", "Levemente adocicado — ótimo para o oral", "Apimenta a relação", "Estimula as brincadeiras a dois", "Cria conexão emocional e sexual"],
-    comoUsar: "Agite antes de usar e aplique um pouco na área desejada, massageie e aproveite! Crie um ambiente intimista com luzes baixas e uma playlist sexy.",
-    ficha: ["Contém: 01 Sedenta por Gemido 18g", "Embalagem: Bisnaga", "Composição: Glicerina, Aroma Idêntico ao Natural e Corante Vermelho V"],
-    cuidados: "Para maiores de 18 anos. Não exponha a temperaturas acima de 50°C. Em caso de irritação, suspenda o uso.",
-    estoque: 1
-  },
-  pepperBall: {
-    nome: "Pepper Ball — Bolinha Explosiva para Oral (Pepper Blend)",
-    preco: "R$ 9,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/pepper_ball.png"],
-    descricao: "A Pepper Ball é a bolinha que explode de prazer! Feita para transformar o sexo oral em uma experiência inesquecível. Ao ser pressionada, libera um líquido com sabor e efeito (esquenta, gela ou vibra) que deixa o oral muito mais gostoso e excitante. Sabores: Chocolate, Menta, Sensação e Morango.",
-    beneficios: ["Explode liberando gel saboroso no oral","Efeitos: esquenta, gela ou vibra conforme sabor","Sabores deliciosos","Aumenta o prazer no sexo oral","2 unidades por embalagem"],
-    comoUsar: "Coloque a bolinha na boca e pressione com a língua durante o sexo oral. Ela estoura liberando o gel com sabor e efeito.",
-    ficha: ["Contém: 2 unidades","Marca: Pepper Blend","Sabores: Chocolate, Menta, Sensação, Morango"],
-    cuidados: "Comestível para uso oral. Para maiores de 18 anos.",
-    estoque: 2
-  },
-  golfinho: {
-    nome: "Mini Vibrador Golfinho Recarregável Ponto G — 10 Modos (Vip Mix)",
-    preco: "R$ 22,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/golfinho.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/golfinho_cores.png"],
-    descricao: "Prepare-se para mergulhar em um mar de prazer! Com design encantador e desempenho surpreendente, ideal para estimular o Ponto G e o clitóris. 10 modos de vibração, silicone macio ABS, recarregável via USB e compacto para a bolsa.",
-    beneficios: ["10 modos de vibração", "Estimula Ponto G e clitóris", "Silicone macio e ABS", "Recarregável via USB", "Compacto para a bolsa", "Resistente à água"],
-    comoUsar: "Lubrifique com gel à base de água. Pressione por 3s para ligar. Toque rapidamente para alternar modos.",
-    ficha: ["Material: Silicone + ABS", "10 modos", "USB recarregável", "Cores: Rosa, Pink, Roxo e Preto"],
-    cuidados: "Lave com água e sabão neutro. Não expor a temperaturas acima de 50°C. Para uso individual.",
-    estoque: 2
-  },
-  bullet: {
-    nome: "Bullet Mini Vibrador Multivelocidades (Vip Mix)",
-    preco: "R$ 12,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet_embalagem.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet_produto.png"],
-    descricao: "Discreto e poderoso! O Bullet Mini Vibrador com multivelocidades da Vip Mix tem padrões vibratórios poderosíssimos. Leve, quieto, discreto e à prova d'água — use a qualquer momento e em qualquer lugar!",
-    beneficios: ["10 modos de vibração", "Ultra leve e discreto", "À prova d'água", "Perfeito solo ou a dois", "Estimula clitóris e mamilos"],
-    comoUsar: "Coloque as pilhas, pressione e gire o botão flor para ligar. Ajuste a intensidade.",
-    ficha: ["1 Bullet com controle e cabo", "Material: Plastificado", "Tamanho: 5cm x 2cm", "Energia: 2 Pilhas AA (não inclusas)"],
-    cuidados: "Higienize com água e sabão neutro. Para uso individual.",
-    estoque: 2
-  },
-  myrose: {
-    nome: "MyRose — Rosa Estimuladora de Clitóris com 10 Modos de Pulsação (MyVib)",
-    preco: "R$ 34,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/myrose_red.png"],
-    descricao: "Seu jardim vai ganhar uma flor diferente! A MyRose é o vibrador potente, macio e ultra-discreto que virou febre! Com 10 modos de pulsação, emite ondas de pressão no clitóris para sensações intensas e orgasmos múltiplos. Silicone macio aveludado, resistente à água e recarregável via USB. Disponível em Vermelho.",
-    beneficios: ["Sucção por ondas de pressão — não suga a pele","Vários modos de intensidade","Silicone premium macio","Resistente à água","Recarregável via USB","Design discreto formato rosa"],
-    comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Pressione o botão por 3 segundos para ligar. Posicione sobre o clitóris e ajuste o modo desejado.",
-    ficha: ["Material: Silicone premium","Tipo: sugador clitóris por ondas de pressão","Resistente à água: sim","Recarregável: USB","Cor disponível: Vermelho"],
-    cuidados: "Higienize com água e sabão neutro. Não submergir. Para uso individual. Maiores de 18 anos.",
-    estoque: 2
-  },
-  raspadinha: {
-    nome: "Raspadinha do Prazer — Menu dos Prazeres",
-    preco: "R$ 1,80",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/raspadinha.png"],
-    descricao: "O jogo erótico mais divertido para casais! Raspe e descubra o que fazer e onde fazer. Combinações de ações e regiões do corpo que garantem muita gargalhada, ousadia e tesão. Perfeito para sair da rotina!",
-    beneficios: ["Jogo erótico surpresa", "Surpresa a cada raspada", "Estimula criatividade e ousadia", "Ótimo para presentear"],
-    comoUsar: "Raspe os campos \"O QUE?\" e \"ONDE?\" com uma moeda e cumpra o desafio!",
-    ficha: ["Formato: cartão raspadinha", "Campos: O QUE? e ONDE?"],
-    cuidados: "Para maiores de 18 anos.",
-    estoque: 8
-  },
-
-  pheroAromaF: {
-    nome: "Phero Aroma — Perfume Feminino com Feromônio 15ml (Sexy Fantasy)",
-    preco: "R$ 22,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/phero_feminino.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/phero_feminino2.png"],
-    descricao: "Liberte o seu poder de atração com Phero Aroma! Fragrância de notas florais com toque cítrico que desperta o poder da feminilidade. Mais que um perfume — é uma arma de poder e sedução!",
-    beneficios: ["Feromônios que potencializam a atração", "Notas florais com toque cítrico", "Deixa rastro irresistível", "Ótima fixação", "Frasco discreto 15ml"],
-    comoUsar: "Duas borrifadas em cada lado do pescoço (15cm da pele), uma atrás de cada orelha e nos pulsos.",
-    ficha: ["01 Perfume 15ml", "Sexy Fantasy", "Composição: Álcool Etílico, Parfum, Água, Propylene Glycol, Linalool e outros"],
-    cuidados: "Não utilizar em pele com lacerações. Não ingerir. Manter fora do alcance de crianças.",
-    estoque: 2
-  },
-
-  kitAlgema: {
-    nome: "Algema MyCuff — Pelúcia Confortável",
-    preco: "R$ 14,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_vermelha.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_preta.png"],
-    descricao: "A Algema MyCuff é feita com pelúcia macia e confortável para explorar a dominação e submissão de forma segura e divertida. Acompanha chave. Ótima para apimentar a relação com cumplicidade e tesão!",
-    beneficios: ["Pelúcia macia e confortável","Acompanha chave","Resistente e segura","Estimula a fantasia e o tesão","Ótima para casais adventureiros"],
-    comoUsar: "Use com consentimento mútuo. Sempre mantenha a chave à mão. Higienize após o uso.",
-    ficha: ["Material: pelúcia + metal","Acompanha: chave","Marca: MyCuff"],
-    cuidados: "Use com segurança e consentimento. Sempre mantenha a chave acessível. Para maiores de 18 anos.",
-    estoque: 3
-  }
-
-};
+(function(){
+  try {
+    if(localStorage.getItem('cdp_age')==='1'){
+      document.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('age-gate').style.display='none';
+        document.getElementById('main').style.display='block';
+      });
+    } else if(localStorage.getItem('cdp_age')==='0'){
+      window.location.replace('https://www.google.com');
+    }
+  }catch(e){}
+})();
 
 </script>
 <script>
-
 var WA = atob('NTUxMTkxNzA5MDYxOQ==');
-
-function san(s) {
-  var d = document.createElement('div');
-  d.appendChild(document.createTextNode(String(s||'')));
-  return d.innerHTML;
+function san(s){var d=document.createElement('div');d.appendChild(document.createTextNode(String(s||'')));return d.innerHTML;}
+function showMain(){
+  document.getElementById('age-gate').style.display='none';
+  document.getElementById('main').style.display='block';
 }
-
-function showMain() {
-  console.log("showMain chamado");
-  document.getElementById('age-gate').classList.add('hidden');
-  var mainEl = document.getElementById('main');
-  mainEl.classList.add('visible');
-  mainEl.style.display = 'block';
-  console.log('main display:', mainEl.style.display, 'classes:', mainEl.className);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Checa se já confirmou idade
-  var aged = false;
-  try { aged = localStorage.getItem('cdp_age') === '1'; } catch(e) {}
-
-  if (aged) {
-    showMain();
-  }
-
-  // Usa event delegation - um único listener no document
-  // Isso garante que funciona independente de quando os cards aparecem
-  document.body.addEventListener('click', function(e) {
-    // Clique num card ou filho de card
-    console.log('click em:', e.target.tagName, e.target.id, e.target.className);
-    var card = e.target.closest('[data-id]');
-    if (card) {
-      openModal(card.getAttribute('data-id'));
-      return;
-    }
-    // Fechar modal
-    if (e.target.id === 'modal-overlay' || e.target.id === 'modal-close') {
-      closeModal();
-    }
+try{
+  if(localStorage.getItem('cdp_age')==='1') document.addEventListener('DOMContentLoaded',showMain);
+  else if(localStorage.getItem('cdp_age')==='0') window.location.replace('https://www.google.com');
+}catch(e){}
+document.addEventListener('DOMContentLoaded',function(){
+  var y=document.getElementById('btn-yes');
+  var n=document.getElementById('btn-no');
+  if(y) y.onclick=function(){try{localStorage.setItem('cdp_age','1');}catch(e){}showMain();};
+  if(n) n.onclick=function(){try{localStorage.setItem('cdp_age','0');}catch(e){}window.location.replace('https://www.google.com');};
+  document.body.addEventListener('click',function(e){
+    var card=e.target.closest('[data-id]');
+    if(card){openModal(card.getAttribute('data-id'));return;}
+    if(e.target.id==='modal-overlay'||e.target.closest('#modal-close')) closeModal();
   });
-
-  // Botão sim
-  document.getElementById('btn-yes').onclick = function() {
-    try { localStorage.setItem('cdp_age','1'); } catch(e) {}
-    showMain();
-  };
-
-  // Botão não
-  document.getElementById('btn-no').onclick = function() {
-    try { localStorage.setItem('cdp_age','0'); } catch(e) {}
-    window.location.replace('https://www.google.com');
-  };
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeModal();
-  });
-
+  document.addEventListener('keydown',function(e){if(e.key==='Escape') closeModal();});
 });
-
-function estoqueHtml(qtd) {
-  if (qtd === undefined || qtd === null) return '';
-  if (qtd === 0) return '<div class="modal-estoque zero">⚫ Sem estoque no momento</div>';
-  if (qtd === 1) return '<div class="modal-estoque vermelho">🔴 Última unidade!</div>';
-  if (qtd <= 3) return '<div class="modal-estoque amarelo">🟡 Restam ' + qtd + ' unidades</div>';
-  return '<div class="modal-estoque verde">🟢 ' + qtd + ' em estoque</div>';
+function estoqueHtml(q){
+  if(q===undefined||q===null) return '';
+  if(q===0) return '<div class="modal-estoque zero">Sem estoque</div>';
+  if(q===1) return '<div class="modal-estoque vermelho">🔴 Última unidade!</div>';
+  if(q<=3) return '<div class="modal-estoque amarelo">🟡 Restam '+q+' unidades</div>';
+  return '<div class="modal-estoque verde">🟢 '+q+' em estoque</div>';
 }
-
-function openModal(id) {
-  if (!window.produtos || !produtos[id]) return;
-  var p = produtos[id];
-
-  document.getElementById('modal-title').textContent = p.nome;
-  document.getElementById('modal-price').textContent = p.preco;
-
-  var msg = encodeURIComponent('Olá! Tenho interesse: ' + p.nome + ' — ' + p.preco);
-  document.getElementById('modal-wa').href = 'https://wa.me/' + WA + '?text=' + msg;
-  var maisLink = document.getElementById('modal-wa-mais');
-  if (maisLink) {
-    var msgMais = encodeURIComponent('Olá! Gostaria de saber sobre disponibilidade de mais unidades de: ' + p.nome);
-    maisLink.href = 'https://wa.me/' + WA + '?text=' + msgMais;
-  }
-
-  var fotos = (p.fotos||[]).filter(function(f){ return typeof f==='string' && f.startsWith('https://'); });
-  var main = document.getElementById('modal-main-img');
-  main.src = fotos.length ? fotos[0] : '';
-  main.alt = p.nome;
-
-  var thumbs = document.getElementById('modal-thumbs');
-  thumbs.innerHTML = '';
-  fotos.forEach(function(f, i) {
-    var img = document.createElement('img');
-    img.src = f; img.alt = p.nome;
-    if (i===0) img.classList.add('active');
-    img.onclick = function() {
-      main.src = f;
-      thumbs.querySelectorAll('img').forEach(function(x){ x.classList.remove('active'); });
-      img.classList.add('active');
-    };
-    thumbs.appendChild(img);
+function openModal(id){
+  if(!window.produtos||!produtos[id]) return;
+  var p=produtos[id];
+  document.getElementById('modal-title').textContent=p.nome;
+  document.getElementById('modal-price').textContent=p.preco;
+  var msg=encodeURIComponent('Olá! Tenho interesse: '+p.nome+' — '+p.preco);
+  document.getElementById('modal-wa').href='https://wa.me/'+WA+'?text='+msg;
+  var msgMais=encodeURIComponent('Olá! Gostaria de mais unidades de: '+p.nome);
+  var wm=document.getElementById('modal-wa-mais');
+  if(wm) wm.href='https://wa.me/'+WA+'?text='+msgMais;
+  var fotos=(p.fotos||[]).filter(function(f){return typeof f==='string'&&f.startsWith('https://');});
+  var mi=document.getElementById('modal-main-img');
+  mi.src=fotos.length?fotos[0]:''; mi.alt=p.nome;
+  var th=document.getElementById('modal-thumbs');
+  th.innerHTML='';
+  fotos.forEach(function(f,i){
+    var img=document.createElement('img');
+    img.src=f; img.alt=p.nome;
+    if(i===0) img.classList.add('active');
+    img.onclick=function(){mi.src=f;th.querySelectorAll('img').forEach(function(x){x.classList.remove('active');});img.classList.add('active');};
+    th.appendChild(img);
   });
-
-  var estoqueBox = document.getElementById('modal-estoque-box');
-  if (!estoqueBox) {
-    estoqueBox = document.createElement('div');
-    estoqueBox.id = 'modal-estoque-box';
-    var pr = document.querySelector('.modal-price-row');
-    if (pr) pr.insertAdjacentElement('afterend', estoqueBox);
-  }
-  estoqueBox.innerHTML = estoqueHtml(p.estoque);
-
-  sec('modal-desc','📝 Sobre o produto', p.descricao ? '<p>'+san(p.descricao)+'</p>' : '');
-  sec('modal-ben','✨ Benefícios', p.beneficios&&p.beneficios.length
-    ? '<ul>'+p.beneficios.map(function(b){ return '<li>'+san(b)+'</li>'; }).join('')+'</ul>' : '');
-  sec('modal-how','💡 Como usar', p.comoUsar ? '<p>'+san(p.comoUsar)+'</p>' : '');
-  sec('modal-specs','📋 Ficha técnica', p.ficha&&p.ficha.length
-    ? '<ul>'+p.ficha.map(function(f){ return '<li>'+san(f)+'</li>'; }).join('')+'</ul>' : '');
-  sec('modal-care','⚠️ Cuidados', p.cuidados ? '<p>'+san(p.cuidados)+'</p>' : '');
-
+  var eb=document.getElementById('modal-estoque-box');
+  if(eb) eb.innerHTML=estoqueHtml(p.estoque);
+  sec('modal-desc','📝 Sobre o produto',p.descricao?'<p>'+san(p.descricao)+'</p>':'');
+  sec('modal-ben','✨ Benefícios',p.beneficios&&p.beneficios.length?'<ul>'+p.beneficios.map(function(b){return '<li>'+san(b)+'</li>';}).join('')+'</ul>':'');
+  sec('modal-how','💡 Como usar',p.comoUsar?'<p>'+san(p.comoUsar)+'</p>':'');
+  sec('modal-specs','📋 Ficha técnica',p.ficha&&p.ficha.length?'<ul>'+p.ficha.map(function(f){return '<li>'+san(f)+'</li>';}).join('')+'</ul>':'');
+  sec('modal-care','⚠️ Cuidados',p.cuidados?'<p>'+san(p.cuidados)+'</p>':'');
   document.getElementById('modal-overlay').classList.add('open');
-  document.body.style.overflow = 'hidden';
+  document.body.style.overflow='hidden';
 }
-
-function sec(id, titulo, html) {
-  var el = document.getElementById(id);
-  if (!html) { el.innerHTML=''; return; }
-  el.innerHTML = '<div class="msec"><h3>'+titulo+'</h3>'+html+'</div>';
+function sec(id,titulo,html){
+  var el=document.getElementById(id);
+  if(!html){el.innerHTML='';return;}
+  el.innerHTML='<div class="msec"><h3>'+titulo+'</h3>'+html+'</div>';
 }
-
-function closeModal() {
+function closeModal(){
   document.getElementById('modal-overlay').classList.remove('open');
-  document.body.style.overflow = '';
+  document.body.style.overflow='';
 }
-
-
 </script>
 </body>
 </html>
