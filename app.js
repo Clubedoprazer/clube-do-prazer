@@ -7,7 +7,10 @@
     return d.innerHTML;
   }
 
-  // AGE GATE
+  if (window.top !== window.self) {
+    window.top.location = window.self.location;
+  }
+
   function showMain() {
     document.getElementById('age-gate').style.display = 'none';
     document.getElementById('main').style.display = 'block';
@@ -22,8 +25,6 @@
   document.addEventListener('DOMContentLoaded', function() {
     var yes = document.getElementById('btn-yes');
     var no  = document.getElementById('btn-no');
-    var cls = document.getElementById('modal-close');
-    var ovl = document.getElementById('modal-overlay');
 
     if (yes) yes.addEventListener('click', function() {
       try { localStorage.setItem('cdp_age','1'); } catch(e) {}
@@ -34,11 +35,11 @@
       window.location.replace('https://www.google.com');
     });
 
-    // Cards e Kits — event delegation
     document.addEventListener('click', function(e) {
       var el = e.target.closest('[data-id]');
       if (el) { openModal(el.getAttribute('data-id')); return; }
-      if (e.target === ovl || e.target.closest('#modal-close')) { closeModal(); }
+      if (e.target === document.getElementById('modal-overlay') ||
+          e.target.closest('#modal-close')) { closeModal(); }
     });
 
     document.addEventListener('keydown', function(e) {
@@ -46,7 +47,14 @@
     });
   });
 
-  // MODAL
+  function estoqueHtml(qtd) {
+    if (qtd === undefined || qtd === null) return '';
+    if (qtd === 0) return '<div class="modal-estoque zero">⚫ Produto sem estoque no momento</div>';
+    if (qtd === 1) return '<div class="modal-estoque vermelho">🔴 Última unidade disponível!</div>';
+    if (qtd <= 3) return '<div class="modal-estoque amarelo">🟡 Restam apenas ' + qtd + ' unidades!</div>';
+    return '<div class="modal-estoque verde">🟢 ' + qtd + ' unidades em estoque</div>';
+  }
+
   function openModal(id) {
     if (!window.produtos || !produtos[id]) return;
     var p = produtos[id];
@@ -76,10 +84,22 @@
       thumbs.appendChild(img);
     });
 
+    // Estoque no topo do modal
+    var estoqueEl = document.getElementById('modal-estoque-box');
+    if (!estoqueEl) {
+      estoqueEl = document.createElement('div');
+      estoqueEl.id = 'modal-estoque-box';
+      var priceRow = document.getElementById('modal-price').parentNode;
+      priceRow.parentNode.insertBefore(estoqueEl, priceRow.nextSibling);
+    }
+    estoqueEl.innerHTML = estoqueHtml(p.estoque);
+
     sec('modal-desc', '📝 Sobre o produto', '<p>' + san(p.descricao) + '</p>');
-    sec('modal-ben', '✨ Benefícios', p.beneficios && p.beneficios.length ? '<ul>' + p.beneficios.map(function(b){ return '<li>' + san(b) + '</li>'; }).join('') + '</ul>' : '');
+    sec('modal-ben', '✨ Benefícios', p.beneficios && p.beneficios.length
+      ? '<ul>' + p.beneficios.map(function(b){ return '<li>' + san(b) + '</li>'; }).join('') + '</ul>' : '');
     sec('modal-how', '💡 Como usar', p.comoUsar ? '<p>' + san(p.comoUsar) + '</p>' : '');
-    sec('modal-specs', '📋 Ficha técnica', p.ficha && p.ficha.length ? '<ul>' + p.ficha.map(function(f){ return '<li>' + san(f) + '</li>'; }).join('') + '</ul>' : '');
+    sec('modal-specs', '📋 Ficha técnica', p.ficha && p.ficha.length
+      ? '<ul>' + p.ficha.map(function(f){ return '<li>' + san(f) + '</li>'; }).join('') + '</ul>' : '');
     sec('modal-care', '⚠️ Cuidados', p.cuidados ? '<p>' + san(p.cuidados) + '</p>' : '');
 
     document.getElementById('modal-overlay').classList.add('open');
