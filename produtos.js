@@ -409,7 +409,7 @@ var produtos = {
   pheroAromaF: {
     nome: "Perfume Phero Aroma Feminino — com Feromônio",
     preco: "R$ 29,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/349215/3560268604509_1.jpg"],
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/phero_feminino.png"],
     descricao: "Perfume íntimo feminino com feromônios que potencializa a sedução e a atração. Aroma delicado, feminino e marcante. Ótima fixação — deixa um rastro irresistível.",
     beneficios: ["Com feromônios — aumenta a atração","Aroma feminino delicado e envolvente","Boa fixação","Ideal para encontros especiais"],
     comoUsar: "Aplique no pescoço, pulsos ou atrás das orelhas.",
@@ -421,7 +421,7 @@ var produtos = {
   kitAlgema: {
     nome: "Algema MyCuff — Pelúcia Confortável",
     preco: "R$ 19,90",
-    fotos: ["https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg"],
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_vermelha.png", "https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/algema_preta.png"],
     descricao: "A Algema MyCuff é feita com pelúcia macia e confortável para explorar a dominação e submissão de forma segura e divertida. Acompanha chave. Ótima para apimentar a relação com cumplicidade e tesão!",
     beneficios: ["Pelúcia macia e confortável","Acompanha chave","Resistente e segura","Estimula a fantasia e o tesão","Ótima para casais adventureiros"],
     comoUsar: "Use com consentimento mútuo. Sempre mantenha a chave à mão. Higienize após o uso.",
