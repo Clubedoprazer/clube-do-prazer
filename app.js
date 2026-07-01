@@ -7,52 +7,51 @@ function san(s) {
 }
 
 function showMain() {
-  document.getElementById('age-gate').style.display = 'none';
-  document.getElementById('main').style.display = 'block';
+  document.getElementById('age-gate').classList.add('hidden');
+  document.getElementById('main').classList.add('visible');
 }
 
-function bindCards() {
-  document.querySelectorAll('[data-id]').forEach(function(card) {
-    card.style.cursor = 'pointer';
-    card.onclick = function() {
-      openModal(this.getAttribute('data-id'));
-    };
-  });
-}
-
-// Checa age gate
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Checa se já confirmou idade
   var aged = false;
   try { aged = localStorage.getItem('cdp_age') === '1'; } catch(e) {}
 
   if (aged) {
     showMain();
-    bindCards();
   }
 
-  // Botões
-  var btnY = document.getElementById('btn-yes');
-  var btnN = document.getElementById('btn-no');
+  // Usa event delegation - um único listener no document
+  // Isso garante que funciona independente de quando os cards aparecem
+  document.body.addEventListener('click', function(e) {
+    // Clique num card ou filho de card
+    var card = e.target.closest('[data-id]');
+    if (card) {
+      openModal(card.getAttribute('data-id'));
+      return;
+    }
+    // Fechar modal
+    if (e.target.id === 'modal-overlay' || e.target.id === 'modal-close') {
+      closeModal();
+    }
+  });
 
-  if (btnY) btnY.onclick = function() {
+  // Botão sim
+  document.getElementById('btn-yes').onclick = function() {
     try { localStorage.setItem('cdp_age','1'); } catch(e) {}
     showMain();
-    bindCards();
   };
 
-  if (btnN) btnN.onclick = function() {
+  // Botão não
+  document.getElementById('btn-no').onclick = function() {
     try { localStorage.setItem('cdp_age','0'); } catch(e) {}
     window.location.replace('https://www.google.com');
   };
 
-  // Fechar modal
-  document.getElementById('modal-close').onclick = closeModal;
-  document.getElementById('modal-overlay').onclick = function(e) {
-    if (e.target === this) closeModal();
-  };
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeModal();
   });
+
 });
 
 function estoqueHtml(qtd) {
