@@ -21,7 +21,8 @@ var produtos = {
       "Composição: Glicerina, Água, Aroma, Álcool, Conservantes e Edulcorante",
       "Validade: presente na embalagem"
     ],
-    cuidados: "Para maiores de 18 anos. Não exponha a temperaturas acima de 50°C. Conserve ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Em contato com os olhos, enxaguar com água abundante."
+    cuidados: "Para maiores de 18 anos. Não exponha a temperaturas acima de 50°C. Conserve ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Em contato com os olhos, enxaguar com água abundante.",
+    estoque: 3
   },
 
   gelVibra: {
@@ -42,7 +43,8 @@ var produtos = {
       "Marca: Pepper Blend",
       "Composição: Água, Glicerina, Extrato de Jambu, Aromas de Caju e Lichia, Arginina, Mentol, Conservantes, Espessante, Neotame e Corante Rosa"
     ],
-    cuidados: "Manter em local seco e fresco. Em caso de vermelhidão ou reação alérgica, suspenda o uso. Evite contato com os olhos. Não compartilhe com outros parceiros."
+    cuidados: "Manter em local seco e fresco. Em caso de vermelhidão ou reação alérgica, suspenda o uso. Evite contato com os olhos. Não compartilhe com outros parceiros.",
+    estoque: 2
   },
 
   caneta: {
@@ -70,7 +72,8 @@ var produtos = {
       "Composição: Água, Glicerol, Hietelose, Imidazolidinyl Urea, PEG-40 Castor Oil, Óleo de Canela Cássia, Disodium EDTA, Perfume, Cinamaldeído",
       "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"
     ],
-    cuidados: "Para maiores de 18 anos. Em caso de irritação suspenda o uso. Não ingerir. Manter fora do alcance de crianças. Não usar em pele irritada ou lesionada."
+    cuidados: "Para maiores de 18 anos. Em caso de irritação suspenda o uso. Não ingerir. Manter fora do alcance de crianças. Não usar em pele irritada ou lesionada.",
+    estoque: 4
   },
 
   trepe: {
@@ -91,7 +94,8 @@ var produtos = {
       "Marca: Secret Love",
       "Composição: Aqua, Fruit Extract, Propylparaben"
     ],
-    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C. Em caso de sensibilidade, interrompa o uso. Guardar longe do alcance de crianças."
+    cuidados: "Para maiores de 18 anos. Não expor a temperaturas acima de 50°C. Em caso de sensibilidade, interrompa o uso. Guardar longe do alcance de crianças.",
+    estoque: 5
   },
 
   chocolate: {
@@ -118,7 +122,8 @@ var produtos = {
       "Ingredientes: Óleo de coco, Guaraná em pó, Açúcar fit, Aroma natural de gengibre e cravo, Cacau em pó, Aroma natural de jambú, Aroma de cereja e Taurina",
       "Pode conter derivados de leite e soja"
     ],
-    cuidados: "Não deve ser consumido por crianças, gestantes ou lactantes. Consumir imediatamente após abrir. Manter em local seco e fresco, ao abrigo da luz e calor."
+    cuidados: "Não deve ser consumido por crianças, gestantes ou lactantes. Consumir imediatamente após abrir. Manter em local seco e fresco, ao abrigo da luz e calor.",
+    estoque: 2
   },
 
   melzinho: {
@@ -146,7 +151,8 @@ var produtos = {
       "Registro: ANVISA",
       "Unissex: sim"
     ],
-    cuidados: "Alérgicos a mel ou própolis não devem usar. Para maiores de 18 anos. Consulte um profissional de saúde em caso de condições médicas."
+    cuidados: "Alérgicos a mel ou própolis não devem usar. Para maiores de 18 anos. Consulte um profissional de saúde em caso de condições médicas.",
+    estoque: 8
   },
 
   myrose: {
@@ -177,7 +183,8 @@ var produtos = {
       "Marca: MyVib",
       "Cores: Rosa Claro e Roxo"
     ],
-    cuidados: "Higienize com água e sabão neutro antes e após o uso. Evite molhar o compartimento de recarga. Seque com papel toalha. Guarde na embalagem original. Não expor a temperatura superior a 50°C. Para uso individual. Maiores de 18 anos."
+    cuidados: "Higienize com água e sabão neutro antes e após o uso. Evite molhar o compartimento de recarga. Seque com papel toalha. Guarde na embalagem original. Não expor a temperatura superior a 50°C. Para uso individual. Maiores de 18 anos.",
+    estoque: 0
   },
 
   miniVib: {
@@ -201,7 +208,8 @@ var produtos = {
       "Marca: Vip Mix",
       "Cores disponíveis: Rosa, Pink, Preto, Roxo"
     ],
-    cuidados: "Lave com água e sabão neutro antes e após o uso. Não use em zona inflamada ou pele lesionada. Para uso individual. Maiores de 18 anos."
+    cuidados: "Lave com água e sabão neutro antes e após o uso. Não use em zona inflamada ou pele lesionada. Para uso individual. Maiores de 18 anos.",
+    estoque: 3
   },
 
   vibLiquido: {
@@ -212,7 +220,8 @@ var produtos = {
     beneficios: ["Efeito vibratório líquido", "Beijável e gostoso", "Aquece e estimula", "3 sabores disponíveis"],
     comoUsar: "Aplique algumas gotas nas regiões erógenas. O calor do corpo ativa a vibração. Pode ser usado com a boca.",
     ficha: ["Conteúdo: 15ml", "Marca: Sexy Fantasy", "Sabores: Chiclete, Menta, Morango"],
-    cuidados: "Não ingerir diretamente. Para maiores de 18 anos."
+    cuidados: "Não ingerir diretamente. Para maiores de 18 anos.",
+    estoque: 3
   },
 
   masturbador: {
@@ -237,7 +246,8 @@ var produtos = {
       "Formato: vagina realística",
       "Tamanho: compacto"
     ],
-    cuidados: "Use APENAS lubrificante à base de água — lubrificante de silicone danifica o material. Higienize sempre após o uso. Para uso individual. Não compartilhar."
+    cuidados: "Use APENAS lubrificante à base de água — lubrificante de silicone danifica o material. Higienize sempre após o uso. Para uso individual. Não compartilhar.",
+    estoque: 1
   },
 
   tesao: {
@@ -261,7 +271,8 @@ var produtos = {
       "Embalagem: frasco plástico",
       "Não contém glúten e lactose"
     ],
-    cuidados: "Para maiores de 18 anos. Não expor a temperatura superior a 50°C. Não indicado para gestantes, lactantes, idosos e hipertensos. Portadores de alguma enfermidade consultem médico antes do uso. Após violar o lacre, consumir imediatamente."
+    cuidados: "Para maiores de 18 anos. Não expor a temperatura superior a 50°C. Não indicado para gestantes, lactantes, idosos e hipertensos. Portadores de alguma enfermidade consultem médico antes do uso. Após violar o lacre, consumir imediatamente.",
+    estoque: 2
   },
 
   eggWavy: {
@@ -286,7 +297,8 @@ var produtos = {
       "Contém: 01 Egg",
       "Medidas: 7,0 cm de comprimento x 5,0 cm de espessura (aproximadas)"
     ],
-    cuidados: "Use lubrificante à base de água. Higienize com água corrente e sabão neutro antes e após o uso. Seque com papel toalha. Guarde na embalagem original. Não usar em pele lesionada. Para uso individual."
+    cuidados: "Use lubrificante à base de água. Higienize com água corrente e sabão neutro antes e após o uso. Seque com papel toalha. Guarde na embalagem original. Não usar em pele lesionada. Para uso individual.",
+    estoque: 4
   },
 
   funnyEgg: {
@@ -297,7 +309,8 @@ var produtos = {
     beneficios: ["CyberSkin realista", "Formato vagina", "Textura interna com relevos", "Compacto"],
     comoUsar: "Use lubrificante à base de água. Higienize após uso.",
     ficha: ["Material: CyberSkin", "Marca: Vip Mix"],
-    cuidados: "Apenas lubrificante à base de água. Para uso individual."
+    cuidados: "Apenas lubrificante à base de água. Para uso individual.",
+    estoque: 1
   },
 
   perfumeCalcinha: {
@@ -320,7 +333,8 @@ var produtos = {
       "Composição: Aqua, Tetrasodium EDTA, Mentha Piperita Leaf Extract, Propylparaben, Methylparaben, Lactic Acid, PEG-40 Hydrogenated Castor Oil, Parfum e outros",
       "Aromas: Maçã do Amor, Algodão Doce, Chocolate Nutella, Menta, Melancia, Morango com Champagne"
     ],
-    cuidados: "Uso externo. Conservar em local fresco ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Manter fora do alcance de crianças."
+    cuidados: "Uso externo. Conservar em local fresco ao abrigo da luz e calor. Em caso de irritação, suspenda o uso. Manter fora do alcance de crianças.",
+    estoque: 3
   },
 
   pherome: {
@@ -331,7 +345,8 @@ var produtos = {
     beneficios: ["Feromônios para maior atração", "Aroma sofisticado chipre frutado", "Ótima fixação e projeção", "Frasco compacto 15ml"],
     comoUsar: "Borrife no pescoço, pulsos ou atrás das orelhas.",
     ficha: ["Conteúdo: 15ml", "Marca: Kalya", "Notas: Bergamota, Maçã, Pimenta Rosa"],
-    cuidados: "Uso externo. Não aplique em pele lesionada."
+    cuidados: "Uso externo. Não aplique em pele lesionada.",
+    estoque: 1
   },
 
   sedentaMolhadinha: {
@@ -342,7 +357,8 @@ var produtos = {
     beneficios: ["Alto poder de lubrificação", "Fórmula neutra", "Compatível com preservativos", "18g — prático"],
     comoUsar: "Aplique na região íntima antes ou durante a relação. Reaplique sempre que necessário.",
     ficha: ["Conteúdo: 50g", "Marca: Pepper Blend", "Tipo: lubrificante neutro"],
-    cuidados: "Uso íntimo externo. Para maiores de 18 anos."
+    cuidados: "Uso íntimo externo. Para maiores de 18 anos.",
+    estoque: 1
   },
   lacradinha: {
     nome: "Lacradinha — Gel Adstringente Feminino 15g (Sexy Fantasy)",
@@ -352,7 +368,8 @@ var produtos = {
     beneficios: ["Efeito adstringente — contração muscular vaginal","Sensação de rejuvenescimento íntimo","Intensifica o prazer para os dois","Fórmula segura e testada","15g — prático e discreto"],
     comoUsar: "Aplique uma pequena quantidade na região íntima externa antes da relação. Aguarde alguns minutos para o efeito agir.",
     ficha: ["Conteúdo: 15g","Marca: Sexy Fantasy","Tipo: gel adstringente feminino"],
-    cuidados: "Uso externo. Evite mucosas internas. Em caso de irritação suspenda o uso. Para maiores de 18 anos."
+    cuidados: "Uso externo. Evite mucosas internas. Em caso de irritação suspenda o uso. Para maiores de 18 anos.",
+    estoque: 2
   },
   sedentaGemido: {
     nome: "Sedenta por Gemido — Excitante 18g (Pepper Blend)",
@@ -362,7 +379,8 @@ var produtos = {
     beneficios: ["Excitante feminino de ação rápida","Leve picância estimulante","Aumenta a sensibilidade íntima","Sensação de calor e formigamento","18g — prático e discreto"],
     comoUsar: "Aplique uma pequena quantidade na região íntima externa e massageie suavemente. Aguarde o efeito agir.",
     ficha: ["Conteúdo: 18g","Marca: Pepper Blend","Tipo: excitante feminino com leve picância"],
-    cuidados: "Uso externo. Evite mucosas internas em grandes quantidades. Em caso de irritação suspenda o uso. Para maiores de 18 anos."
+    cuidados: "Uso externo. Evite mucosas internas em grandes quantidades. Em caso de irritação suspenda o uso. Para maiores de 18 anos.",
+    estoque: 1
   },
   pepperBall: {
     nome: "Pepper Ball — Bolinha Explosiva para Oral (Pepper Blend)",
@@ -372,7 +390,8 @@ var produtos = {
     beneficios: ["Explode liberando gel saboroso no oral","Efeitos: esquenta, gela ou vibra conforme sabor","Sabores deliciosos","Aumenta o prazer no sexo oral","2 unidades por embalagem"],
     comoUsar: "Coloque a bolinha na boca e pressione com a língua durante o sexo oral. Ela estoura liberando o gel com sabor e efeito.",
     ficha: ["Contém: 2 unidades","Marca: Pepper Blend","Sabores: Chocolate, Menta, Sensação, Morango"],
-    cuidados: "Comestível para uso oral. Para maiores de 18 anos."
+    cuidados: "Comestível para uso oral. Para maiores de 18 anos.",
+    estoque: 2
   },
   golfinho: {
     nome: "Vibrador Golfinho — Ponto G Silicone Recarregável",
@@ -382,7 +401,8 @@ var produtos = {
     beneficios: ["Curvatura anatômica para estimulação do Ponto G","Silicone macio e aveludado","Múltiplos modos de vibração","Resistente à água","Recarregável via USB","Cores: Pink e Vermelho"],
     comoUsar: "Use lubrificante à base de água. Pressione para ligar e escolha o modo. Direcione a curvatura para a parede anterior da vagina para estimular o Ponto G.",
     ficha: ["Material: Silicone","Tipo: vibrador ponto G com curvatura","Resistente à água: sim","Carregamento: USB","Cores: Pink e Vermelho"],
-    cuidados: "Higienize antes e após o uso. Use lubrificante à base de água. Para uso individual. Maiores de 18 anos."
+    cuidados: "Higienize antes e após o uso. Use lubrificante à base de água. Para uso individual. Maiores de 18 anos.",
+    estoque: 2
   },
   bullet: {
     nome: "Bullet Vibrador com Controle — Multivelocidades",
@@ -392,7 +412,8 @@ var produtos = {
     beneficios: ["Vibração multivelocidade","Controle por fio — entregue o poder ao par","Ultra discreto e compacto","Estimula clitóris, mamilos e zonas erógenas","Disponível em várias cores"],
     comoUsar: "Conecte o bullet ao controle. Pressione o botão para ligar e ajuste a velocidade. Use sobre as regiões desejadas. Lave com água e sabão neutro após o uso.",
     ficha: ["Material: ABS","Tipo: bullet com controle por fio","Cores: Rosa, Vermelho, Roxo, Preto, Branco"],
-    cuidados: "Higienize antes e após uso. Para uso individual. Maiores de 18 anos."
+    cuidados: "Higienize antes e após uso. Para uso individual. Maiores de 18 anos.",
+    estoque: 2
   },
   sugarClitoris: {
     nome: "Sugar — Sugador de Clitóris Formato Rosa (Vermelho)",
@@ -402,7 +423,8 @@ var produtos = {
     beneficios: ["Sucção por ondas de pressão — não suga a pele","Vários modos de intensidade","Silicone premium macio","Resistente à água","Recarregável via USB","Design discreto formato rosa"],
     comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Pressione o botão por 3 segundos para ligar. Posicione sobre o clitóris e ajuste o modo desejado.",
     ficha: ["Material: Silicone premium","Tipo: sugador clitóris por ondas de pressão","Resistente à água: sim","Recarregável: USB","Cor disponível: Vermelho"],
-    cuidados: "Higienize com água e sabão neutro. Não submergir. Para uso individual. Maiores de 18 anos."
+    cuidados: "Higienize com água e sabão neutro. Não submergir. Para uso individual. Maiores de 18 anos.",
+    estoque: 2
   },
   raspadinha: {
     nome: "Raspadinha do Prazer — Menu dos Prazeres",
@@ -412,7 +434,8 @@ var produtos = {
     beneficios: ["Jogo erótico divertido para casais","Surpresa a cada raspada","Estimula a criatividade e ousadia","Fácil de usar — é como uma raspadinha","Preço acessível — ótimo para presentear"],
     comoUsar: "Raspe os campos 'O QUE?' e 'ONDE?' com uma moeda. Cumpra o desafio revelado com o seu par. Prepare-se para muito tesão e gargalhadas!",
     ficha: ["Formato: cartão raspadinha","Marca: Menu dos Prazeres","Campos: O QUE? e ONDE?"],
-    cuidados: "Para maiores de 18 anos. Produto de uso recreativo para casais."
+    cuidados: "Para maiores de 18 anos. Produto de uso recreativo para casais.",
+    estoque: 8
   }
 
   pheroAromaF: {
@@ -423,7 +446,8 @@ var produtos = {
     beneficios: ["Com feromônios — aumenta a atração","Aroma feminino delicado e envolvente","Boa fixação","Ideal para encontros especiais"],
     comoUsar: "Aplique no pescoço, pulsos ou atrás das orelhas.",
     ficha: ["Tipo: perfume íntimo feminino c/ feromônios","Marca: Miess"],
-    cuidados: "Uso externo. Para uso pessoal."
+    cuidados: "Uso externo. Para uso pessoal.",
+    estoque: 2
   },
 
   kitAlgema: {
@@ -434,7 +458,8 @@ var produtos = {
     beneficios: ["Pelúcia macia e confortável","Acompanha chave","Resistente e segura","Estimula a fantasia e o tesão","Ótima para casais adventureiros"],
     comoUsar: "Use com consentimento mútuo. Sempre mantenha a chave à mão. Higienize após o uso.",
     ficha: ["Material: pelúcia + metal","Acompanha: chave","Marca: MyCuff"],
-    cuidados: "Use com segurança e consentimento. Sempre mantenha a chave acessível. Para maiores de 18 anos."
+    cuidados: "Use com segurança e consentimento. Sempre mantenha a chave acessível. Para maiores de 18 anos.",
+    estoque: 3
   }
 
 };
