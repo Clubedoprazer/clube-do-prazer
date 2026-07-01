@@ -7,8 +7,12 @@ function san(s) {
 }
 
 function showMain() {
+  console.log("showMain chamado");
   document.getElementById('age-gate').classList.add('hidden');
-  document.getElementById('main').classList.add('visible');
+  var mainEl = document.getElementById('main');
+  mainEl.classList.add('visible');
+  mainEl.style.display = 'block';
+  console.log('main display:', mainEl.style.display, 'classes:', mainEl.className);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Isso garante que funciona independente de quando os cards aparecem
   document.body.addEventListener('click', function(e) {
     // Clique num card ou filho de card
+    console.log('click em:', e.target.tagName, e.target.id, e.target.className);
     var card = e.target.closest('[data-id]');
     if (card) {
       openModal(card.getAttribute('data-id'));
