@@ -138,3 +138,5 @@ footer{background:linear-gradient(100deg,var(--pink2),var(--pink));display:flex;
 .modal-estoque.amarelo{background:rgba(255,165,0,.15);color:#ffb347;}
 .modal-estoque.vermelho{background:rgba(255,50,50,.15);color:#ff6b6b;}
 .modal-estoque.zero{background:rgba(100,100,100,.15);color:#888;}
+
+.estoque,.estoque-zero{display:none!important;}
