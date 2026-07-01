@@ -124,3 +124,10 @@ footer{background:linear-gradient(100deg,var(--pink2),var(--pink));display:flex;
   footer{flex-direction:column;text-align:center}
   .foot-cta{text-align:center}
 }
+
+/* ESTOQUE */
+.estoque{display:block;margin-top:6px;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;text-align:center;}
+.estoque[data-qtd="1"]{background:rgba(255,50,50,.2);color:#ff6b6b;}
+.estoque[data-qtd="2"]{background:rgba(255,165,0,.18);color:#ffb347;}
+.estoque[data-qtd="3"]{background:rgba(255,165,0,.18);color:#ffb347;}
+.estoque-zero{display:block;margin-top:6px;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;text-align:center;background:rgba(100,100,100,.2);color:#888;}
