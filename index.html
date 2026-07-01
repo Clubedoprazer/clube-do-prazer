@@ -128,10 +128,9 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
 .foot-sub{font-size:12px;color:var(--muted)}
 
 /* MODAL */
-#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);
-  z-index:1000;align-items:flex-end;justify-content:center}
-@media(min-width:700px){#modal-overlay{align-items:center;padding:20px}}
-#modal-overlay.open{display:flex}
+#modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1000;align-items:flex-end;justify-content:center}
+#modal-overlay.open{display:flex !important}
+@media(min-width:700px){#modal-overlay.open{align-items:center;padding:20px}}
 #modal-box{background:linear-gradient(180deg,var(--card),var(--bg2));
   width:100%;max-width:780px;max-height:92vh;overflow-y:auto;
   border-radius:24px 24px 0 0;border:1px solid var(--border);position:relative}
@@ -389,7 +388,9 @@ function openModal(id){
   sec('modal-how','💡 Como usar',p.comoUsar?'<p>'+san(p.comoUsar)+'</p>':'');
   sec('modal-specs','📋 Ficha técnica',p.ficha&&p.ficha.length?'<ul>'+p.ficha.map(function(f){return '<li>'+san(f)+'</li>';}).join('')+'</ul>':'');
   sec('modal-care','⚠️ Cuidados',p.cuidados?'<p>'+san(p.cuidados)+'</p>':'');
-  document.getElementById('modal-overlay').classList.add('open');
+  var mo=document.getElementById('modal-overlay');
+  mo.classList.add('open');
+  mo.style.display='flex';
   document.body.style.overflow='hidden';
 }
 function sec(id,titulo,html){
@@ -398,7 +399,9 @@ function sec(id,titulo,html){
   el.innerHTML='<div class="msec"><h3>'+titulo+'</h3>'+html+'</div>';
 }
 function closeModal(){
-  document.getElementById('modal-overlay').classList.remove('open');
+  var mo=document.getElementById('modal-overlay');
+  mo.classList.remove('open');
+  mo.style.display='none';
   document.body.style.overflow='';
 }
 </script>
