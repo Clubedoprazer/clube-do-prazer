@@ -404,7 +404,7 @@ var produtos = {
     ficha: ["Formato: cartão raspadinha","Marca: Menu dos Prazeres","Campos: O QUE? e ONDE?"],
     cuidados: "Para maiores de 18 anos. Produto de uso recreativo para casais.",
     estoque: 8
-  }
+  },
 
   pheroAromaF: {
     nome: "Perfume Phero Aroma Feminino — com Feromônio",
