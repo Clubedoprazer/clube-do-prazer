@@ -335,13 +335,13 @@ var produtos = {
   },
 
   sedentaMolhadinha: {
-    nome: "Sedenta Molhadinha — Gel Deslizante Neutro 18g (Pepper Blend)",
+    nome: "Sedenta Molhadinha — Gel Deslizante Neutro 50g (Pepper Blend)",
     preco: "R$ 14,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/347301/PB509_1.jpg"],
     descricao: "Gel lubrificante neutro com alto poder de deslizamento. Traz mais conforto e prazer. Compatível com preservativos.",
     beneficios: ["Alto poder de lubrificação", "Fórmula neutra", "Compatível com preservativos", "18g — prático"],
     comoUsar: "Aplique na região íntima antes ou durante a relação. Reaplique sempre que necessário.",
-    ficha: ["Conteúdo: 18g", "Marca: Pepper Blend", "Tipo: lubrificante neutro"],
+    ficha: ["Conteúdo: 50g", "Marca: Pepper Blend", "Tipo: lubrificante neutro"],
     cuidados: "Uso íntimo externo. Para maiores de 18 anos."
   },
   lacradinha: {
