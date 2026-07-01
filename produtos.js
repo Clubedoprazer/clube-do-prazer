@@ -155,38 +155,6 @@ var produtos = {
     estoque: 8
   },
 
-  myrose: {
-    nome: "MyRose — Rosa Estimuladora de Clitóris com 10 Modos de Pulsação (MyVib)",
-    preco: "R$ 29,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/361004/MVV7879-Rosa-Claro_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/361005/MVV7879_2.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/361006/MVV7879-Rosa-Claro_3.jpg"
-    ],
-    descricao: "Seu jardim vai ganhar uma flor diferente! A MyRose é o vibrador potente, macio e discreto que você estava procurando. Famosa pelos seus modos poderosos de pulsação, ela emite ondas de pressão no clitóris fazendo com que estimule e massageie a região, aumentando a excitação a níveis surpreendentes. Feita em silicone macio com toque aveludado, possui 10 modos de pulsação, é resistente à água e recarregável via USB. Seu formato de rosa passa despercebido por olhos curiosos — ideal para levar onde desejar.",
-    beneficios: [
-      "10 modos de pulsação intensa",
-      "Emite ondas de pressão no clitóris — não suga a pele",
-      "Design discreto em formato de rosa",
-      "Silicone macio com toque aveludado",
-      "Resistente à água",
-      "Recarregável via USB com base magnética",
-      "Pode ser usado em clitóris, mamilos e outras áreas erógenas"
-    ],
-    comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Para ligar/desligar, pressione o botão por 3 segundos. Pressione novamente para alternar entre os modos. Relaxe e aproveite! Medidas: 6,6 cm de comprimento x 5,6 cm de espessura.",
-    ficha: [
-      "10 modos de pulsação",
-      "Material: Silicone de alta qualidade",
-      "Resistente à água: sim (não submergir)",
-      "Carregamento: USB com base magnética",
-      "Medidas: 6,6 x 5,6 cm (aproximadas)",
-      "Marca: MyVib",
-      "Cores: Rosa Claro e Roxo"
-    ],
-    cuidados: "Higienize com água e sabão neutro antes e após o uso. Evite molhar o compartimento de recarga. Seque com papel toalha. Guarde na embalagem original. Não expor a temperatura superior a 50°C. Para uso individual. Maiores de 18 anos.",
-    estoque: 2
-  },
-
   miniVib: {
     nome: "Mini Vibrador Super Potente Smallest (Vip Mix)",
     preco: "R$ 17,90",
@@ -415,11 +383,11 @@ var produtos = {
     cuidados: "Higienize antes e após uso. Para uso individual. Maiores de 18 anos.",
     estoque: 2
   },
-  sugarClitoris: {
-    nome: "Sugar — Sugador de Clitóris Formato Rosa (Vermelho)",
+  myrose: {
+    nome: "MyRose — Rosa Estimuladora de Clitóris com 10 Modos de Pulsação (MyVib)",
     preco: "R$ 34,90",
-    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sugar.png"],
-    descricao: "O Sugar é um sugador de clitóris em formato de rosa com tecnologia de sucção por ondas de pressão. Diferente de vibradores comuns, ele não suga a pele — emite ondas que acariciam e estimulam o clitóris de forma única, elevando a excitação a níveis surpreendentes. Silicone premium, resistente à água e recarregável.",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/myrose_red.png"],
+    descricao: "Seu jardim vai ganhar uma flor diferente! A MyRose é o vibrador potente, macio e ultra-discreto que virou febre! Com 10 modos de pulsação, emite ondas de pressão no clitóris para sensações intensas e orgasmos múltiplos. Silicone macio aveludado, resistente à água e recarregável via USB. Disponível em Vermelho.",
     beneficios: ["Sucção por ondas de pressão — não suga a pele","Vários modos de intensidade","Silicone premium macio","Resistente à água","Recarregável via USB","Design discreto formato rosa"],
     comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Pressione o botão por 3 segundos para ligar. Posicione sobre o clitóris e ajuste o modo desejado.",
     ficha: ["Material: Silicone premium","Tipo: sugador clitóris por ondas de pressão","Resistente à água: sim","Recarregável: USB","Cor disponível: Vermelho"],
