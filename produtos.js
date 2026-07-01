@@ -184,7 +184,7 @@ var produtos = {
       "Cores: Rosa Claro e Roxo"
     ],
     cuidados: "Higienize com água e sabão neutro antes e após o uso. Evite molhar o compartimento de recarga. Seque com papel toalha. Guarde na embalagem original. Não expor a temperatura superior a 50°C. Para uso individual. Maiores de 18 anos.",
-    estoque: 0
+    estoque: 2
   },
 
   miniVib: {
