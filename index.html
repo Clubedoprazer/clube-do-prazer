@@ -124,6 +124,20 @@ footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
 .msec li{padding:3px 0;padding-left:14px;position:relative}
 .msec li::before{content:'—';position:absolute;left:0;color:var(--pink);font-size:10px;top:6px}
 </style>
+<script>
+(function(){
+  try {
+    if(localStorage.getItem('cdp_age')==='1'){
+      document.addEventListener('DOMContentLoaded',function(){
+        document.getElementById('age-gate').style.display='none';
+        document.getElementById('main').style.display='block';
+      });
+    } else if(localStorage.getItem('cdp_age')==='0'){
+      window.location.replace('https://www.google.com');
+    }
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 
@@ -143,7 +157,7 @@ footer{border-top:1px solid var(--border);padding:32px 20px;text-align:center}
 </div>
 
 <!-- MAIN -->
-<div id="main">
+<div id="main" style="display:none">
 
   <!-- HERO -->
   <div class="hero">
