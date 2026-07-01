@@ -344,58 +344,97 @@ var produtos = {
     ficha: ["Conteúdo: 18g", "Marca: Pepper Blend", "Tipo: lubrificante neutro"],
     cuidados: "Uso íntimo externo. Para maiores de 18 anos."
   },
+  lacradinha: {
+    nome: "Lacradinha — Gel Adstringente Feminino 15g (Sexy Fantasy)",
+    preco: "R$ 14,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/lacradinha.png"],
+    descricao: "O seu selinho virgem de qualidade! A Lacradinha é um gel adstringente feminino que promove a contração e tonificação dos músculos vaginais, proporcionando uma sensação de rejuvenescimento íntimo. Deixa tudo mais apertadinho e intensifica o prazer para os dois!",
+    beneficios: ["Efeito adstringente — contração muscular vaginal","Sensação de rejuvenescimento íntimo","Intensifica o prazer para os dois","Fórmula segura e testada","15g — prático e discreto"],
+    comoUsar: "Aplique uma pequena quantidade na região íntima externa antes da relação. Aguarde alguns minutos para o efeito agir.",
+    ficha: ["Conteúdo: 15g","Marca: Sexy Fantasy","Tipo: gel adstringente feminino"],
+    cuidados: "Uso externo. Evite mucosas internas. Em caso de irritação suspenda o uso. Para maiores de 18 anos."
+  },
+  sedentaGemido: {
+    nome: "Sedenta por Gemido — Excitante 18g (Pepper Blend)",
+    preco: "R$ 14,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sedenta_gemido.png"],
+    descricao: "A Sedenta por Gemido é um excitante feminino com leve picância desenvolvido pela Pepper Blend. Aumenta a sensibilidade na região íntima, provoca sensação de calor e formigamento, deixando você completamente louca de tesão. O nome diz tudo!",
+    beneficios: ["Excitante feminino de ação rápida","Leve picância estimulante","Aumenta a sensibilidade íntima","Sensação de calor e formigamento","18g — prático e discreto"],
+    comoUsar: "Aplique uma pequena quantidade na região íntima externa e massageie suavemente. Aguarde o efeito agir.",
+    ficha: ["Conteúdo: 18g","Marca: Pepper Blend","Tipo: excitante feminino com leve picância"],
+    cuidados: "Uso externo. Evite mucosas internas em grandes quantidades. Em caso de irritação suspenda o uso. Para maiores de 18 anos."
+  },
+  pepperBall: {
+    nome: "Pepper Ball — Bolinha Explosiva para Oral (Pepper Blend)",
+    preco: "R$ 9,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/pepper_ball.png"],
+    descricao: "A Pepper Ball é a bolinha que explode de prazer! Feita para transformar o sexo oral em uma experiência inesquecível. Ao ser pressionada, libera um líquido com sabor e efeito (esquenta, gela ou vibra) que deixa o oral muito mais gostoso e excitante. Sabores: Chocolate, Menta, Sensação e Morango.",
+    beneficios: ["Explode liberando gel saboroso no oral","Efeitos: esquenta, gela ou vibra conforme sabor","Sabores deliciosos","Aumenta o prazer no sexo oral","2 unidades por embalagem"],
+    comoUsar: "Coloque a bolinha na boca e pressione com a língua durante o sexo oral. Ela estoura liberando o gel com sabor e efeito.",
+    ficha: ["Contém: 2 unidades","Marca: Pepper Blend","Sabores: Chocolate, Menta, Sensação, Morango"],
+    cuidados: "Comestível para uso oral. Para maiores de 18 anos."
+  },
+  golfinho: {
+    nome: "Vibrador Golfinho — Ponto G Silicone Recarregável",
+    preco: "R$ 39,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/golfinho.png"],
+    descricao: "O Vibrador Golfinho tem curvatura anatômica especialmente desenvolvida para estimular o ponto G com precisão e eficiência. Feito em silicone macio e aveludado, proporciona sensações intensas e inesquecíveis. Discreto, recarregável e resistente à água.",
+    beneficios: ["Curvatura anatômica para estimulação do Ponto G","Silicone macio e aveludado","Múltiplos modos de vibração","Resistente à água","Recarregável via USB","Cores: Pink e Vermelho"],
+    comoUsar: "Use lubrificante à base de água. Pressione para ligar e escolha o modo. Direcione a curvatura para a parede anterior da vagina para estimular o Ponto G.",
+    ficha: ["Material: Silicone","Tipo: vibrador ponto G com curvatura","Resistente à água: sim","Carregamento: USB","Cores: Pink e Vermelho"],
+    cuidados: "Higienize antes e após o uso. Use lubrificante à base de água. Para uso individual. Maiores de 18 anos."
+  },
+  bullet: {
+    nome: "Bullet Vibrador com Controle — Multivelocidades",
+    preco: "R$ 19,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/bullet.png"],
+    descricao: "O Bullet é o clássico vibrador compacto e poderoso com controle por fio! Discreto, avassalador e o queridinho das mulheres e casais. A cápsula vibratória possui vibração única e multivelocidade, que pode ser aumentada gradativamente. Use sozinha ou entregue o controle para o seu par!",
+    beneficios: ["Vibração multivelocidade","Controle por fio — entregue o poder ao par","Ultra discreto e compacto","Estimula clitóris, mamilos e zonas erógenas","Disponível em várias cores"],
+    comoUsar: "Conecte o bullet ao controle. Pressione o botão para ligar e ajuste a velocidade. Use sobre as regiões desejadas. Lave com água e sabão neutro após o uso.",
+    ficha: ["Material: ABS","Tipo: bullet com controle por fio","Cores: Rosa, Vermelho, Roxo, Preto, Branco"],
+    cuidados: "Higienize antes e após uso. Para uso individual. Maiores de 18 anos."
+  },
+  sugarClitoris: {
+    nome: "Sugar — Sugador de Clitóris Formato Rosa (Vermelho)",
+    preco: "R$ 34,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/sugar.png"],
+    descricao: "O Sugar é um sugador de clitóris em formato de rosa com tecnologia de sucção por ondas de pressão. Diferente de vibradores comuns, ele não suga a pele — emite ondas que acariciam e estimulam o clitóris de forma única, elevando a excitação a níveis surpreendentes. Silicone premium, resistente à água e recarregável.",
+    beneficios: ["Sucção por ondas de pressão — não suga a pele","Vários modos de intensidade","Silicone premium macio","Resistente à água","Recarregável via USB","Design discreto formato rosa"],
+    comoUsar: "Higienize antes do uso. Aplique lubrificante à base de água. Pressione o botão por 3 segundos para ligar. Posicione sobre o clitóris e ajuste o modo desejado.",
+    ficha: ["Material: Silicone premium","Tipo: sugador clitóris por ondas de pressão","Resistente à água: sim","Recarregável: USB","Cor disponível: Vermelho"],
+    cuidados: "Higienize com água e sabão neutro. Não submergir. Para uso individual. Maiores de 18 anos."
+  },
+  raspadinha: {
+    nome: "Raspadinha do Prazer — Menu dos Prazeres",
+    preco: "R$ 3,90",
+    fotos: ["https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/raspadinha.png"],
+    descricao: "A Raspadinha do Prazer é o jogo erótico mais divertido para casais! Igual a uma raspadinha de loteria, você raspa e descobre o que fazer e onde fazer. São combinações de ações e regiões do corpo que garantem muita gargalhada, ousadia e tesão. Perfeito para sair da rotina!",
+    beneficios: ["Jogo erótico divertido para casais","Surpresa a cada raspada","Estimula a criatividade e ousadia","Fácil de usar — é como uma raspadinha","Preço acessível — ótimo para presentear"],
+    comoUsar: "Raspe os campos 'O QUE?' e 'ONDE?' com uma moeda. Cumpra o desafio revelado com o seu par. Prepare-se para muito tesão e gargalhadas!",
+    ficha: ["Formato: cartão raspadinha","Marca: Menu dos Prazeres","Campos: O QUE? e ONDE?"],
+    cuidados: "Para maiores de 18 anos. Produto de uso recreativo para casais."
+  }
 
-  // KITS
-  kitPhero: {
-    nome: "Kit Phero Aroma — Perfume Phero + Vibrador Ponto G + Sedenta Molhadinha + Lacradinha",
-    preco: "R$ 54,90",
+  pheroAromaF: {
+    nome: "Perfume Phero Aroma Feminino — com Feromônio",
+    preco: "R$ 29,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/349215/3560268604509_1.jpg"],
-    descricao: "Kit premium com 4 produtos: Perfume Phero Aroma Feminino com feromônios, Vibrador Ponto G, Sedenta Molhadinha lubrificante neutro e Lacradinha Gel Adstringente. Uma experiência completa!",
-    beneficios: ["4 produtos premium", "Perfume com feromônios incluído", "Vibrador Ponto G", "Lubrificante de qualidade", "Lacradinha Gel Adstringente"],
-    comoUsar: "Use o Perfume para criar o clima. A Lacradinha para adstringência. O Lubrificante para conforto. O Vibrador para o prazer máximo!",
-    ficha: ["1 Perfume Phero Aroma Feminino", "1 Vibrador Ponto G", "1 Sedenta Molhadinha 18g", "1 Lacradinha Gel Adstringente"],
-    cuidados: "Produtos para maiores de 18 anos."
+    descricao: "Perfume íntimo feminino com feromônios que potencializa a sedução e a atração. Aroma delicado, feminino e marcante. Ótima fixação — deixa um rastro irresistível.",
+    beneficios: ["Com feromônios — aumenta a atração","Aroma feminino delicado e envolvente","Boa fixação","Ideal para encontros especiais"],
+    comoUsar: "Aplique no pescoço, pulsos ou atrás das orelhas.",
+    ficha: ["Tipo: perfume íntimo feminino c/ feromônios","Marca: Miess"],
+    cuidados: "Uso externo. Para uso pessoal."
   },
 
-  kitBullet: {
-    nome: "Kit Bullet Explosivo — Bullet Vibro Ó + Pepper Ball + Algema MyCuff + Sedenta por Gemido",
-    preco: "R$ 30,00",
+  kitAlgema: {
+    nome: "Algema MyCuff — Pelúcia Confortável",
+    preco: "R$ 19,90",
     fotos: ["https://miess.vteximg.com.br/arquivos/ids/365078/507411501537_2.jpg"],
-    descricao: "Kit completo para uma noite inesquecível! Bullet vibratório multivelocidades, Bolinha explosiva Pepper Ball para oral, Algema de pelúcia MyCuff e gel Sedenta por Gemido.",
-    beneficios: ["Bullet multivelocidades", "Bolinha explosiva para oral", "Algema de pelúcia confortável", "Sedenta por Gemido incluído"],
-    comoUsar: "Use cada item com criatividade e sempre com consentimento mútuo. As algemas têm chave — mantenha à mão!",
-    ficha: ["1 Bullet Vibro Ó", "1 Pepper Ball Bolinha Explosiva", "1 Algema MyCuff", "1 Sedenta por Gemido"],
-    cuidados: "Use algemas com segurança e consentimento. Para maiores de 18 anos."
-  },
-
-  kitOral1: {
-    nome: "Kit Oral Completo — Sedenta Garganta Profunda + Egg Wavy + Vibrador Líquido",
-    preco: "R$ 39,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/347892/PB52-Morango_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/339162/6170-Chiclete_1.jpg"
-    ],
-    descricao: "Trio perfeito para o prazer oral e individual! Sedenta Garganta Profunda dessensibilizante, Egg Wavy masturbador com textura ondulada e Vibrador Líquido que vibra na pele.",
-    beneficios: ["Dessensibilizante oral extra forte", "Masturbador com textura ondulada", "Vibrador líquido beijável", "Combinação versátil"],
-    comoUsar: "Sedenta para o oral. Egg Wavy para ele. Vibrador Líquido para potencializar qualquer toque.",
-    ficha: ["1 Sedenta Garganta Profunda 18ml", "1 Egg Wavy Masturbador", "1 Vibrador Líquido Liquidi 15ml"],
-    cuidados: "Produtos para maiores de 18 anos."
-  },
-
-  kitOral2: {
-    nome: "Kit Esquenta & Vibra — Sedenta Garganta Profunda + Egg Wavy + Siri Ryka Gel Vibra",
-    preco: "R$ 39,90",
-    fotos: [
-      "https://miess.vteximg.com.br/arquivos/ids/347892/PB52-Morango_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/221509/1013F_1.jpg",
-      "https://miess.vteximg.com.br/arquivos/ids/352989/PB356.jpg"
-    ],
-    descricao: "Combinação irresistível! Sedenta Garganta Profunda dessensibilizante, Egg Wavy masturbador e o Siri Ryka que esquenta, gela e vibra. Prazer em trio!",
-    beneficios: ["Dessensibilizante extra forte", "Masturbador com textura ondulada", "Gel triplo: esquenta, gela e vibra", "Combinação poderosa"],
-    comoUsar: "Sedenta para o oral. Gel Vibra para ela. Egg Wavy para ele. Noite completa!",
-    ficha: ["1 Sedenta Garganta Profunda 18ml", "1 Egg Wavy Masturbador", "1 Siri Ryka Gel Vibra 18g"],
-    cuidados: "Produtos para maiores de 18 anos."
+    descricao: "A Algema MyCuff é feita com pelúcia macia e confortável para explorar a dominação e submissão de forma segura e divertida. Acompanha chave. Ótima para apimentar a relação com cumplicidade e tesão!",
+    beneficios: ["Pelúcia macia e confortável","Acompanha chave","Resistente e segura","Estimula a fantasia e o tesão","Ótima para casais adventureiros"],
+    comoUsar: "Use com consentimento mútuo. Sempre mantenha a chave à mão. Higienize após o uso.",
+    ficha: ["Material: pelúcia + metal","Acompanha: chave","Marca: MyCuff"],
+    cuidados: "Use com segurança e consentimento. Sempre mantenha a chave acessível. Para maiores de 18 anos."
   }
 
 };
