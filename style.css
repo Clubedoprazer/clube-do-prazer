@@ -20,7 +20,6 @@ body{background:var(--dark);font-family:'Poppins',sans-serif;color:#fff;min-heig
 .btn-nao{background:transparent;color:var(--muted);border:1px solid var(--muted);border-radius:30px;padding:12px 32px;font-size:15px;cursor:pointer}
 
 /* MAIN */
-#main{display:none}
 
 /* HEADER */
 header{background:linear-gradient(180deg,#1a0012,#0a0008);border-bottom:1px solid var(--border)}
@@ -140,3 +139,8 @@ footer{background:linear-gradient(100deg,var(--pink2),var(--pink));display:flex;
 .modal-estoque.zero{background:rgba(100,100,100,.15);color:#888;}
 
 .estoque,.estoque-zero{display:none!important;}
+
+/* Age gate control */
+#main { display: none; }
+#main.visible { display: block; }
+#age-gate.hidden { display: none !important; }
