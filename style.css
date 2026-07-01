@@ -142,5 +142,5 @@ footer{background:linear-gradient(100deg,var(--pink2),var(--pink));display:flex;
 
 /* Age gate control */
 #main { display: none; }
-#main.visible { display: block; }
+#main.visible { display: block !important; }
 #age-gate.hidden { display: none !important; }
