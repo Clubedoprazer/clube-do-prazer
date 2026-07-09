@@ -308,7 +308,7 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
 
       <div class="card" data-id="vibLiquido"><div class="card-img"><img src="https://raw.githubusercontent.com/Clubedoprazer/clube-do-prazer/main/imgs/liquidi_sabores.png" alt="Liquidi" loading="lazy"></div><div class="card-body"><div class="card-name">Liquidi Vibrador</div><div class="card-desc">Gel beijável que vibra</div><div class="card-price-row"><div class="card-price">R$ 18,90</div><span class="card-hint">toque p/ ver</span></div><div class="card-actions"><button class="btn-detalhes" data-detail="vibLiquido">👁 Detalhes</button><button class="btn-add" data-add="vibLiquido">🛒 Adicionar</button></div></div></div>
 
-      <div class="card" data-id="caneta"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg" alt="Caneta" loading="lazy"></div><div class="card-body"><div class="card-name">Caneta Comestível Sexy Pen</div><div class="card-desc">Escreva, desenhe e lamba!</div><div class="card-price-row"><div class="card-price"><small>2 por</small>R$ 12,90</div><span class="card-hint">toque p/ ver</span></div><div class="card-actions"><button class="btn-detalhes" data-detail="caneta">👁 Detalhes</button><button class="btn-add" data-add="caneta">🛒 Adicionar</button></div></div></div>
+      <div class="card" data-id="caneta"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg" alt="Caneta" loading="lazy"></div><div class="card-body"><div class="card-name">Caneta Comestível Sexy Pen</div><div class="card-desc">Escreva, desenhe e lamba!</div><div class="card-price-row"><div class="card-price"><small>a partir de</small>R$ 6,00</div><span class="card-hint">toque p/ ver</span></div><div class="card-actions"><button class="btn-detalhes" data-detail="caneta">👁 Detalhes</button><button class="btn-add" data-add="caneta">🛒 Adicionar</button></div></div></div>
 
       <div class="card" data-id="trepe"><div class="card-img"><img src="https://miess.vteximg.com.br/arquivos/ids/363043/SL167-BRINDESITE_1.jpg" alt="Trepe Honey" loading="lazy"></div><div class="card-body"><div class="card-name">Trepe Honey</div><div class="card-desc">Estimulante natural</div><div class="card-price-row"><div class="card-price">R$ 12,90</div><span class="card-hint">toque p/ ver</span></div><div class="card-actions"><button class="btn-detalhes" data-detail="trepe">👁 Detalhes</button><button class="btn-add" data-add="trepe">🛒 Adicionar</button></div></div></div>
 
@@ -583,7 +583,7 @@ var produtos = {
 
   caneta: {
     nome: "Caneta Comestível Sexy Pen 20g — Sensuale",
-    preco: "2 unidades por R$ 10,00",
+    preco: "R$ 6,00",
     fotos: [
       "https://miess.vteximg.com.br/arquivos/ids/155473/0125736Leite-Condensado_1.jpg",
       "https://miess.vteximg.com.br/arquivos/ids/155474/012570Chocomenta_1.jpg",
@@ -607,7 +607,9 @@ var produtos = {
       "Sabores: Leite Condensado, Chocomenta, Morango, Ice Menta, Doce de Leite"
     ],
     cuidados: "Para maiores de 18 anos. Em caso de irritação suspenda o uso. Não ingerir. Manter fora do alcance de crianças. Não usar em pele irritada ou lesionada.",
-    estoque: 4
+    estoque: 4,
+    promo: {qtd:2, preco:10.00, label:"2 por R$ 10,00"},
+    variacoes: [{nome:"Chocolate com Menta",estoque:2},{nome:"Creme Condensado",estoque:2}]
   },
 
   trepe: {
