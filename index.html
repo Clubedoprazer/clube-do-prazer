@@ -324,6 +324,25 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
   </footer>
 </div>
 
+<!-- CARRINHO FAB -->
+<button id="cart-fab" class="hidden" onclick="openCart()">🛒 Carrinho <span class="count" id="cart-count">0</span></button>
+
+<!-- CARRINHO PAINEL -->
+<div id="cart-overlay" onclick="if(event.target===this)closeCart()">
+  <div id="cart-panel">
+    <div class="cart-head">
+      <h3>🛒 Meu Carrinho</h3>
+      <button class="cart-close" onclick="closeCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-foot" id="cart-foot" style="display:none">
+      <div class="cart-total"><span>Total:</span><strong id="cart-total-value">R$ 0,00</strong></div>
+      <div class="cart-brinde-msg" id="cart-brinde"></div>
+      <button class="cart-checkout" onclick="checkoutCart()">💬 Finalizar pedido no WhatsApp</button>
+    </div>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div id="modal-overlay">
   <div id="modal-box">
@@ -339,6 +358,7 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
           <span id="modal-price"></span>
           <a id="modal-wa" href="#" target="_blank" rel="noopener" class="btn-wa">💬 Pedir via WhatsApp</a>
         </div>
+        <button class="add-cart-btn" id="modal-add-cart">🛒 Adicionar ao carrinho</button>
         <div id="modal-estoque-box"></div>
         <div id="modal-desc"></div>
         <div id="modal-ben"></div>
