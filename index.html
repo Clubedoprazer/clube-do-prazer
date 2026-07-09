@@ -352,25 +352,7 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
     <div class="icon">🎁</div>
     <p><strong>Brinde especial!</strong>Nas compras acima de R$ 40,00 você ganha um Sachê Sugalik Momozin Gel Sugador!</p>
   </div>
-
-
-  <!-- PAGAMENTO -->
-  <div class="pay-info">
-    <h4>💳 Formas de pagamento</h4>
-    <div class="pay-methods">
-      <span class="pay-badge">⚡ Pix</span>
-      <span class="pay-badge">💵 Dinheiro na entrega</span>
-    </div>
-    <div class="pix-key">
-      <div>
-        <div class="label">Chave Pix</div>
-        <div class="val" id="pix-key-val">gabrielyfelix095@gmail.com</div>
-      </div>
-      <button class="pix-copy" onclick="copyPix(this)">📋 Copiar</button>
-    </div>
-  </div>
-
-  <!-- BUSCA -->
+<!-- BUSCA -->
   <div class="search-wrap">
     <input type="text" class="search-box" id="search" placeholder="🔍 Buscar produto..." oninput="filtrarProdutos()">
   </div>
@@ -465,6 +447,11 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
   </section>
 
   <footer>
+    
+    <div class="pay-methods" style="justify-content:center;margin-bottom:18px">
+      <span class="pay-badge">⚡ Pix</span>
+      <span class="pay-badge">💵 Dinheiro na entrega</span>
+    </div>
     <div class="foot-pills">
       <span class="foot-pill">🔒 Discrição total</span>
       <span class="foot-pill">📦 Embalagem sigilosa</span>
@@ -1362,19 +1349,6 @@ function closeVariacao(){
 }
 
 
-// ===== COPIAR PIX =====
-function copyPix(btn){
-  var val = document.getElementById('pix-key-val').textContent;
-  navigator.clipboard.writeText(val).then(function(){
-    var t = btn.textContent;
-    btn.textContent = '✓ Copiado!';
-    btn.classList.add('copied');
-    setTimeout(function(){ btn.textContent=t; btn.classList.remove('copied'); },1500);
-  }).catch(function(){
-    alert('Chave Pix: '+val);
-  });
-}
-
 // ===== FILTROS E BUSCA =====
 var catAtiva = 'todos';
 function filtrarProdutos(){
@@ -1469,7 +1443,6 @@ function enviarPedido(){
   msg += '━━━━━━━━━━━━━━━'+L;
   msg += '💰 *TOTAL: R$ '+total.toFixed(2).replace('.',',')+'*'+L;
   if(total>=40) msg += L+'🎁 *Brinde incluso!*'+L;
-  if(payMethod==='Pix') msg += L+'⚡ Pix: gabrielyfelix095@gmail.com'+L;
   if(obs) msg += L+'📝 *Obs:* '+obs+L;
   msg += L+'📦 Aguardo confirmação!';
 
