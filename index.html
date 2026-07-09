@@ -247,6 +247,68 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
 .var-opt-stock{font-size:11px;color:var(--muted)}
 .var-cancel{width:100%;background:transparent;border:1px solid var(--border);color:var(--muted);
   border-radius:50px;padding:12px;margin-top:16px;cursor:pointer;font-size:13px}
+
+/* PAGAMENTO */
+.pay-info{background:linear-gradient(135deg,rgba(37,211,102,.08),rgba(255,45,143,.06));
+  border:1px solid rgba(37,211,102,.25);border-radius:14px;padding:16px;margin:0 16px 24px}
+.pay-info h4{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#5ddd7a;margin-bottom:10px}
+.pay-methods{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.pay-badge{background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:50px;
+  padding:6px 14px;font-size:12px;color:var(--pink3);display:flex;align-items:center;gap:6px}
+.pix-key{background:rgba(0,0,0,.3);border-radius:10px;padding:10px 14px;display:flex;
+  align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.pix-key .label{font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.pix-key .val{font-size:13px;color:#fff;font-weight:500;word-break:break-all}
+.pix-copy{background:var(--pink);color:#fff;border:none;border-radius:50px;padding:6px 14px;
+  font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap}
+.pix-copy.copied{background:#25D366}
+
+/* BUSCA E FILTROS */
+.search-wrap{padding:0 16px 14px}
+.search-box{width:100%;background:var(--card);border:1px solid var(--border);border-radius:50px;
+  padding:12px 18px;color:#fff;font-size:14px;font-family:'Poppins',sans-serif;outline:none}
+.search-box::placeholder{color:var(--muted)}
+.search-box:focus{border-color:var(--pink)}
+.filters{display:flex;gap:8px;overflow-x:auto;padding:0 16px 18px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.filter-btn{background:rgba(255,45,143,.08);border:1px solid var(--border);color:var(--muted);
+  border-radius:50px;padding:8px 16px;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;transition:.15s}
+.filter-btn:hover{background:rgba(255,45,143,.18)}
+.filter-btn.active{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border-color:transparent}
+.card.hidden-filter{display:none}
+.no-results{grid-column:1/-1;text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
+
+/* AVALIAÇÕES */
+.reviews{padding:0 16px 40px}
+.review-grid{display:grid;grid-template-columns:1fr;gap:12px}
+@media(min-width:700px){.review-grid{grid-template-columns:repeat(3,1fr)}}
+.review-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px}
+.review-stars{color:var(--gold);font-size:13px;margin-bottom:8px;letter-spacing:2px}
+.review-text{font-size:13px;color:var(--muted);line-height:1.6;font-style:italic;margin-bottom:10px}
+.review-author{font-size:11px;color:var(--pink3);font-weight:600}
+
+/* CHECKOUT FORM */
+#checkout-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:1300;
+  align-items:center;justify-content:center;padding:20px}
+#checkout-overlay.open{display:flex}
+.checkout-box{background:var(--card);border:1px solid var(--pink);border-radius:20px;
+  padding:28px 24px;max-width:400px;width:100%;max-height:90vh;overflow-y:auto}
+.checkout-box h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--pink3);margin-bottom:6px;text-align:center}
+.checkout-box .sub{font-size:12px;color:var(--muted);text-align:center;margin-bottom:20px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:11px;color:var(--pink3);margin-bottom:6px;letter-spacing:.06em}
+.field input,.field textarea{width:100%;background:var(--bg2);border:1px solid var(--border);
+  border-radius:12px;padding:12px 14px;color:#fff;font-size:14px;font-family:'Poppins',sans-serif;outline:none}
+.field input:focus,.field textarea:focus{border-color:var(--pink)}
+.field textarea{resize:vertical;min-height:60px}
+.pay-select{display:flex;gap:8px}
+.pay-opt{flex:1;background:var(--bg2);border:1px solid var(--border);border-radius:12px;
+  padding:12px;text-align:center;cursor:pointer;font-size:12px;transition:.15s}
+.pay-opt.selected{background:linear-gradient(135deg,var(--pink),var(--purple));border-color:transparent;color:#fff}
+.checkout-send{width:100%;background:#25D366;color:#fff;border:none;border-radius:50px;padding:15px;
+  font-size:15px;font-weight:600;cursor:pointer;margin-top:10px}
+.checkout-cancel{width:100%;background:transparent;border:1px solid var(--border);color:var(--muted);
+  border-radius:50px;padding:12px;margin-top:10px;cursor:pointer;font-size:13px}
 </style>
 </head>
 <body>
