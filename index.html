@@ -476,6 +476,35 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
   </footer>
 </div>
 
+<!-- CHECKOUT -->
+<div id="checkout-overlay" onclick="if(event.target===this)closeCheckout()">
+  <div class="checkout-box">
+    <h3>Finalizar pedido</h3>
+    <p class="sub">Preencha para enviarmos ao WhatsApp</p>
+
+    <div class="field">
+      <label>Seu nome *</label>
+      <input type="text" id="ck-nome" placeholder="Como podemos te chamar?">
+    </div>
+
+    <div class="field">
+      <label>Forma de pagamento *</label>
+      <div class="pay-select">
+        <div class="pay-opt selected" data-pay="Pix" onclick="selectPay(this)">⚡ Pix</div>
+        <div class="pay-opt" data-pay="Dinheiro na entrega" onclick="selectPay(this)">💵 Dinheiro</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Observação (opcional)</label>
+      <textarea id="ck-obs" placeholder="Alguma preferência ou dúvida?"></textarea>
+    </div>
+
+    <button class="checkout-send" onclick="enviarPedido()">💬 Enviar pedido no WhatsApp</button>
+    <button class="checkout-cancel" onclick="closeCheckout()">Voltar ao carrinho</button>
+  </div>
+</div>
+
 <!-- SELETOR DE VARIAÇÃO -->
 <div id="variacao-overlay" onclick="if(event.target===this)closeVariacao()">
   <div class="var-box">
@@ -500,7 +529,7 @@ footer{background:linear-gradient(135deg,rgba(255,45,143,.1),rgba(155,31,202,.1)
     <div class="cart-foot" id="cart-foot" style="display:none">
       <div class="cart-total"><span>Total:</span><strong id="cart-total-value">R$ 0,00</strong></div>
       <div class="cart-brinde-msg" id="cart-brinde"></div>
-      <button class="cart-checkout" onclick="checkoutCart()">💬 Finalizar pedido no WhatsApp</button>
+      <button class="cart-checkout" onclick="openCheckout()">💬 Finalizar pedido</button>
     </div>
   </div>
 </div>
@@ -1330,6 +1359,122 @@ function closeVariacao(){
   document.getElementById('variacao-overlay').classList.remove('open');
   document.body.style.overflow='';
   varProdId = null;
+}
+
+
+// ===== COPIAR PIX =====
+function copyPix(btn){
+  var val = document.getElementById('pix-key-val').textContent;
+  navigator.clipboard.writeText(val).then(function(){
+    var t = btn.textContent;
+    btn.textContent = '✓ Copiado!';
+    btn.classList.add('copied');
+    setTimeout(function(){ btn.textContent=t; btn.classList.remove('copied'); },1500);
+  }).catch(function(){
+    alert('Chave Pix: '+val);
+  });
+}
+
+// ===== FILTROS E BUSCA =====
+var catAtiva = 'todos';
+function filtrarProdutos(){
+  var termo = (document.getElementById('search')||{value:''}).value.toLowerCase().trim();
+  var cards = document.querySelectorAll('.card[data-id]');
+  var visiveis = 0;
+  cards.forEach(function(c){
+    var id = c.getAttribute('data-id');
+    var cat = c.getAttribute('data-cat')||'';
+    var p = produtos[id];
+    var nome = (p ? p.nome : '').toLowerCase();
+    var desc = (c.querySelector('.card-desc')||{textContent:''}).textContent.toLowerCase();
+    var matchCat = (catAtiva==='todos' || cat===catAtiva);
+    var matchTexto = (!termo || nome.indexOf(termo)>-1 || desc.indexOf(termo)>-1);
+    if(matchCat && matchTexto){ c.classList.remove('hidden-filter'); visiveis++; }
+    else { c.classList.add('hidden-filter'); }
+  });
+  // mensagem sem resultado
+  var grid = document.querySelector('.grid');
+  var nores = document.getElementById('no-results');
+  if(visiveis===0){
+    if(!nores){
+      nores = document.createElement('div');
+      nores.id='no-results'; nores.className='no-results';
+      nores.textContent='Nenhum produto encontrado 🔍';
+      grid.appendChild(nores);
+    }
+  } else if(nores){ nores.remove(); }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.filter-btn').forEach(function(b){
+    b.onclick = function(){
+      document.querySelectorAll('.filter-btn').forEach(function(x){x.classList.remove('active');});
+      b.classList.add('active');
+      catAtiva = b.getAttribute('data-cat');
+      filtrarProdutos();
+    };
+  });
+});
+
+// ===== CHECKOUT =====
+var payMethod = 'Pix';
+function selectPay(el){
+  document.querySelectorAll('.pay-opt').forEach(function(x){x.classList.remove('selected');});
+  el.classList.add('selected');
+  payMethod = el.getAttribute('data-pay');
+}
+function openCheckout(){
+  if(cart.length===0) return;
+  closeCart();
+  document.getElementById('checkout-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCheckout(){
+  document.getElementById('checkout-overlay').classList.remove('open');
+  document.body.style.overflow='';
+  openCart();
+}
+
+function enviarPedido(){
+  var nome = document.getElementById('ck-nome').value.trim();
+  var obs = document.getElementById('ck-obs').value.trim();
+  if(!nome){ alert('Por favor, informe seu nome 😊'); return; }
+
+  var L = '\n';
+  var msg = '🛍️ *NOVO PEDIDO — CLUBE DO PRAZER*'+L+L;
+  msg += '👤 *Cliente:* '+nome+L;
+  msg += '💳 *Pagamento:* '+payMethod+L+L;
+  msg += '━━━━━━━━━━━━━━━'+L+L;
+
+  var total = 0;
+  var qtdPorProduto = {};
+  cart.forEach(function(it){ qtdPorProduto[it.id] = (qtdPorProduto[it.id]||0) + it.qty; });
+
+  cart.forEach(function(it, i){
+    var p = produtos[it.id];
+    var preco = precoNum(p.preco);
+    var sub, precoLabel = p.preco;
+    if(p.promo && qtdPorProduto[it.id] >= p.promo.qtd){
+      var pu = p.promo.preco / p.promo.qtd;
+      sub = pu * it.qty;
+      precoLabel = 'R$ '+pu.toFixed(2).replace('.',',')+' (promo)';
+    } else { sub = preco * it.qty; }
+    total += sub;
+    var nomeP = p.nome.split('—')[0].trim();
+    msg += '*'+(i+1)+'.* '+nomeP+L;
+    if(it.variacao) msg += '   🏷 '+it.variacao+L;
+    msg += '   '+it.qty+'x '+precoLabel+' = R$ '+sub.toFixed(2).replace('.',',')+L+L;
+  });
+
+  msg += '━━━━━━━━━━━━━━━'+L;
+  msg += '💰 *TOTAL: R$ '+total.toFixed(2).replace('.',',')+'*'+L;
+  if(total>=40) msg += L+'🎁 *Brinde incluso!*'+L;
+  if(payMethod==='Pix') msg += L+'⚡ Pix: gabrielyfelix095@gmail.com'+L;
+  if(obs) msg += L+'📝 *Obs:* '+obs+L;
+  msg += L+'📦 Aguardo confirmação!';
+
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg), '_blank');
+  closeCheckout();
 }
 
 </script>
