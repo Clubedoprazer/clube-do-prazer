@@ -456,6 +456,7 @@ function openModal(id){
   mo.classList.add('open');
   mo.style.display='flex';
   document.body.style.overflow='hidden';
+  pushHistoryState('modal');
 }
 function sec(id,titulo,html){
   var el=document.getElementById(id);
@@ -464,9 +465,11 @@ function sec(id,titulo,html){
 }
 function closeModal(){
   var mo=document.getElementById('modal-overlay');
+  if(!mo.classList.contains('open')) return;
   mo.classList.remove('open');
   mo.style.display='none';
   document.body.style.overflow='';
+  if(history.state && history.state.overlay==='modal') history.back();
 }
 </script>
 <script>
@@ -995,10 +998,14 @@ function updateCart(){
 function openCart(){
   document.getElementById('cart-overlay').classList.add('open');
   document.body.style.overflow='hidden';
+  pushHistoryState('cart');
 }
 function closeCart(){
-  document.getElementById('cart-overlay').classList.remove('open');
+  var co=document.getElementById('cart-overlay');
+  if(!co.classList.contains('open')) return;
+  co.classList.remove('open');
   document.body.style.overflow='';
+  if(history.state && history.state.overlay==='cart') history.back();
 }
 
 function checkoutCart(){
@@ -1015,6 +1022,31 @@ function checkoutCart(){
   if(total>=40) msg += '%0A%0A🎁 Com direito ao brinde!';
   window.open('https://wa.me/'+WA+'?text='+msg, '_blank');
 }
+
+
+// ===== BOTÃO VOLTAR DO CELULAR =====
+// Quando abre modal ou carrinho, adiciona entrada no histórico
+// Assim o botão voltar fecha em vez de sair do site
+function pushHistoryState(type){
+  history.pushState({overlay:type}, '');
+}
+
+window.addEventListener('popstate', function(e){
+  // Se tem modal aberto, fecha
+  var modal = document.getElementById('modal-overlay');
+  var cart = document.getElementById('cart-overlay');
+  if(cart && cart.classList.contains('open')){
+    cart.classList.remove('open');
+    document.body.style.overflow='';
+    return;
+  }
+  if(modal && modal.classList.contains('open')){
+    modal.classList.remove('open');
+    modal.style.display='none';
+    document.body.style.overflow='';
+    return;
+  }
+});
 
 </script>
 </body>
