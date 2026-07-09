@@ -907,8 +907,14 @@ function precoNum(p){
 
 function addToCart(id){
   if(!produtos[id]) return;
+  var p = produtos[id];
+  var estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
+  if(estoque<=0){ alert('Produto sem estoque no momento 😔'); return; }
   var ex = cart.find(function(i){return i.id===id;});
-  if(ex){ ex.qty++; }
+  if(ex){
+    if(ex.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+' em estoque!'); return; }
+    ex.qty++;
+  }
   else { cart.push({id:id, qty:1}); }
   updateCart();
   // feedback visual
@@ -925,6 +931,9 @@ function removeFromCart(id){
 function changeQty(id, delta){
   var it = cart.find(function(i){return i.id===id;});
   if(!it) return;
+  var p = produtos[id];
+  var estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
+  if(delta>0 && it.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+' em estoque!'); return; }
   it.qty += delta;
   if(it.qty<=0) removeFromCart(id);
   else updateCart();
@@ -957,12 +966,13 @@ function updateCart(){
       '<div class="ci-info">'+
         '<div class="ci-name">'+p.nome.split('—')[0]+'</div>'+
         '<div class="ci-price">'+p.preco+'</div>'+
+      '<div style="font-size:10px;color:var(--muted)">'+((p.estoque!==undefined&&p.estoque<=3)?('só '+p.estoque+' em estoque'):'')+'</div>'+
         '<button class="ci-remove" onclick="removeFromCart(\''+it.id+'\')">🗑 remover</button>'+
       '</div>'+
       '<div class="ci-controls">'+
         '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',-1)">−</button>'+
         '<span class="ci-qty">'+it.qty+'</span>'+
-        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',1)">+</button>'+
+        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',1)" '+((p.estoque!==undefined&&it.qty>=p.estoque)?'style="opacity:.3;cursor:not-allowed"':'')+'>+</button>'+
       '</div>'+
     '</div>';
   });
