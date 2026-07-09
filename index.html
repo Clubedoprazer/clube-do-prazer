@@ -1006,19 +1006,25 @@ function addToCart(id, variacao){
   setTimeout(function(){fab.style.transform='';},200);
 }
 
-function removeFromCart(id){
-  cart = cart.filter(function(i){return i.id!==id;});
+function removeFromCart(key){
+  cart = cart.filter(function(i){return i.key!==key;});
   updateCart();
 }
 
-function changeQty(id, delta){
-  var it = cart.find(function(i){return i.id===id;});
+function changeQty(key, delta){
+  var it = cart.find(function(i){return i.key===key;});
   if(!it) return;
-  var p = produtos[id];
-  var estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
-  if(delta>0 && it.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+' em estoque!'); return; }
+  var p = produtos[it.id];
+  var estoque;
+  if(it.variacao){
+    var v = p.variacoes.find(function(x){return x.nome===it.variacao;});
+    estoque = v ? v.estoque : 0;
+  } else {
+    estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
+  }
+  if(delta>0 && it.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+' disponível!'); return; }
   it.qty += delta;
-  if(it.qty<=0) removeFromCart(id);
+  if(it.qty<=0) removeFromCart(key);
   else updateCart();
 }
 
@@ -1044,18 +1050,20 @@ function updateCart(){
     var preco = precoNum(p.preco);
     total += preco*it.qty;
     var foto = (p.fotos&&p.fotos[0])||'';
+    var nome = p.nome.split('—')[0].trim();
+    var varLabel = it.variacao ? '<div style="font-size:10.5px;color:var(--pink3);margin-top:2px">🏷 '+it.variacao+'</div>' : '';
     html += '<div class="cart-item">'+
       '<img src="'+foto+'" alt="">'+
       '<div class="ci-info">'+
-        '<div class="ci-name">'+p.nome.split('—')[0]+'</div>'+
+        '<div class="ci-name">'+nome+'</div>'+
+        varLabel+
         '<div class="ci-price">'+p.preco+'</div>'+
-      '<div style="font-size:10px;color:var(--muted)">'+((p.estoque!==undefined&&p.estoque<=3)?('só '+p.estoque+' em estoque'):'')+'</div>'+
-        '<button class="ci-remove" onclick="removeFromCart(\''+it.id+'\')">🗑 remover</button>'+
+        '<button class="ci-remove" onclick="removeFromCart(\''+it.key+'\')">🗑 remover</button>'+
       '</div>'+
       '<div class="ci-controls">'+
-        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',-1)">−</button>'+
+        '<button class="ci-qty-btn" onclick="changeQty(\''+it.key+'\',-1)">−</button>'+
         '<span class="ci-qty">'+it.qty+'</span>'+
-        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',1)" '+((p.estoque!==undefined&&it.qty>=p.estoque)?'style="opacity:.3;cursor:not-allowed"':'')+'>+</button>'+
+        '<button class="ci-qty-btn" onclick="changeQty(\''+it.key+'\',1)">+</button>'+
       '</div>'+
     '</div>';
   });
@@ -1087,17 +1095,26 @@ function closeCart(){
 
 function checkoutCart(){
   if(cart.length===0) return;
-  var msg = 'Olá! Quero fazer um pedido:%0A%0A';
+  var L = '%0A'; // quebra de linha
+  var msg = '🛍️ *NOVO PEDIDO — CLUBE DO PRAZER*'+L+L;
+  msg += '━━━━━━━━━━━━━━━'+L+L;
   var total = 0;
-  cart.forEach(function(it){
+  cart.forEach(function(it, i){
     var p = produtos[it.id];
     var preco = precoNum(p.preco);
-    total += preco*it.qty;
-    msg += '• '+it.qty+'x '+p.nome.split('—')[0].trim()+' — '+p.preco+'%0A';
+    var sub = preco*it.qty;
+    total += sub;
+    var nome = p.nome.split('—')[0].trim();
+    msg += '*'+(i+1)+'.* '+nome+L;
+    if(it.variacao) msg += '   🏷 Sabor: '+it.variacao+L;
+    msg += '   Qtd: '+it.qty+' x '+p.preco+L;
+    msg += '   Subtotal: R$ '+sub.toFixed(2).replace('.',',')+L+L;
   });
-  msg += '%0A*Total: R$ '+total.toFixed(2).replace('.',',')+'*';
-  if(total>=40) msg += '%0A%0A🎁 Com direito ao brinde!';
-  window.open('https://wa.me/'+WA+'?text='+msg, '_blank');
+  msg += '━━━━━━━━━━━━━━━'+L;
+  msg += '💰 *TOTAL: R$ '+total.toFixed(2).replace('.',',')+'*'+L;
+  if(total>=40) msg += L+'🎁 *Brinde incluso!* (Sachê Sugalik Momozin)'+L;
+  msg += L+'📦 Aguardo confirmação e combinamos a entrega!';
+  window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(decodeURIComponent(msg)), '_blank');
 }
 
 
