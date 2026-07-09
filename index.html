@@ -971,17 +971,34 @@ function precoNum(p){
   return 0;
 }
 
-function addToCart(id){
+function addToCart(id, variacao){
   if(!produtos[id]) return;
   var p = produtos[id];
-  var estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
+
+  // Se tem variações e nenhuma foi escolhida, abre seletor
+  if(p.variacoes && p.variacoes.length && !variacao){
+    openVariacao(id);
+    return;
+  }
+
+  var estoque, key;
+  if(variacao){
+    var v = p.variacoes.find(function(x){return x.nome===variacao;});
+    estoque = v ? v.estoque : 0;
+    key = id + '::' + variacao;
+  } else {
+    estoque = (p.estoque===undefined||p.estoque===null) ? 99 : p.estoque;
+    key = id;
+  }
+
   if(estoque<=0){ alert('Produto sem estoque no momento 😔'); return; }
-  var ex = cart.find(function(i){return i.id===id;});
+
+  var ex = cart.find(function(i){return i.key===key;});
   if(ex){
-    if(ex.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+' em estoque!'); return; }
+    if(ex.qty>=estoque){ alert('Só temos '+estoque+' unidade'+(estoque>1?'s':'')+(variacao?' de '+variacao:'')+'!'); return; }
     ex.qty++;
   }
-  else { cart.push({id:id, qty:1}); }
+  else { cart.push({key:key, id:id, variacao:variacao||null, qty:1}); }
   updateCart();
   // feedback visual
   var fab = document.getElementById('cart-fab');
@@ -1107,6 +1124,43 @@ window.addEventListener('popstate', function(e){
     return;
   }
 });
+
+
+// ===== SELETOR DE VARIAÇÃO =====
+var varProdId = null;
+function openVariacao(id){
+  varProdId = id;
+  var p = produtos[id];
+  document.getElementById('var-title').textContent = 'Escolha o sabor';
+  document.getElementById('var-sub').textContent = p.nome.split('—')[0].trim();
+  var opts = document.getElementById('var-opts');
+  opts.innerHTML = '';
+  p.variacoes.forEach(function(v){
+    // Quantidade já no carrinho dessa variação
+    var noCart = cart.find(function(i){return i.key===(id+'::'+v.nome);});
+    var usado = noCart ? noCart.qty : 0;
+    var disp = v.estoque - usado;
+    var div = document.createElement('div');
+    div.className = 'var-opt' + (disp<=0 ? ' disabled' : '');
+    div.innerHTML = '<span class="var-opt-name">'+v.nome+'</span>' +
+      '<span class="var-opt-stock">'+(disp>0 ? disp+' disponível'+(disp>1?'is':'') : 'esgotado')+'</span>';
+    if(disp>0){
+      div.onclick = function(){
+        addToCart(id, v.nome);
+        closeVariacao();
+        openCart();
+      };
+    }
+    opts.appendChild(div);
+  });
+  document.getElementById('variacao-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeVariacao(){
+  document.getElementById('variacao-overlay').classList.remove('open');
+  document.body.style.overflow='';
+  varProdId = null;
+}
 
 </script>
 </body>
