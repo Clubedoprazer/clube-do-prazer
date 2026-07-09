@@ -1047,18 +1047,42 @@ function updateCart(){
   }
   var total = 0;
   var html='';
+  // Agrupa quantidade por produto (para promoção)
+  var qtdPorProduto = {};
+  cart.forEach(function(it){
+    qtdPorProduto[it.id] = (qtdPorProduto[it.id]||0) + it.qty;
+  });
+
   cart.forEach(function(it){
     var p = produtos[it.id];
     var preco = precoNum(p.preco);
-    total += preco*it.qty;
+    var subtotal;
+    if(p.promo && qtdPorProduto[it.id] >= p.promo.qtd){
+      // Aplica preço promocional proporcional
+      var precoUnitPromo = p.promo.preco / p.promo.qtd;
+      subtotal = precoUnitPromo * it.qty;
+    } else {
+      subtotal = preco * it.qty;
+    }
+    total += subtotal;
     var foto = (p.fotos&&p.fotos[0])||'';
     var nome = p.nome.split('—')[0].trim();
     var varLabel = it.variacao ? '<div style="font-size:10.5px;color:var(--pink3);margin-top:2px">🏷 '+it.variacao+'</div>' : '';
+    var promoLabel = '';
+    if(p.promo){
+      if(qtdPorProduto[it.id] >= p.promo.qtd){
+        promoLabel = '<div style="font-size:10px;color:#5ddd7a;margin-top:2px">🎉 '+p.promo.label+' aplicado!</div>';
+      } else {
+        var falta = p.promo.qtd - qtdPorProduto[it.id];
+        promoLabel = '<div style="font-size:10px;color:var(--gold);margin-top:2px">+'+falta+' e ganhe: '+p.promo.label+'</div>';
+      }
+    }
     html += '<div class="cart-item">'+
       '<img src="'+foto+'" alt="">'+
       '<div class="ci-info">'+
         '<div class="ci-name">'+nome+'</div>'+
         varLabel+
+        promoLabel+
         '<div class="ci-price">'+p.preco+'</div>'+
         '<button class="ci-remove" onclick="removeFromCart(\''+it.key+'\')">🗑 remover</button>'+
       '</div>'+
@@ -1101,15 +1125,25 @@ function checkoutCart(){
   var msg = '🛍️ *NOVO PEDIDO — CLUBE DO PRAZER*'+L+L;
   msg += '━━━━━━━━━━━━━━━'+L+L;
   var total = 0;
+  var qtdPorProduto = {};
+  cart.forEach(function(it){ qtdPorProduto[it.id] = (qtdPorProduto[it.id]||0) + it.qty; });
+
   cart.forEach(function(it, i){
     var p = produtos[it.id];
     var preco = precoNum(p.preco);
-    var sub = preco*it.qty;
+    var sub, precoLabel = p.preco;
+    if(p.promo && qtdPorProduto[it.id] >= p.promo.qtd){
+      var pu = p.promo.preco / p.promo.qtd;
+      sub = pu * it.qty;
+      precoLabel = 'R$ '+pu.toFixed(2).replace('.',',')+' (promo)';
+    } else {
+      sub = preco * it.qty;
+    }
     total += sub;
     var nome = p.nome.split('—')[0].trim();
     msg += '*'+(i+1)+'.* '+nome+L;
     if(it.variacao) msg += '   🏷 Sabor: '+it.variacao+L;
-    msg += '   Qtd: '+it.qty+' x '+p.preco+L;
+    msg += '   Qtd: '+it.qty+' x '+precoLabel+L;
     msg += '   Subtotal: R$ '+sub.toFixed(2).replace('.',',')+L+L;
   });
   msg += '━━━━━━━━━━━━━━━'+L;
