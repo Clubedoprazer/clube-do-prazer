@@ -408,7 +408,9 @@ document.addEventListener('DOMContentLoaded',function(){
     if(card){openModal(card.getAttribute('data-id'));return;}
     if(e.target.id==='modal-overlay'||e.target.closest('#modal-close')) closeModal();
   });
-  document.addEventListener('keydown',function(e){if(e.key==='Escape') closeModal();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();closeCart();}});
+  var addBtn=document.getElementById('modal-add-cart');
+  if(addBtn) addBtn.onclick=function(){ if(currentModalId){addToCart(currentModalId);closeModal();openCart();} };
 });
 function estoqueHtml(q){
   if(q===undefined||q===null) return '';
@@ -419,6 +421,7 @@ function estoqueHtml(q){
 }
 function openModal(id){
   if(!window.produtos||!produtos[id]) return;
+  currentModalId=id;
   var p=produtos[id];
   document.getElementById('modal-title').textContent=p.nome;
   document.getElementById('modal-price').textContent=p.preco;
@@ -890,6 +893,116 @@ var produtos = {
   }
 
 };
+
+// ===== CARRINHO =====
+var cart = [];
+var currentModalId = null;
+
+function precoNum(p){
+  // Extrai número do preço (ex "R$ 17,90" -> 17.90, "2 por R$ 10,00" -> 10.00)
+  var m = String(p).match(/R\$\s*([\d.]+),(\d{2})/);
+  if(m) return parseFloat(m[1].replace('.','')+'.'+m[2]);
+  return 0;
+}
+
+function addToCart(id){
+  if(!produtos[id]) return;
+  var ex = cart.find(function(i){return i.id===id;});
+  if(ex){ ex.qty++; }
+  else { cart.push({id:id, qty:1}); }
+  updateCart();
+  // feedback visual
+  var fab = document.getElementById('cart-fab');
+  fab.style.transform='scale(1.15)';
+  setTimeout(function(){fab.style.transform='';},200);
+}
+
+function removeFromCart(id){
+  cart = cart.filter(function(i){return i.id!==id;});
+  updateCart();
+}
+
+function changeQty(id, delta){
+  var it = cart.find(function(i){return i.id===id;});
+  if(!it) return;
+  it.qty += delta;
+  if(it.qty<=0) removeFromCart(id);
+  else updateCart();
+}
+
+function updateCart(){
+  var fab = document.getElementById('cart-fab');
+  var count = document.getElementById('cart-count');
+  var totalQty = cart.reduce(function(s,i){return s+i.qty;},0);
+  count.textContent = totalQty;
+  if(totalQty>0) fab.classList.remove('hidden');
+  else fab.classList.add('hidden');
+
+  var itemsEl = document.getElementById('cart-items');
+  var footEl = document.getElementById('cart-foot');
+  if(cart.length===0){
+    itemsEl.innerHTML = '<div class="cart-empty">Seu carrinho está vazio 🛒<br><br>Adicione produtos para fazer seu pedido!</div>';
+    footEl.style.display='none';
+    return;
+  }
+  var total = 0;
+  var html='';
+  cart.forEach(function(it){
+    var p = produtos[it.id];
+    var preco = precoNum(p.preco);
+    total += preco*it.qty;
+    var foto = (p.fotos&&p.fotos[0])||'';
+    html += '<div class="cart-item">'+
+      '<img src="'+foto+'" alt="">'+
+      '<div class="ci-info">'+
+        '<div class="ci-name">'+p.nome.split('—')[0]+'</div>'+
+        '<div class="ci-price">'+p.preco+'</div>'+
+        '<button class="ci-remove" onclick="removeFromCart(\''+it.id+'\')">🗑 remover</button>'+
+      '</div>'+
+      '<div class="ci-controls">'+
+        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',-1)">−</button>'+
+        '<span class="ci-qty">'+it.qty+'</span>'+
+        '<button class="ci-qty-btn" onclick="changeQty(\''+it.id+'\',1)">+</button>'+
+      '</div>'+
+    '</div>';
+  });
+  itemsEl.innerHTML = html;
+  footEl.style.display='block';
+  document.getElementById('cart-total-value').textContent = 'R$ '+total.toFixed(2).replace('.',',');
+
+  var brinde = document.getElementById('cart-brinde');
+  if(total>=40){
+    brinde.textContent = '🎁 Você ganhou o brinde! (Sachê Sugalik Momozin)';
+  } else {
+    var falta = (40-total).toFixed(2).replace('.',',');
+    brinde.textContent = '🎁 Faltam R$ '+falta+' para ganhar um brinde!';
+  }
+}
+
+function openCart(){
+  document.getElementById('cart-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCart(){
+  document.getElementById('cart-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function checkoutCart(){
+  if(cart.length===0) return;
+  var msg = 'Olá! Quero fazer um pedido:%0A%0A';
+  var total = 0;
+  cart.forEach(function(it){
+    var p = produtos[it.id];
+    var preco = precoNum(p.preco);
+    total += preco*it.qty;
+    msg += '• '+it.qty+'x '+p.nome.split('—')[0].trim()+' — '+p.preco+'%0A';
+  });
+  msg += '%0A*Total: R$ '+total.toFixed(2).replace('.',',')+'*';
+  if(total>=40) msg += '%0A%0A🎁 Com direito ao brinde!';
+  window.open('https://wa.me/'+WA+'?text='+msg, '_blank');
+}
+
 </script>
 </body>
 </html>
