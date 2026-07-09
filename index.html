@@ -422,7 +422,23 @@ document.addEventListener('DOMContentLoaded',function(){
   if(y) y.onclick=function(){try{localStorage.setItem('cdp_age','1');}catch(e){}showMain();};
   if(n) n.onclick=function(){try{localStorage.setItem('cdp_age','0');}catch(e){}window.location.replace('https://www.google.com');};
   document.body.addEventListener('click',function(e){
-    var card=e.target.closest('[data-id]');
+    var addBtn=e.target.closest('[data-add]');
+    if(addBtn){
+      e.preventDefault(); e.stopPropagation();
+      addToCart(addBtn.getAttribute('data-add'));
+      var t=addBtn.innerHTML;
+      addBtn.innerHTML='&#10003; Adicionado';
+      addBtn.classList.add('added');
+      setTimeout(function(){addBtn.innerHTML=t;addBtn.classList.remove('added');},1200);
+      return;
+    }
+    var detBtn=e.target.closest('[data-detail]');
+    if(detBtn){
+      e.preventDefault(); e.stopPropagation();
+      openModal(detBtn.getAttribute('data-detail'));
+      return;
+    }
+    var card=e.target.closest('.card[data-id]');
     if(card){openModal(card.getAttribute('data-id'));return;}
     if(e.target.id==='modal-overlay'||e.target.closest('#modal-close')) closeModal();
   });
